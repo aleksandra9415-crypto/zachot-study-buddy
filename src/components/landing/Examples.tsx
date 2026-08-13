@@ -1,6 +1,13 @@
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, FileText, Calculator, Presentation } from "lucide-react";
 import { copy, examples } from "@/data/content";
+
+const typeIcons: Record<string, any> = {
+  "Текстовая работа": FileText,
+  "Решение задачи": Calculator,
+  "Презентация": Presentation,
+};
+
 
 export function Examples() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -41,7 +48,13 @@ export function Examples() {
             key={ex.title}
             className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-white p-6"
           >
-            <div className="h-8 w-8 rounded-[8px] bg-teal-200" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-200 text-teal-500">
+              {(() => {
+                const Icon = typeIcons[ex.type] || FileText;
+                return <Icon className="h-5 w-5" />;
+              })()}
+            </div>
+
             <h3 className="mt-4 line-clamp-2 text-[16px] font-bold text-navy-900">
               {ex.title}
             </h3>

@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
 
 export function Personalization() {
@@ -6,15 +6,12 @@ export function Personalization() {
     <section className="container-page">
       <div className="rounded-[32px] bg-white p-6 md:p-12">
         <div className="flex justify-center">
-          <div className="relative flex h-[400px] w-[280px] items-center justify-center rounded-[24px] bg-teal-200">
-            <button
-              type="button"
-              aria-label="Смотреть видео"
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-navy-900"
-            >
-              <Play className="h-5 w-5" />
-            </button>
+          <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px] bg-teal-200">
+            <div className="absolute inset-0 flex items-center justify-center bg-navy-100 text-[14px] text-muted italic">
+              [Изображение рабочего стола]
+            </div>
           </div>
+
         </div>
 
         <h2 className="mt-10 text-center text-[28px] md:text-[40px]">
