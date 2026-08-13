@@ -78,16 +78,16 @@
   --radius: 0.625rem;
 
   /* Brand tokens */
-  --navy-950: oklch(0.253 0.043 236.5);
-  --navy-900: oklch(0.322 0.045 245.2);
-  --navy-700: oklch(0.395 0.058 244.6);
-  --orange-500: oklch(0.673 0.212 42.2);
-  --orange-100: oklch(0.929 0.043 47.6);
-  --teal-500: oklch(0.694 0.072 197.3);
-  --teal-200: oklch(0.869 0.038 197.7);
+  --navy-950: oklch(0.237 0.046 240.2);
+  --navy-900: oklch(0.2774 0.0487 247.98);
+  --navy-700: oklch(0.3491 0.0587 245.87);
+  --orange-500: oklch(0.6855 0.2034 40.95);
+  --orange-100: oklch(0.9439 0.0316 50.4);
+  --teal-500: oklch(0.7003 0.0853 197.34);
+  --teal-200: oklch(0.8788 0.0368 198.63);
   --brand-white: oklch(1 0 0);
-  --brand-bg: oklch(0.961 0.005 232.5);
-  --brand-muted: oklch(0.552 0.024 238.8);
+  --brand-bg: oklch(0.9654 0.0042 236.5);
+  --brand-muted: oklch(0.5782 0.0318 246.76);
   --gradient-dark: linear-gradient(135deg, #062132 0%, #132A3F 100%);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
