@@ -20,8 +20,11 @@ export function Hero() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((s) => (
             <div key={s.id} className="rounded-[24px] bg-white p-6">
-              <div className="h-12 w-12 rounded-[12px] bg-orange-100" />
+              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 italic text-[10px] text-muted text-center">
+                [Image: {s.id}]
+              </div>
               <h3 className="mt-4 text-[16px] font-bold text-navy-900">{s.title}</h3>
+
               <p className="mt-1 text-[14px] text-muted">{s.caption}</p>
             </div>
           ))}
