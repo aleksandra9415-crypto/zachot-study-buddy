@@ -69,8 +69,9 @@ export function ResultDemo() {
                   </h4>
                   <div className="space-y-3">
                     <p className="text-[13px] leading-[1.7] text-navy-900">
-                      {card.lines[0].split(" ").slice(0, 40).join(" ")}...
+                      {card.lines?.[0]?.split(" ").slice(0, 40).join(" ")}...
                     </p>
+
                   </div>
                 </div>
               </div>
@@ -87,8 +88,9 @@ export function ResultDemo() {
             <h3 className="mt-4 text-[16px] font-bold">{card.title}</h3>
             <div className="mt-2">
               <p className="line-clamp-3 text-[13px] leading-relaxed text-muted">
-                {card.lines[0]}
+                {card.lines?.[0]}
               </p>
+
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {card.meta.map((m) => (
