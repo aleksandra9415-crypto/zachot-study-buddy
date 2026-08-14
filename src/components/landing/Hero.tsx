@@ -1,9 +1,8 @@
 import { copy, scenarios } from "@/data/content";
-// Using placeholders for now to fix build errors
-const textImg = "data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23F1F4F6'/%3E%3Crect x='16' y='12' width='32' height='40' rx='2' fill='%23132A3F'/%3E%3Crect x='20' y='20' width='24' height='2' fill='%2356AFB1'/%3E%3Crect x='20' y='26' width='24' height='2' fill='%2356AFB1'/%3E%3Crect x='20' y='32' width='16' height='2' fill='%23FC6116'/%3E%3C/svg%3E";
-const deckImg = "data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23F1F4F6'/%3E%3Crect x='12' y='16' width='40' height='28' rx='2' fill='%23132A3F'/%3E%3Crect x='18' y='30' width='6' height='8' fill='%2356AFB1'/%3E%3Crect x='28' y='26' width='6' height='12' fill='%23FC6116'/%3E%3Crect x='38' y='22' width='6' height='16' fill='%2356AFB1'/%3E%3C/svg%3E";
-const taskImg = "data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23F1F4F6'/%3E%3Crect x='18' y='14' width='28' height='36' rx='4' fill='%23132A3F'/%3E%3Crect x='22' y='18' width='20' height='8' rx='1' fill='%2356AFB1'/%3E%3Ccircle cx='25' cy='32' r='2' fill='white'/%3E%3Ccircle cx='32' cy='32' r='2' fill='white'/%3E%3Ccircle cx='39' cy='32' r='2' fill='white'/%3E%3Ccircle cx='25' cy='39' r='2' fill='white'/%3E%3Ccircle cx='32' cy='39' r='2' fill='white'/%3E%3Ccircle cx='39' cy='39' r='2' fill='white'/%3E%3Crect x='37' y='44' width='7' height='2' fill='%23FC6116'/%3E%3C/svg%3E";
-const topicImg = "data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23F1F4F6'/%3E%3Cpath d='M12 20C12 18.8954 12.8954 18 14 18H32V46H14C12.8954 46 12 45.1046 12 44V20Z' fill='%23132A3F'/%3E%3Cpath d='M52 20C52 18.8954 51.1046 18 50 18H32V46H50C51.1046 46 52 45.1046 52 44V20Z' fill='%231E3D57'/%3E%3Ccircle cx='32' cy='24' r='6' fill='%23FC6116'/%3E%3Crect x='31' cy='30' width='2' height='4' fill='%23FC6116'/%3E%3C/svg%3E";
+import textImg from "@/assets/illustrations/scenario-text.png";
+import deckImg from "@/assets/illustrations/scenario-deck.png";
+import taskImg from "@/assets/illustrations/scenario-task.png";
+import topicImg from "@/assets/illustrations/scenario-topic.png";
 
 const ILLUSTRATIONS: Record<string, { src: string; alt: string }> = {
   text: { src: textImg, alt: "Иллюстрация: стопка листов и ручка" },
