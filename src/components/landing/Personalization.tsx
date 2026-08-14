@@ -9,9 +9,11 @@ export function Personalization() {
       <div className="rounded-[32px] bg-white p-6 md:p-12">
         <div className="flex justify-center">
           <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px] bg-teal-200">
-            <div className="absolute inset-0 flex items-center justify-center bg-navy-100 text-[14px] text-muted italic">
-              [Изображение рабочего стола]
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600" 
+              alt="Workspace"
+              className="h-full w-full object-cover"
+            />
           </div>
 
         </div>
