@@ -13,7 +13,7 @@ export const Section = ({ id, className, children, outerClassName }: SectionProp
     <section 
       id={id} 
       className={cn(
-        "w-full pb-[48px] md:pb-[80px] first:pt-[32px]", 
+        "w-full first:pt-[32px] last:pb-[32px]", 
         outerClassName
       )}
     >

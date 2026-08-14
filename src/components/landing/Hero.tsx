@@ -2,6 +2,7 @@ import { copy, scenarios } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import Shape from "@/components/decor/Shape";
 import Marker from "@/components/decor/Marker";
+import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -26,18 +27,24 @@ export function Hero() {
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((s) => (
-            <div key={s.id} className="rounded-[24px] bg-white p-6">
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 italic text-[10px] text-muted text-center">
+            <a 
+              key={s.id} 
+              href="#" 
+              className="group relative flex flex-col rounded-[24px] bg-white p-6 transition-all duration-200 hover:-translate-y-[2px] hover:border-orange-500 hover:shadow-[0_8px_24px_rgba(11,40,49,0.18)] border border-transparent cursor-pointer"
+            >
+              <ArrowUpRight className="absolute top-4 right-4 h-4 w-4 text-muted transition-colors group-hover:text-orange-500" />
+              
+              <div className="flex h-[72px] w-[72px] items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 shrink-0">
                 <img 
                   src={`https://api.dicebear.com/9.x/shapes/svg?seed=${s.id}&backgroundColor=ffe7da`} 
                   alt={s.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-[16px] font-display text-navy-900">{s.title}</h3>
+              <h3 className="mt-4 text-[16px] font-display text-navy-900 leading-tight">{s.title}</h3>
 
-              <p className="mt-1 text-[14px] text-muted">{s.caption}</p>
-            </div>
+              <p className="mt-1 text-[14px] text-muted leading-snug">{s.caption}</p>
+            </a>
           ))}
         </div>
       </div>

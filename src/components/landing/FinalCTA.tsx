@@ -9,7 +9,7 @@ export const FinalCTA = () => {
         <Shape kind="circle" size={160} className="bg-orange-500" style={{ bottom: -70, right: -40 }} />
         
         <div className="relative z-10 flex flex-col items-center">
-          <h2 className="text-[32px] md:text-[40px] font-bold text-white mb-[24px] md:mb-[32px]">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-white mb-6">
             Начни с одной работы
           </h2>
           <p className="text-base text-teal-200 max-w-[560px] leading-[1.6] mb-10">

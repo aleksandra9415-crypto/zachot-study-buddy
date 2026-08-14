@@ -20,31 +20,32 @@ export function Examples() {
 
   return (
     <Section id="examples" className="px-6 md:px-0">
-      <h2 className="text-center text-[28px] md:text-[40px] mb-[24px] md:mb-[32px]">{copy.examples.h2}</h2>
+      <h2 className="text-center text-[28px] md:text-[40px]">{copy.examples.h2}</h2>
 
-      <div className="mt-8 flex gap-3">
-        <button
-          type="button"
-          aria-label="Назад"
-          onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          aria-label="Вперёд"
-          onClick={() => scrollBy(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
-      </div>
+      <div className="mt-6 flex flex-col">
+        <div className="flex gap-3">
+          <button
+            type="button"
+            aria-label="Назад"
+            onClick={() => scrollBy(-1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="Вперёд"
+            onClick={() => scrollBy(1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
 
-      <div
-        ref={trackRef}
-        className="no-scrollbar mt-6 flex snap-x gap-4 overflow-x-auto pb-2"
-      >
+        <div
+          ref={trackRef}
+          className="no-scrollbar mt-4 flex snap-x gap-4 overflow-x-auto pb-2"
+        >
         {examples.map((ex) => (
           <article
             key={ex.title}
@@ -77,6 +78,7 @@ export function Examples() {
             </div>
           </article>
         ))}
+      </div>
       </div>
     </Section>
   );

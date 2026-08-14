@@ -6,11 +6,11 @@ import { Section } from "@/components/layout/Section";
 export const Comparison = () => {
   return (
     <Section id="comparison" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
         Чем отличается от обычного чат-бота
       </h2>
       
-      <div className="grid grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
+      <div className="mt-[24px] grid grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
         {/* Left column: labels */}
         <div className="flex flex-col">
           <div className="min-h-[64px]" />
