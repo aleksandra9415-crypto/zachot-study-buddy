@@ -10,6 +10,7 @@ const typeIcons: Record<string, any> = {
 
 
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function Examples() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ export function Examples() {
 
   return (
     <Section id="examples" className="px-6 md:px-0">
-      <h2 className="text-center text-[28px] md:text-[40px]">{copy.examples.h2}</h2>
+      <SectionTitle>{copy.examples.h2}</SectionTitle>
 
       <div className="mt-6 flex flex-col">
         <div className="flex gap-3">

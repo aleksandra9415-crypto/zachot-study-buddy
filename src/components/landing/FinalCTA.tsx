@@ -1,4 +1,5 @@
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import Shape from "@/components/decor/Shape";
 
 export const FinalCTA = () => {
@@ -11,9 +12,9 @@ export const FinalCTA = () => {
         <Shape kind="circle" size={160} className="bg-orange-500 hidden md:block" style={{ bottom: -70, right: -40 }} />
         
         <div className="relative z-10 flex flex-col items-center">
-          <h2 className="text-[26px] md:text-[40px] font-bold text-white mb-6">
+          <SectionTitle className="text-white mb-6">
             Начни с одной работы
-          </h2>
+          </SectionTitle>
           <p className="text-[15px] md:text-base text-teal-200 max-w-[560px] leading-[1.6] mb-10">
             Первая работа бесплатно — посмотришь, как Зачёт справляется с твоей темой, и решишь, нужна ли подписка.
           </p>

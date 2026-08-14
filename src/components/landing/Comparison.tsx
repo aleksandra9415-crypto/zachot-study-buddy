@@ -2,13 +2,14 @@ import { BRAND } from "@/config/brand";
 import { comparison } from "@/data/content";
 import { Check, X } from "lucide-react";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export const Comparison = () => {
   return (
     <Section id="comparison" className="px-6 md:px-0">
-      <h2 className="text-center font-bold text-navy-950">
+      <SectionTitle>
         Чем отличается от обычного чат-бота
-      </h2>
+      </SectionTitle>
       
       <div className="mt-[24px] grid grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
         {/* Left column: labels */}

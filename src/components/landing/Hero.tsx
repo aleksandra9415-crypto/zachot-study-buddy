@@ -15,7 +15,7 @@ export function Hero() {
         
         <div className="relative z-10">
           <h1 className="max-w-[820px] text-[32px] leading-[1.05] md:text-[56px]">
-            Учёба без ночных <Marker className="text-orange-500"><span className="whitespace-nowrap">дедлайнов</span></Marker>
+            Учёба без ночных <Marker className="text-orange-500"><span className="whitespace-nowrap text-white">дедлайнов</span></Marker>
           </h1>
         <p className="mt-6 max-w-[640px] text-[15px] md:text-[18px] text-teal-200">
           {copy.hero.subtitle}

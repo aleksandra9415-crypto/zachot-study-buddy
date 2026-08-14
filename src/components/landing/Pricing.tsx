@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 type PeriodId = "m1" | "m3" | "m12";
 
@@ -11,9 +12,9 @@ export const Pricing = () => {
 
   return (
     <Section id="pricing" className="px-6 md:px-0">
-      <h2 className="text-center font-bold text-navy-950">
+      <SectionTitle>
         Выбери, сколько тебе нужно
-      </h2>
+      </SectionTitle>
 
       {/* Period Switcher */}
       <div className="flex justify-center mt-[24px] mb-8 md:mb-16">

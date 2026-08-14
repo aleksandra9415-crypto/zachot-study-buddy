@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import { faq } from "@/data/content";
 import { ChevronDown } from "lucide-react";
 
@@ -13,9 +14,9 @@ export const FAQ = () => {
   return (
     <Section id="faq" className="bg-bg">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="font-bold text-navy-900 text-center">
+        <SectionTitle>
           Частые вопросы
-        </h2>
+        </SectionTitle>
         
         <div className="mt-[24px] flex flex-col gap-3">
           {faq.map((item, index) => {

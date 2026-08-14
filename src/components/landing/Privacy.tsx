@@ -1,5 +1,6 @@
 import { BRAND } from "@/config/brand";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 
 export const Privacy = () => {
@@ -9,9 +10,9 @@ export const Privacy = () => {
         className="rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-center flex flex-col items-center gap-6"
         style={{ background: 'linear-gradient(135deg, #0B2831 0%, #12333C 100%)' }}
       >
-        <h2 className="text-white text-[26px] md:text-5xl font-bold tracking-tight">
+        <SectionTitle className="text-white">
           Твои работы — только твои
-        </h2>
+        </SectionTitle>
         <p className="text-teal-200 text-[15px] md:text-lg max-w-[640px] leading-relaxed">
           Мы не передаём твои темы, тексты и файлы вузам и преподавателям. Историю работ видишь только ты.
         </p>

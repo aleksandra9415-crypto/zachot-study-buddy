@@ -1,15 +1,16 @@
 import { Star } from "lucide-react";
 import { DEMO_DATA, demoReviews } from "@/data/demo";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export const Reviews = () => {
   if (!DEMO_DATA) return null;
 
   return (
     <Section className="px-6 md:px-0">
-      <h2 className="text-center font-bold text-navy-950">
+      <SectionTitle>
         Что говорят студенты
-      </h2>
+      </SectionTitle>
       
       <div className="mt-[24px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {demoReviews.map((review, idx) => (
