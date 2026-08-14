@@ -12,7 +12,7 @@ export function Hero() {
         
         <div className="relative z-10">
           <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
-            Учёба без ночных <Marker className="text-orange-500"><span className="text-navy-900">дедлайнов</span></Marker>
+            Учёба без ночных <Marker className="text-orange-500">дедлайнов</Marker>
           </h1>
         <p className="mt-6 max-w-[640px] text-[18px] text-teal-200">
           {copy.hero.subtitle}
