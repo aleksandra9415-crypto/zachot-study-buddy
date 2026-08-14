@@ -1,5 +1,6 @@
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import Marker from "@/components/decor/Marker";
 
 export function ResultDemo() {
@@ -8,7 +9,7 @@ export function ResultDemo() {
   return (
     <Section className="px-6 md:px-0">
       <div className="gradient-dark rounded-[32px] p-[48px] text-white">
-        <h2 className="text-center text-[28px] md:text-[40px] font-display">Ты <Marker>ведёшь</Marker> процесс</h2>
+        <SectionTitle className="text-white">Как выглядит результат</SectionTitle>
         <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-200">
           {copy.demo.subtitle}
         </p>
