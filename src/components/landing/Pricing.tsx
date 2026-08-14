@@ -54,7 +54,7 @@ export const Pricing = () => {
               }`}
             >
               <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold">{plan.name}</h3>
+                <h3 className="text-xl font-display">{plan.name}</h3>
                 <p className={`text-[13px] ${plan.featured ? 'text-teal-200' : 'text-muted'}`}>
                   {plan.caption}
                 </p>
