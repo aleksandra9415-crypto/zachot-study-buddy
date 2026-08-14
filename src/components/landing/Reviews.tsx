@@ -13,7 +13,10 @@ export const Reviews = () => {
       
       <div className="mt-[24px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {demoReviews.map((review, idx) => (
-          <div key={idx} className="bg-white rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50">
+          <div 
+            key={idx} 
+            className={`bg-white rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50 ${idx === 1 ? 'rotate-[1.5deg] z-10' : ''}`}
+          >
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star 

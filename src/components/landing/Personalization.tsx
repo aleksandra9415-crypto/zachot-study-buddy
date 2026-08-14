@@ -15,7 +15,7 @@ export function Personalization() {
             <img 
               src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600" 
               alt="Workspace"
-              className="relative z-10 h-full w-full object-cover rounded-[24px]"
+              className="relative z-10 h-full w-full object-cover rounded-[24px] rotate-[-2deg]"
             />
           </div>
 
