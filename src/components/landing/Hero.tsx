@@ -1,4 +1,15 @@
 import { copy, scenarios } from "@/data/content";
+import textImg from "@/assets/illustrations/scenario-text.png";
+import deckImg from "@/assets/illustrations/scenario-deck.png";
+import taskImg from "@/assets/illustrations/scenario-task.png";
+import topicImg from "@/assets/illustrations/scenario-topic.png";
+
+const ILLUSTRATIONS: Record<string, { src: string; alt: string }> = {
+  text: { src: textImg, alt: "Иллюстрация: стопка листов и ручка" },
+  deck: { src: deckImg, alt: "Иллюстрация: экран с презентацией" },
+  task: { src: taskImg, alt: "Иллюстрация: калькулятор и линейка" },
+  topic: { src: topicImg, alt: "Иллюстрация: раскрытая книга и лампочка" },
+};
 
 export function Hero() {
   return (
@@ -20,8 +31,12 @@ export function Hero() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((s) => (
             <div key={s.id} className="rounded-[24px] bg-white p-6">
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 italic text-[10px] text-muted text-center">
-                [Image: {s.id}]
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-[12px]">
+                <img
+                  src={ILLUSTRATIONS[s.id]?.src}
+                  alt={ILLUSTRATIONS[s.id]?.alt}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <h3 className="mt-4 text-[16px] font-bold text-navy-900">{s.title}</h3>
 
