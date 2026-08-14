@@ -1,5 +1,7 @@
-export default function Shape({ kind = "circle", size = 200, className = "", style = {} }) {
-  const base = {
+import React from 'react';
+
+export default function Shape({ kind = "circle", size = 200, className = "", style = {} }: { kind?: "circle" | "square" | "diamond", size?: number, className?: string, style?: React.CSSProperties }) {
+  const base: React.CSSProperties = {
     position: "absolute",
     width: size,
     height: size,
