@@ -13,7 +13,7 @@ const widths = [1.4, 1, 1, 1.3];
 
 export function Stats() {
   return (
-    <Section className="px-0">
+    <Section className="px-6 md:px-0">
       <div className="grid grid-cols-2 gap-4 md:flex">
         {stats.map((s, i) => (
           <div

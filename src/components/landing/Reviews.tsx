@@ -6,7 +6,7 @@ export const Reviews = () => {
   if (!DEMO_DATA) return null;
 
   return (
-    <Section className="px-0">
+    <Section className="px-6 md:px-0">
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-navy-950">
         Что говорят студенты
       </h2>

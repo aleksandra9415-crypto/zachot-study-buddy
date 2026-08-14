@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 
 export function Personalization() {
   return (
-    <Section className="px-0">
+    <Section className="px-6 md:px-0">
       <div className="rounded-[32px] bg-white p-6 md:p-12">
         <div className="flex justify-center">
           <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px] bg-teal-200">

@@ -4,7 +4,7 @@ import { Section } from "@/components/layout/Section";
 
 export const Privacy = () => {
   return (
-    <Section id="privacy">
+    <Section id="privacy" className="px-6 md:px-0">
       <div 
         className="rounded-[32px] p-8 md:p-16 text-center flex flex-col items-center gap-6"
         style={{ background: 'linear-gradient(135deg, #062132 0%, #132A3F 100%)' }}

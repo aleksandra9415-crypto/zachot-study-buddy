@@ -5,7 +5,7 @@ export function ResultDemo() {
   const card = copy.demo.card;
 
   return (
-    <Section className="px-0">
+    <Section className="px-6 md:px-0">
       <div className="gradient-dark rounded-[32px] p-6 pb-16 text-white md:p-16 md:pb-16">
         <h2 className="text-center text-[28px] md:text-[40px]">{copy.demo.h2}</h2>
         <p className="mx-auto mt-4 max-w-[640px] text-center text-[16px] text-teal-200">
