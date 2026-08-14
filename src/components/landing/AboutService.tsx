@@ -17,9 +17,8 @@ export const AboutService = () => {
 
         <div className="relative z-20 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
           {/* Left Column: Text */}
-          <div className="text-[15px] text-ink-900 leading-[1.7] space-y-6 max-w-[640px] pl-4">
+          <div className="text-[15px] text-ink-900 leading-[1.7] space-y-6 max-w-[640px] pl-10">
             <h2 className="text-[32px] font-heading font-extrabold text-ink-900 text-left mb-[24px] md:mb-[32px]">
-
               Что такое Зачёт и чем он помогает
             </h2>
             
