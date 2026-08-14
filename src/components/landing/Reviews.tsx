@@ -13,12 +13,12 @@ export const Reviews = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {demoReviews.map((review, idx) => (
-          <div key={idx} className="bg-white rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50">
+          <div key={idx} className={`bg-surface rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-line ${idx === 1 ? 'rotate-[1.5deg]' : ''}`}>
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-4 h-4 ${i < review.stars ? 'text-amber-500 fill-orange-500' : 'text-[#E3E8EC]'}`} 
+                  className={`w-4 h-4 ${i < review.stars ? 'text-pink-500 fill-pink-500' : 'text-line'}`} 
                 />
               ))}
             </div>

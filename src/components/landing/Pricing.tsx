@@ -24,13 +24,13 @@ export const Pricing = () => {
               onClick={() => setActivePeriod(period.id as PeriodId)}
               className={`relative px-6 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
                 activePeriod === period.id 
-                ? 'bg-ink-900 text-white shadow-md' 
+                ? 'bg-ink-900 text-surface shadow-md' 
                 : 'text-muted hover:text-ink-900'
               }`}
             >
               {period.label}
               {period.discount && (
-                <span className="bg-teal-600 text-white text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
+                <span className="bg-pink-500 text-ink-900 text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
                   {period.discount}
                 </span>
               )}

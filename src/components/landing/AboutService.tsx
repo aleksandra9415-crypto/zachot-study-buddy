@@ -3,12 +3,23 @@ import { FileCheck, ListOrdered, SlidersHorizontal, Wallet } from "lucide-react"
 
 export const AboutService = () => {
   return (
-    <Section className="bg-bg">
-      <div className="bg-white rounded-[24px] p-[40px] max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
+    <Section className="bg-paper">
+      <div className="bg-surface relative overflow-hidden rounded-[24px] p-[40px] max-w-full">
+        {/* Notebook Margins and Ruling */}
+        <div className="absolute left-[32px] top-0 bottom-0 w-[1px] bg-pink-500 z-10" />
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-50"
+          style={{ 
+            backgroundImage: 'linear-gradient(to bottom, #F0EBE1 1px, transparent 1px)',
+            backgroundSize: '100% 32px'
+          }}
+        />
+
+        <div className="relative z-20 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
           {/* Left Column: Text */}
-          <div className="text-[15px] text-ink-900 leading-[1.7] space-y-6 max-w-[640px]">
-            <h2 className="text-[32px] font-bold text-ink-900 text-left mb-[24px] md:mb-[32px]">
+          <div className="text-[15px] text-ink-900 leading-[1.7] space-y-6 max-w-[640px] pl-4">
+            <h2 className="text-[32px] font-heading font-extrabold text-ink-900 text-left mb-[24px] md:mb-[32px]">
+
               Что такое Зачёт и чем он помогает
             </h2>
             
@@ -26,7 +37,7 @@ export const AboutService = () => {
           </div>
 
           {/* Right Column: Comparison Card */}
-          <div className="bg-[#E9EEF2] rounded-[24px] p-[24px]">
+          <div className="bg-teal-100 rounded-[24px] p-[24px]">
             <h3 className="text-[15px] font-bold text-ink-900 mb-5">
               Чем отличается от чат-бота
             </h3>

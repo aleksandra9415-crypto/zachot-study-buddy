@@ -1,11 +1,17 @@
 import { copy, scenarios } from "@/data/content";
-
 import { Section } from "@/components/layout/Section";
+import { Marker } from "@/components/decor/Marker";
+import { Shape } from "@/components/decor/Shape";
 
 export function Hero() {
   return (
     <Section outerClassName="py-0 md:py-0" className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-[48px] text-white md:p-[48px]">
+      <div className="gradient-dark relative overflow-hidden rounded-[32px] p-[48px] text-white md:p-[48px]">
+        <Shape kind="circle" size={320} color="bg-teal-600" position={{ top: -120, right: -80 }} />
+        <Shape kind="diamond" size={120} color="bg-amber-500" position={{ bottom: -40, left: -30 }} />
+        
+        <div className="relative z-10">
+
         <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
           Учёба без ночных <Marker>дедлайнов</Marker>
         </h1>
@@ -39,3 +45,4 @@ export function Hero() {
     </Section>
   );
 }
+
