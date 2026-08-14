@@ -18,7 +18,7 @@ export const Reviews = () => {
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-4 h-4 ${i < review.stars ? 'text-orange-500 fill-orange-500' : 'text-[#E3E8EC]'}`} 
+                  className={`w-4 h-4 ${i < review.stars ? 'text-pink-500 fill-pink-500' : 'text-[#E3E8EC]'}`} 
                 />
               ))}
             </div>
