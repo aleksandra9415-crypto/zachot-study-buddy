@@ -13,7 +13,7 @@ export const FAQ = () => {
   return (
     <Section id="faq" className="bg-bg">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="text-[32px] font-bold text-navy-900 text-center mb-[24px] md:mb-[32px]">
+        <h2 className="text-[32px] font-bold text-ink-900 text-center mb-[24px] md:mb-[32px]">
           Частые вопросы
         </h2>
         
@@ -29,7 +29,7 @@ export const FAQ = () => {
                   onClick={() => toggle(index)}
                   className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/50"
                 >
-                  <span className="text-base font-medium text-navy-900 leading-tight">
+                  <span className="text-base font-medium text-ink-900 leading-tight">
                     {item.q}
                   </span>
                   <ChevronDown 

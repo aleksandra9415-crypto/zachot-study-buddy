@@ -28,7 +28,7 @@ export function Personalization() {
 
             <button
               type="button"
-              className="mt-8 flex h-[52px] w-fit items-center justify-center gap-2 rounded-full border border-navy-900 bg-transparent px-[28px] text-[16px] font-medium text-navy-900 transition-colors hover:bg-bg"
+              className="mt-8 flex h-[52px] w-fit items-center justify-center gap-2 rounded-full border border-ink-900 bg-transparent px-[28px] text-[16px] font-medium text-ink-900 transition-colors hover:bg-bg"
             >
               Попробовать
               <ArrowRight className="h-4 w-4" />

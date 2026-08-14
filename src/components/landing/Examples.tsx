@@ -27,7 +27,7 @@ export function Examples() {
           type="button"
           aria-label="Назад"
           onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink-900 transition-colors hover:bg-amber-100"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -35,7 +35,7 @@ export function Examples() {
           type="button"
           aria-label="Вперёд"
           onClick={() => scrollBy(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy-900 transition-colors hover:bg-orange-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink-900 transition-colors hover:bg-amber-100"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -50,14 +50,14 @@ export function Examples() {
             key={ex.title}
             className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-white p-6"
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-200 text-teal-500">
+            <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-100 text-teal-600">
               {(() => {
                 const Icon = typeIcons[ex.type] || FileText;
                 return <Icon className="h-5 w-5" />;
               })()}
             </div>
 
-            <h3 className="mt-4 line-clamp-2 text-[16px] font-bold text-navy-900">
+            <h3 className="mt-4 line-clamp-2 text-[16px] font-bold text-ink-900">
               {ex.title}
             </h3>
             <div className="mt-auto pt-6 flex flex-wrap gap-x-1.5 gap-y-0.5 text-[12px] text-muted">

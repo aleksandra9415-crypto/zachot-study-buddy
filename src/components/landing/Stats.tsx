@@ -2,10 +2,10 @@ import { stats } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 
 const toneClass: Record<string, string> = {
-  accent: "bg-orange-500 text-white",
-  light: "bg-orange-100 text-navy-900",
-  white: "bg-white text-navy-900",
-  dark: "bg-navy-900 text-white",
+  accent: "bg-amber-500 text-white",
+  light: "bg-amber-100 text-ink-900",
+  white: "bg-white text-ink-900",
+  dark: "bg-ink-900 text-white",
 };
 
 const widths = [1.4, 1, 1, 1.3];

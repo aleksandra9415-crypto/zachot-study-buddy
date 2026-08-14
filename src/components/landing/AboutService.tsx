@@ -7,8 +7,8 @@ export const AboutService = () => {
       <div className="bg-white rounded-[24px] p-[40px] max-w-full">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
           {/* Left Column: Text */}
-          <div className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px]">
-            <h2 className="text-[32px] font-bold text-navy-900 text-left mb-[24px] md:mb-[32px]">
+          <div className="text-[15px] text-ink-900 leading-[1.7] space-y-6 max-w-[640px]">
+            <h2 className="text-[32px] font-bold text-ink-900 text-left mb-[24px] md:mb-[32px]">
               Что такое Зачёт и чем он помогает
             </h2>
             
@@ -27,43 +27,43 @@ export const AboutService = () => {
 
           {/* Right Column: Comparison Card */}
           <div className="bg-[#E9EEF2] rounded-[24px] p-[24px]">
-            <h3 className="text-[15px] font-bold text-navy-900 mb-5">
+            <h3 className="text-[15px] font-bold text-ink-900 mb-5">
               Чем отличается от чат-бота
             </h3>
             
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <FileCheck className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 bg-amber-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <FileCheck className="w-5 h-5 text-amber-500" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Понимает формат учебных работ: структура, объём, оформление
                 </span>
               </div>
               
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <ListOrdered className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 bg-amber-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <ListOrdered className="w-5 h-5 text-amber-500" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Показывает ход решения, а не только ответ
                 </span>
               </div>
               
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <SlidersHorizontal className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 bg-amber-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <SlidersHorizontal className="w-5 h-5 text-amber-500" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Собирает работу по шагам, каждый можно поправить
                 </span>
               </div>
               
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <Wallet className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 bg-amber-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <Wallet className="w-5 h-5 text-amber-500" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Работает из России и принимает оплату рублями
                 </span>
               </div>

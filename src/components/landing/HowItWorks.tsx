@@ -14,12 +14,12 @@ export function HowItWorks() {
             <div
               key={step.n}
               className={`flex flex-col rounded-[24px] p-6 ${
-                first ? "bg-orange-500 text-white" : "bg-white text-navy-900"
+                first ? "bg-amber-500 text-white" : "bg-white text-ink-900"
               }`}
             >
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-[8px] text-[14px] font-bold ${
-                  first ? "bg-white text-orange-500" : "bg-orange-100 text-navy-900"
+                  first ? "bg-white text-amber-500" : "bg-amber-100 text-ink-900"
                 }`}
               >
                 {step.n}
@@ -31,7 +31,7 @@ export function HowItWorks() {
               {first && (
                 <button
                   type="button"
-                  className="mt-6 inline-flex h-[52px] items-center justify-center rounded-full bg-navy-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+                  className="mt-6 inline-flex h-[52px] items-center justify-center rounded-full bg-ink-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
                 >
                   {copy.how.firstCta}
                 </button>

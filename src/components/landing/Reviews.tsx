@@ -7,7 +7,7 @@ export const Reviews = () => {
 
   return (
     <Section className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-ink-950">
         Что говорят студенты
       </h2>
       
@@ -18,21 +18,21 @@ export const Reviews = () => {
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-4 h-4 ${i < review.stars ? 'text-orange-500 fill-orange-500' : 'text-[#E3E8EC]'}`} 
+                  className={`w-4 h-4 ${i < review.stars ? 'text-amber-500 fill-orange-500' : 'text-[#E3E8EC]'}`} 
                 />
               ))}
             </div>
             
-            <p className="text-sm text-navy-900 leading-relaxed min-h-[4.5rem]">
+            <p className="text-sm text-ink-900 leading-relaxed min-h-[4.5rem]">
               {review.text}
             </p>
             
             <div className="flex items-center gap-3 mt-auto">
-              <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 font-bold text-sm shrink-0">
+              <div className="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-amber-500 font-bold text-sm shrink-0">
                 {review.name[0]}
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold text-navy-950">{review.name}</span>
+                <span className="text-sm font-bold text-ink-950">{review.name}</span>
                 <span className="text-xs text-muted">
                   {review.place} • {review.date}
                 </span>

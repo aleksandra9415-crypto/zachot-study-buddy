@@ -20,10 +20,10 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
         <a href="#" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-amber-500 text-[18px] font-bold text-white">
             З
           </span>
-          <span className="text-[18px] font-bold tracking-[-0.02em] text-navy-900">
+          <span className="text-[18px] font-bold tracking-[-0.02em] text-ink-900">
             {BRAND.name}
           </span>
         </a>
@@ -33,7 +33,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[16px] text-muted transition-colors hover:text-navy-900"
+              className="text-[16px] text-muted transition-colors hover:text-ink-900"
             >
               {item.label}
             </a>
@@ -42,7 +42,7 @@ export function Header() {
 
         <a
           href="#"
-          className="inline-flex h-[52px] items-center rounded-full bg-navy-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+          className="inline-flex h-[52px] items-center rounded-full bg-ink-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
         >
           {copy.ctaPrimary}
         </a>

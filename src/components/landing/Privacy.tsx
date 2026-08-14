@@ -12,12 +12,12 @@ export const Privacy = () => {
         <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight">
           Твои работы — только твои
         </h2>
-        <p className="text-teal-200 text-base md:text-lg max-w-[640px] leading-relaxed">
+        <p className="text-teal-100 text-base md:text-lg max-w-[640px] leading-relaxed">
           Мы не передаём твои темы, тексты и файлы вузам и преподавателям. Историю работ видишь только ты.
         </p>
         <a 
           href="#faq"
-          className="w-full md:w-auto px-12 h-[52px] flex items-center justify-center rounded-full border border-teal-500 text-white font-medium hover:bg-teal-500/10 transition-colors"
+          className="w-full md:w-auto px-12 h-[52px] flex items-center justify-center rounded-full border border-teal-600 text-white font-medium hover:bg-teal-600/10 transition-colors"
         >
           Как мы храним данные
         </a>
