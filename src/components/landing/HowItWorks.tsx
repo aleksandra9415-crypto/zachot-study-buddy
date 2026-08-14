@@ -64,7 +64,7 @@ export function HowItWorks() {
               key={step.n}
               onClick={() => handleStepClick(i)}
               className={`relative flex cursor-pointer flex-col overflow-hidden rounded-[24px] p-6 transition-all duration-250 ${
-                isActive ? "bg-navy-900 text-white" : "bg-bg text-navy-900"
+                isActive ? "bg-navy-900 text-white" : "bg-[#EFEAE1] text-navy-900"
               }`}
             >
               {isActive && (
