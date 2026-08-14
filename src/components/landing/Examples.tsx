@@ -9,6 +9,8 @@ const typeIcons: Record<string, any> = {
 };
 
 
+import { Section } from "@/components/layout/Section";
+
 export function Examples() {
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -17,7 +19,7 @@ export function Examples() {
   };
 
   return (
-    <section id="examples" className="container-page">
+    <Section id="examples" className="px-0">
       <h2 className="text-center text-[28px] md:text-[40px]">{copy.examples.h2}</h2>
 
       <div className="mt-8 flex gap-3">
@@ -58,12 +60,24 @@ export function Examples() {
             <h3 className="mt-4 line-clamp-2 text-[16px] font-bold text-navy-900">
               {ex.title}
             </h3>
-            <p className="mt-auto pt-6 text-[13px] text-muted">
-              {[ex.type, ex.size, ex.subject].filter(Boolean).join(" · ")}
-            </p>
+            <div className="mt-auto pt-6 flex flex-wrap gap-x-1.5 gap-y-0.5 text-[12px] text-muted">
+              <span>{ex.type}</span>
+              {ex.size && (
+                <>
+                  <span>·</span>
+                  <span>{ex.size}</span>
+                </>
+              )}
+              {ex.subject && (
+                <>
+                  <span>·</span>
+                  <span>{ex.subject}</span>
+                </>
+              )}
+            </div>
           </article>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

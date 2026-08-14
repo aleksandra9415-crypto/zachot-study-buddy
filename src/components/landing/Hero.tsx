@@ -1,8 +1,10 @@
 import { copy, scenarios } from "@/data/content";
 
+import { Section } from "@/components/layout/Section";
+
 export function Hero() {
   return (
-    <section className="container-page">
+    <Section outerClassName="py-0 md:py-0" className="px-0">
       <div className="gradient-dark rounded-[32px] p-8 text-white md:p-16">
         <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
           {copy.hero.h1}
@@ -30,6 +32,6 @@ export function Hero() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
