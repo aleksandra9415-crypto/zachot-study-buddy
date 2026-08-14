@@ -1,4 +1,6 @@
 import { BRAND } from "@/config/brand";
+import { Section } from "@/components/layout/Section";
+
 
 export const Privacy = () => {
   return (
