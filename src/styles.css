@@ -61,6 +61,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-display: Onest, system-ui, sans-serif;
 
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
@@ -174,8 +175,9 @@
   h1,
   h2,
   h3 {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.01em;
   }
 }
 
