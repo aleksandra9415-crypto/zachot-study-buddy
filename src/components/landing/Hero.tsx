@@ -23,7 +23,11 @@ export function Hero() {
           {scenarios.map((s) => (
             <div key={s.id} className="rounded-[24px] bg-white p-6">
               <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 italic text-[10px] text-muted text-center">
-                [Image: {s.id}]
+                <img 
+                  src={`https://api.dicebear.com/9.x/shapes/svg?seed=${s.id}&backgroundColor=ffe7da`} 
+                  alt={s.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="mt-4 text-[16px] font-bold text-navy-900">{s.title}</h3>
 
