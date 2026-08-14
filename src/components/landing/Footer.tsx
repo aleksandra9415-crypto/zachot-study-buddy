@@ -4,8 +4,9 @@ import { footerLinks } from "@/data/content";
 
 export const Footer = () => {
   return (
-    <Section className="bg-bg">
-      <div className="bg-ink-900 rounded-[32px] p-[48px] w-full text-white">
+    <Section className="bg-paper">
+      <div className="bg-ink-900 rounded-[32px] p-[48px] w-full text-surface">
+
         {/* Top Area */}
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10">
           {/* Brand Info */}
@@ -47,7 +48,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Area */}
-        <div className="mt-8 pt-8 border-t border-line flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="mt-8 pt-8 border-t border-ink-950 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-[13px] text-[#6B7C8C]">
             © 2026 · Реквизиты появятся после регистрации юрлица
           </p>
