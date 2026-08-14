@@ -21,7 +21,8 @@ def generate_and_save(filename, prompt):
         print("Error: LOVABLE_API_KEY not found in environment")
         return False
     
-    url = "https://gateway.lovable.ai/v1/images/generations"
+    # Using the standard OpenAI-compatible endpoint through the gateway
+    url = "https://ai-gateway.lovable.ai/v1/images/generations"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
