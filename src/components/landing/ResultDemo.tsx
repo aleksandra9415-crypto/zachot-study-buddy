@@ -20,9 +20,10 @@ export function ResultDemo() {
               {/* Top Panel */}
               <div className="flex h-[44px] shrink-0 items-center border-b border-line bg-paper px-4">
                 <div className="flex gap-1.5">
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+
                 </div>
                 <div className="flex-1 text-center text-[13px] text-muted">
                   Влияние крещения Руси на становление государственности

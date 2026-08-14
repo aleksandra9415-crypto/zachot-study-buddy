@@ -20,12 +20,13 @@ export const Footer = () => {
               <span className="text-[18px] font-bold">{BRAND.name}</span>
             </div>
             <div className="space-y-1">
-              <p className="text-[13px] text-[#8FA3B4] leading-relaxed">
+              <p className="text-[13px] text-muted leading-relaxed opacity-70">
                 Поддержка отвечает по будням с 10:00 до 19:00 по МСК
               </p>
-              <p className="text-[13px] text-[#8FA3B4]">
+              <p className="text-[13px] text-muted opacity-70">
                 support@——
               </p>
+
             </div>
           </div>
 
@@ -38,7 +39,7 @@ export const Footer = () => {
                   <li key={i}>
                     <a 
                       href="#" 
-                      className="text-[14px] text-[#8FA3B4] hover:text-surface transition-colors"
+                      className="text-[14px] text-muted opacity-70 hover:text-surface transition-colors"
                     >
                       {item}
                     </a>
@@ -52,17 +53,18 @@ export const Footer = () => {
         {/* Bottom Area */}
         <div className="mt-8 pt-8 border-t border-ink-950 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
 
-          <p className="text-[13px] text-[#6B7C8C]">
+          <p className="text-[13px] text-muted opacity-60">
             © 2026 · Реквизиты появятся после регистрации юрлица
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-surface transition-colors">
+            <a href="#" className="text-[13px] text-muted opacity-60 hover:text-surface transition-colors">
               Политика обработки персональных данных
             </a>
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-surface transition-colors">
+            <a href="#" className="text-[13px] text-muted opacity-60 hover:text-surface transition-colors">
               Пользовательское соглашение
             </a>
           </div>
+
         </div>
       </div>
     </Section>
