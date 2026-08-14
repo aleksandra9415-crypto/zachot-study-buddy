@@ -29,7 +29,7 @@ export function Hero() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-navy-900">{s.title}</h3>
+              <h3 className="mt-4 text-[16px] font-display text-navy-900">{s.title}</h3>
 
               <p className="mt-1 text-[14px] text-muted">{s.caption}</p>
             </div>

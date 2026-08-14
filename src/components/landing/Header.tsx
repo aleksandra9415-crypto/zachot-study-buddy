@@ -23,7 +23,7 @@ export function Header() {
           <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-navy-900">
             З
           </span>
-          <span className="text-[18px] font-bold tracking-[-0.02em] text-navy-900">
+          <span className="text-[18px] font-display text-navy-900">
             {BRAND.name}
           </span>
         </a>

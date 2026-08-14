@@ -14,7 +14,7 @@ export const Footer = () => {
               <div className="w-10 h-10 bg-orange-500 rounded-[12px] flex items-center justify-center text-navy-900 font-bold text-xl">
                 З
               </div>
-              <span className="text-[18px] font-bold">{BRAND.name}</span>
+              <span className="text-[18px] font-display">{BRAND.name}</span>
             </div>
             <div className="space-y-1">
               <p className="text-[13px] text-[#8FA6AA] leading-relaxed">

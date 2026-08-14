@@ -7,7 +7,7 @@ export function ResultDemo() {
   return (
     <Section className="px-6 md:px-0">
       <div className="gradient-dark rounded-[32px] p-[48px] text-white">
-        <h2 className="text-center text-[28px] md:text-[40px]">{copy.demo.h2}</h2>
+        <h2 className="text-center text-[28px] md:text-[40px] font-display">{copy.demo.h2}</h2>
         <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-200">
           {copy.demo.subtitle}
         </p>
@@ -92,7 +92,7 @@ export function ResultDemo() {
               </div>
               <span className="text-[14px] text-muted">{card.author}</span>
             </div>
-            <h3 className="mt-4 text-[16px] font-bold">{card.title}</h3>
+            <h3 className="mt-4 text-[16px] font-display">{card.title}</h3>
             <div className="mt-2">
               <p className="line-clamp-3 text-[13px] leading-relaxed text-muted">
                 {card.lines?.[0]}

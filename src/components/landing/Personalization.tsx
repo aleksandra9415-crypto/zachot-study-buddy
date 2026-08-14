@@ -19,7 +19,7 @@ export function Personalization() {
 
           {/* Right Column: Content */}
           <div className="flex flex-col items-start text-left">
-            <h2 className="text-[28px] md:text-[40px] leading-tight">
+            <h2 className="text-[28px] md:text-[40px] leading-tight font-display">
               {copy.personalization.h2}
             </h2>
             <p className="mt-[24px] md:mt-[32px] max-w-[480px] text-[16px] text-muted">
