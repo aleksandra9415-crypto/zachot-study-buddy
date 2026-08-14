@@ -1,4 +1,5 @@
 import { stats } from "@/data/content";
+import { Section } from "@/components/layout/Section";
 
 const toneClass: Record<string, string> = {
   accent: "bg-orange-500 text-white",
@@ -9,7 +10,6 @@ const toneClass: Record<string, string> = {
 
 const widths = [1.4, 1, 1, 1.3];
 
-import { Section } from "@/components/layout/Section";
 
 export function Stats() {
   return (

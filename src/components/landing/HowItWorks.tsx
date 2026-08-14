@@ -1,6 +1,6 @@
 import { copy, steps } from "@/data/content";
-
 import { Section } from "@/components/layout/Section";
+
 
 export function HowItWorks() {
   return (

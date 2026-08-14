@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 
-import { Section } from "@/components/layout/Section";
 
 export function Personalization() {
   return (
