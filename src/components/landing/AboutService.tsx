@@ -4,21 +4,25 @@ import { FileCheck, ListOrdered, SlidersHorizontal, Wallet } from "lucide-react"
 export const AboutService = () => {
   return (
     <Section className="bg-bg">
-      <div className="bg-white rounded-[24px] p-[40px] max-w-full relative overflow-hidden">
+      <div className="bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-[40px] max-w-full relative overflow-hidden">
         {/* Notebook line */}
-        <div className="absolute top-0 bottom-0 left-[32px] w-[1px] bg-pink-500 z-10" />
+        <div className="absolute top-0 bottom-0 left-[20px] md:left-[32px] w-[1px] bg-pink-500 z-10" />
         
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
           {/* Left Column: Text */}
           <div 
-            className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px] pl-[64px] relative"
+            className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px] pl-[40px] md:pl-[64px] relative"
             style={{
-              backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 31px, #F0EBE1 31px, #F0EBE1 32px)',
-              backgroundSize: '100% 32px',
-              backgroundAttachment: 'local'
+              backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 27px, #F0EBE1 27px, #F0EBE1 28px)',
+              backgroundSize: '100% 28px',
+              backgroundAttachment: 'local',
+              ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? {
+                backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 31px, #F0EBE1 31px, #F0EBE1 32px)',
+                backgroundSize: '100% 32px'
+              } : {})
             }}
           >
-            <h2 className="text-[32px] font-bold text-navy-900 text-left">
+            <h2 className="font-bold text-navy-900 text-left">
               Что такое Зачёт и чем он помогает
             </h2>
             

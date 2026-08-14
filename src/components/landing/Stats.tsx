@@ -31,7 +31,7 @@ export function Stats() {
             key={s.label}
             className={`flex flex-col items-center justify-center h-[132px] rounded-[20px] border text-center ${toneStyles[s.tone || 'white']}`}
           >
-            <span className={`text-[40px] font-bold leading-none ${valueColor[s.tone || 'white']}`}>
+            <span className={`text-[30px] md:text-[40px] font-bold leading-none ${valueColor[s.tone || 'white']}`}>
               {s.value}
             </span>
             <span className={`mt-[6px] text-[13px] ${labelColor[s.tone || 'white']}`}>

@@ -13,8 +13,8 @@ export function ResultDemo() {
           {copy.demo.subtitle}
         </p>
 
-        <div className="relative mt-[32px] pb-[40px]">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[460px]">
+        <div className="relative mt-[32px] pb-[40px] flex flex-col md:block">
+          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[280px] md:h-[460px]">
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
@@ -24,11 +24,11 @@ export function ResultDemo() {
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
                 </div>
-                <div className="flex-1 text-center text-[13px] text-muted">
+                <div className="flex-1 text-center text-[13px] text-muted truncate px-2">
                   Влияние крещения Руси на становление государственности
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[28px] items-center rounded-full border border-navy-900 px-3 text-[12px] font-medium text-navy-900">
+                  <div className="hidden md:flex h-[28px] items-center rounded-full border border-navy-900 px-3 text-[12px] font-medium text-navy-900">
                     Презентация
                   </div>
                   <div className="flex h-[28px] items-center rounded-full bg-navy-900 px-3 text-[12px] font-medium text-white">
@@ -47,7 +47,7 @@ export function ResultDemo() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
+                <div className="flex-1 bg-white p-6 md:p-8 text-left overflow-y-auto">
                   <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E8E2D8] px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
@@ -94,7 +94,7 @@ export function ResultDemo() {
           </div>
 
           <div 
-            className="absolute bottom-[-24px] right-[-40px] w-[380px] rounded-[24px] bg-white p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E8E2D8] z-20 max-md:right-0 max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]"
+            className="mt-4 md:mt-0 md:absolute md:bottom-[-24px] md:right-[-40px] w-full md:w-[380px] rounded-[20px] md:rounded-[24px] bg-white p-5 md:p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E8E2D8] z-20"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">
@@ -102,9 +102,9 @@ export function ResultDemo() {
               </div>
               <span className="text-[14px] text-muted">{card.author}</span>
             </div>
-            <h3 className="mt-4 text-[16px] font-display">{card.title}</h3>
+            <h3 className="mt-4 text-[18px] md:text-[16px] font-display">{card.title}</h3>
             <div className="mt-2">
-              <p className="line-clamp-3 text-[13px] leading-relaxed text-muted">
+              <p className="line-clamp-3 text-[14px] md:text-[13px] leading-relaxed text-muted">
                 {card.lines?.[0]}
               </p>
 

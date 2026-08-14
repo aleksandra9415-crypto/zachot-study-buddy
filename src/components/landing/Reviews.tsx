@@ -7,7 +7,7 @@ export const Reviews = () => {
 
   return (
     <Section className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
+      <h2 className="text-center font-bold text-navy-950">
         Что говорят студенты
       </h2>
       
@@ -15,7 +15,7 @@ export const Reviews = () => {
         {demoReviews.map((review, idx) => (
           <div 
             key={idx} 
-            className={`bg-white rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50 ${idx === 1 ? 'rotate-[1.5deg] z-10' : ''}`}
+            className={`bg-white rounded-[16px] md:rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50 ${idx === 1 ? 'md:rotate-[1.5deg] md:z-10' : ''}`}
           >
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (

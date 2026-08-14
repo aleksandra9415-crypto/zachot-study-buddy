@@ -11,18 +11,18 @@ export const Pricing = () => {
 
   return (
     <Section id="pricing" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
+      <h2 className="text-center font-bold text-navy-950">
         Выбери, сколько тебе нужно
       </h2>
 
       {/* Period Switcher */}
-      <div className="flex justify-center mt-[24px] mb-16">
-        <div className="inline-flex p-1 bg-white border border-[#E8E2D8] rounded-full">
+      <div className="flex justify-center mt-[24px] mb-8 md:mb-16">
+        <div className="inline-flex p-1 bg-white border border-[#E8E2D8] rounded-full overflow-x-auto no-scrollbar max-w-full">
           {periods.map((period: any) => (
             <button
               key={period.id}
               onClick={() => setActivePeriod(period.id as PeriodId)}
-              className={`relative px-6 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+              className={`relative px-4 md:px-6 py-2 rounded-full text-[13px] md:text-sm font-medium transition-all flex items-center gap-2 shrink-0 ${
                 activePeriod === period.id 
                 ? 'bg-navy-900 text-white shadow-md' 
                 : 'text-muted hover:text-navy-900'
@@ -40,14 +40,14 @@ export const Pricing = () => {
       </div>
 
       {/* Plans Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.25fr_1fr] gap-4 items-stretch">
+      <div className="flex flex-col md:grid md:grid-cols-[1fr_1.25fr_1fr] gap-4 items-stretch">
         {demoPlans.map((plan) => {
           const price = DEMO_DATA ? plan.price[activePeriod] : "——";
           
           return (
             <div 
               key={plan.id}
-              className={`rounded-[24px] p-6 md:p-8 flex flex-col gap-8 transition-all duration-300 border ${
+              className={`rounded-[20px] md:rounded-[24px] p-5 md:p-8 flex flex-col gap-8 transition-all duration-300 border ${
                 plan.featured 
                 ? 'bg-navy-900 text-white border-navy-900 shadow-xl z-10 md:-my-4' 
                 : 'bg-white text-navy-900 border-orange-50'

@@ -42,7 +42,7 @@ export function Header() {
 
         <a
           href="#"
-          className="inline-flex h-[52px] items-center rounded-full bg-navy-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+          className="inline-flex h-[44px] md:h-[52px] items-center rounded-full bg-navy-900 px-[18px] md:px-7 text-[14px] md:text-[16px] font-medium text-white transition-opacity hover:opacity-90"
         >
           {copy.ctaPrimary}
         </a>

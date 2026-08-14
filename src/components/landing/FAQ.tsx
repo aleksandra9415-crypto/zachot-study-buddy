@@ -13,7 +13,7 @@ export const FAQ = () => {
   return (
     <Section id="faq" className="bg-bg">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="text-[32px] font-bold text-navy-900 text-center">
+        <h2 className="font-bold text-navy-900 text-center">
           Частые вопросы
         </h2>
         
