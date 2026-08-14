@@ -7,7 +7,7 @@ export function Hero() {
     <Section outerClassName="py-0 md:py-0" className="px-6 md:px-0">
       <div className="gradient-dark rounded-[32px] p-[48px] text-white md:p-[48px]">
         <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
-          {copy.hero.h1}
+          Учёба без ночных <Marker>дедлайнов</Marker>
         </h1>
         <p className="mt-6 max-w-[640px] text-[18px] text-teal-100">
           {copy.hero.subtitle}
