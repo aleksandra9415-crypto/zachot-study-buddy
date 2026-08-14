@@ -79,6 +79,7 @@ export function Examples() {
           </article>
         ))}
       </div>
+      </div>
     </Section>
   );
 }
