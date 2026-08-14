@@ -15,7 +15,7 @@ export const Comparison = () => {
         <div className="flex flex-col">
           <div className="min-h-[64px]" />
           {comparison.map((row, idx) => (
-            <div key={idx} className="min-h-[64px] flex items-center justify-end text-[15px] text-muted text-right pr-4">
+            <div key={idx} className="min-h-[64px] flex items-center justify-end text-[14px] text-navy-900 font-semibold text-right pr-4">
               {row.label}
             </div>
           ))}
@@ -32,20 +32,20 @@ export const Comparison = () => {
           {comparison.map((row, idx) => (
             <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#EFF2F4]' : ''}`}>
               <Check className="w-5 h-5 text-teal-500 shrink-0" />
-              <span className="text-[14px] text-navy-900 leading-snug">{row.us}</span>
+              <span className="text-[14px] text-navy-900 font-normal leading-snug">{row.us}</span>
             </div>
           ))}
         </div>
 
         {/* Right column: Them */}
-        <div className="bg-bg rounded-[24px] px-5 flex flex-col">
+        <div className="bg-[#E9EEF2] rounded-[24px] px-5 flex flex-col">
           <div className="min-h-[64px] flex items-center">
             <span className="text-muted font-medium text-[16px]">Обычные нейросети</span>
           </div>
           {comparison.map((row, idx) => (
-            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#EFF2F4]' : ''}`}>
+            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#D8E1E8]' : ''}`}>
               <X className="w-5 h-5 text-muted shrink-0" />
-              <span className="text-[14px] text-muted leading-snug">{row.them}</span>
+              <span className="text-[14px] text-muted font-normal leading-snug">{row.them}</span>
             </div>
           ))}
         </div>
