@@ -6,39 +6,42 @@ export function ResultDemo() {
 
   return (
     <Section className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-[48px] text-white">
-        <h2 className="text-center text-[28px] md:text-[40px]">{copy.demo.h2}</h2>
-        <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-200">
+      <div className="gradient-dark rounded-[32px] p-[48px] text-surface">
+        <h2 className="text-center text-[28px] md:text-[40px] font-heading font-extrabold">{copy.demo.h2}</h2>
+        <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-100">
+
           {copy.demo.subtitle}
         </p>
 
         <div className="relative mt-[32px] pb-[24px]">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[380px]">
+          <div className="overflow-hidden rounded-[16px] bg-surface shadow-2xl h-[380px]">
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
-              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E3E8EC] bg-bg px-4">
+              <div className="flex h-[44px] shrink-0 items-center border-b border-line bg-paper px-4">
                 <div className="flex gap-1.5">
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-line" />
+
                 </div>
                 <div className="flex-1 text-center text-[13px] text-muted">
                   Влияние крещения Руси на становление государственности
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[28px] items-center rounded-full border border-navy-900 px-3 text-[12px] font-medium text-navy-900">
+                  <div className="flex h-[28px] items-center rounded-full border border-ink-900 px-3 text-[12px] font-medium text-ink-900">
                     Презентация
                   </div>
-                  <div className="flex h-[28px] items-center rounded-full bg-navy-900 px-3 text-[12px] font-medium text-white">
+                  <div className="flex h-[28px] items-center rounded-full bg-ink-900 px-3 text-[12px] font-medium text-surface">
                     Скачать
                   </div>
+
                 </div>
               </div>
 
               <div className="flex flex-1 overflow-hidden">
                 {/* Left Sidebar */}
-                <div className="flex w-[48px] flex-col items-center bg-bg py-5">
+                <div className="flex w-[48px] flex-col items-center bg-paper py-5">
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
@@ -46,8 +49,8 @@ export function ResultDemo() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
-                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E3E8EC] px-4 text-[13px] text-muted">
+                <div className="flex-1 bg-surface p-8 text-left overflow-y-auto">
+                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-line px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
                       width="10"
@@ -65,17 +68,17 @@ export function ResultDemo() {
                       />
                     </svg>
                   </div>
-                  <h4 className="mb-4 text-[18px] font-bold text-navy-900">
+                  <h4 className="mb-4 text-[18px] font-bold text-ink-900">
                     Введение
                   </h4>
                   <div className="space-y-6">
-                    <p className="text-[13px] leading-[1.7] text-navy-900">
+                    <p className="text-[13px] leading-[1.7] text-ink-900">
                       {card.lines?.[0]?.split(" ").slice(0, 40).join(" ")}...
                     </p>
                     
                     <div>
-                      <h5 className="text-[15px] font-bold text-navy-900 mb-2">1. Историческая обстановка</h5>
-                      <p className="text-[13px] leading-[1.7] text-navy-900">
+                      <h5 className="text-[15px] font-bold text-ink-900 mb-2">1. Историческая обстановка</h5>
+                      <p className="text-[13px] leading-[1.7] text-ink-900">
                         К концу X века Древнерусское государство объединяло земли с разной племенной традицией и слабыми внутренними связями. Языческий культ не давал общей идеологической основы, а внешнеполитические контакты требовали понятного для соседей религиозного языка.
                       </p>
                     </div>
@@ -85,9 +88,9 @@ export function ResultDemo() {
             </div>
           </div>
 
-          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-white p-6 text-navy-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
+          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-surface p-6 text-ink-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-orange-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-[16px] font-bold text-amber-500">
                 К
               </div>
               <span className="text-[14px] text-muted">{card.author}</span>
@@ -103,11 +106,12 @@ export function ResultDemo() {
               {card.meta.map((m) => (
                 <span
                   key={m}
-                  className="rounded-full bg-bg px-3 py-1 text-[12px] text-navy-900"
+                  className="rounded-full bg-paper px-3 py-1 text-[12px] text-ink-900"
                 >
                   {m}
                 </span>
               ))}
+
             </div>
           </div>
         </div>
