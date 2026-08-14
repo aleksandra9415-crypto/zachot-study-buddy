@@ -11,7 +11,7 @@ export const Pricing = () => {
 
   return (
     <Section id="pricing" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
         Выбери, сколько тебе нужно
       </h2>
 

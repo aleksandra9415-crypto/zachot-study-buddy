@@ -6,7 +6,7 @@ import { Section } from "@/components/layout/Section";
 export const Comparison = () => {
   return (
     <Section id="comparison" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
         Чем отличается от обычного чат-бота
       </h2>
       

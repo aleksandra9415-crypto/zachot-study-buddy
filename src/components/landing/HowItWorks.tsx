@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 export function HowItWorks() {
   return (
     <Section id="how" className="px-6 md:px-0">
-      <h2 className="text-center text-[28px] md:text-[40px]">{copy.how.h2}</h2>
+      <h2 className="text-center text-[28px] md:text-[40px] mb-[24px] md:mb-[32px]">{copy.how.h2}</h2>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => {
