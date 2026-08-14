@@ -154,6 +154,11 @@ export const comparison = [
   },
 ];
 
+export const periods = [
+  { id: "m1", label: "На месяц", discount: null },
+  { id: "m3", label: "На 3 месяца", discount: "−25%" },
+  { id: "m12", label: "На год", discount: "−45%" },
+];
 
 export const faq = [
   {
