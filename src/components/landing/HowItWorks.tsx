@@ -14,12 +14,12 @@ export function HowItWorks() {
             <div
               key={step.n}
               className={`flex flex-col rounded-[24px] p-6 ${
-                first ? "bg-orange-500 text-white" : "bg-white text-navy-900"
+                first ? "bg-orange-500 text-navy-900" : "bg-white text-navy-900"
               }`}
             >
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-[8px] text-[14px] font-bold ${
-                  first ? "bg-white text-orange-500" : "bg-orange-100 text-navy-900"
+                  first ? "bg-white text-navy-900" : "bg-orange-100 text-navy-900"
                 }`}
               >
                 {step.n}

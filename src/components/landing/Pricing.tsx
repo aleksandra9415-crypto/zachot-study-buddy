@@ -17,7 +17,7 @@ export const Pricing = () => {
 
       {/* Period Switcher */}
       <div className="flex justify-center mb-16">
-        <div className="inline-flex p-1 bg-white border border-[#E3E8EC] rounded-full">
+        <div className="inline-flex p-1 bg-white border border-[#E8E2D8] rounded-full">
           {periods.map((period: any) => (
             <button
               key={period.id}
@@ -30,7 +30,7 @@ export const Pricing = () => {
             >
               {period.label}
               {period.discount && (
-                <span className="bg-teal-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
+                <span className="bg-pink-500 text-navy-900 text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
                   {period.discount}
                 </span>
               )}
@@ -85,7 +85,7 @@ export const Pricing = () => {
 
               <button className={`w-full h-[52px] rounded-full font-bold mt-auto transition-all ${
                 plan.featured 
-                ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-lg shadow-orange-500/20' 
+                ? 'bg-orange-500 text-navy-900 hover:opacity-90 shadow-lg shadow-orange-500/20' 
                 : 'border border-navy-900 text-navy-900 hover:bg-navy-50'
               }`}>
                 Выбрать

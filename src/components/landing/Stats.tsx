@@ -2,7 +2,7 @@ import { stats } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 
 const toneClass: Record<string, string> = {
-  accent: "bg-orange-500 text-white",
+  accent: "bg-orange-500 text-navy-900",
   light: "bg-orange-100 text-navy-900",
   white: "bg-white text-navy-900",
   dark: "bg-navy-900 text-white",
