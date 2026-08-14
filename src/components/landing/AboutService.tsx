@@ -3,12 +3,12 @@ import { FileCheck, ListOrdered, SlidersHorizontal, Wallet } from "lucide-react"
 
 export const AboutService = () => {
   return (
-    <Section className="bg-bg">
-      <div className="bg-white rounded-[24px] p-[40px] max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
+    <Section className="px-6 md:px-0">
+      <div className="bg-surface rounded-[32px] p-[40px] max-w-full border border-line shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-[40px] items-start">
           {/* Left Column: Text */}
-          <div className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px]">
-            <h2 className="text-[32px] font-bold text-navy-900 text-left mb-[24px] md:mb-[32px]">
+          <div className="text-[16px] text-muted leading-[1.7] space-y-6">
+            <h2 className="text-[28px] md:text-[40px] font-nunito font-extrabold text-ink-900 tracking-[-0.01em] text-left mb-[24px] md:mb-[32px]">
               Что такое Зачёт и чем он помогает
             </h2>
             
@@ -26,44 +26,44 @@ export const AboutService = () => {
           </div>
 
           {/* Right Column: Comparison Card */}
-          <div className="bg-[#E9EEF2] rounded-[24px] p-[24px]">
-            <h3 className="text-[15px] font-bold text-navy-900 mb-5">
-              Чем отличается от чат-бота
+          <div className="bg-line/30 rounded-[32px] p-8 border border-line">
+            <h3 className="text-[20px] font-nunito font-extrabold text-ink-900 mb-6">
+              В чём разница
             </h3>
             
-            <div className="flex flex-col gap-5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <FileCheck className="w-5 h-5 text-orange-500" />
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <FileCheck className="w-5 h-5 text-teal-600" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Понимает формат учебных работ: структура, объём, оформление
                 </span>
               </div>
               
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <ListOrdered className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <ListOrdered className="w-5 h-5 text-teal-600" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Показывает ход решения, а не только ответ
                 </span>
               </div>
               
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <SlidersHorizontal className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <SlidersHorizontal className="w-5 h-5 text-teal-600" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Собирает работу по шагам, каждый можно поправить
                 </span>
               </div>
               
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <Wallet className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-[12px] flex items-center justify-center shrink-0">
+                  <Wallet className="w-5 h-5 text-teal-600" />
                 </div>
-                <span className="text-[14px] text-navy-900 leading-snug">
+                <span className="text-[14px] text-ink-900 leading-snug">
                   Работает из России и принимает оплату рублями
                 </span>
               </div>
