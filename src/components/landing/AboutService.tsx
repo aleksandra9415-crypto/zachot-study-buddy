@@ -22,7 +22,7 @@ export const AboutService = () => {
               } : {})
             }}
           >
-            <h2 className="text-[32px] font-bold text-navy-900 text-left">
+            <h2 className="font-bold text-navy-900 text-left">
               Что такое Зачёт и чем он помогает
             </h2>
             

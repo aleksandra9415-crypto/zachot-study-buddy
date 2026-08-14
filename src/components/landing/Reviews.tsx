@@ -7,7 +7,7 @@ export const Reviews = () => {
 
   return (
     <Section className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
+      <h2 className="text-center font-bold text-navy-950">
         Что говорят студенты
       </h2>
       
