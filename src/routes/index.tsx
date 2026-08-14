@@ -34,7 +34,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-bg">
       <Header />
-      <main className="flex flex-col gap-14 py-14 md:gap-24 md:py-24">
+      <main className="flex flex-col">
         <Hero />
         <Examples />
         <Stats />
