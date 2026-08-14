@@ -6,16 +6,16 @@ export function ResultDemo() {
 
   return (
     <Section className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-6 pb-16 text-white md:p-16 md:pb-16">
+      <div className="gradient-dark rounded-[32px] p-[48px] text-white">
         <h2 className="text-center text-[28px] md:text-[40px]">{copy.demo.h2}</h2>
-        <p className="mx-auto mt-4 max-w-[640px] text-center text-[16px] text-teal-200">
+        <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-200">
           {copy.demo.subtitle}
         </p>
 
-        <div className="relative mt-10 pb-[40px]">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl">
+        <div className="relative mt-[32px] pb-[24px]">
+          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[380px]">
             {/* Mockup Editor */}
-            <div className="flex aspect-[16/10] w-full flex-col">
+            <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
               <div className="flex h-[44px] shrink-0 items-center border-b border-[#E3E8EC] bg-bg px-4">
                 <div className="flex gap-1.5">
@@ -46,7 +46,7 @@ export function ResultDemo() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 bg-white p-8 text-left">
+                <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
                   <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E3E8EC] px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
@@ -68,18 +68,24 @@ export function ResultDemo() {
                   <h4 className="mb-4 text-[18px] font-bold text-navy-900">
                     Введение
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-6">
                     <p className="text-[13px] leading-[1.7] text-navy-900">
                       {card.lines?.[0]?.split(" ").slice(0, 40).join(" ")}...
                     </p>
-
+                    
+                    <div>
+                      <h5 className="text-[15px] font-bold text-navy-900 mb-2">1. Историческая обстановка</h5>
+                      <p className="text-[13px] leading-[1.7] text-navy-900">
+                        К концу X века Древнерусское государство объединяло земли с разной племенной традицией и слабыми внутренними связями. Языческий культ не давал общей идеологической основы, а внешнеполитические контакты требовали понятного для соседей религиозного языка.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 w-[calc(100%-32px)] max-w-[420px] -translate-x-1/2 translate-y-1/2 rounded-[24px] bg-white p-6 text-navy-900 shadow-xl md:translate-y-1/3">
+          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-white p-6 text-navy-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-orange-500">
                 К
@@ -104,7 +110,6 @@ export function ResultDemo() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </Section>

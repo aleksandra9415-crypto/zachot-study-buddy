@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 export function Hero() {
   return (
     <Section outerClassName="py-0 md:py-0" className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-8 text-white md:p-16">
+      <div className="gradient-dark rounded-[32px] p-[48px] text-white md:p-[48px]">
         <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
           {copy.hero.h1}
         </h1>

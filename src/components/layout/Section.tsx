@@ -10,7 +10,13 @@ interface SectionProps {
 
 export const Section = ({ id, className, children, outerClassName }: SectionProps) => {
   return (
-    <section id={id} className={cn("w-full py-14 md:py-24 first:pt-0", outerClassName)}>
+    <section 
+      id={id} 
+      className={cn(
+        "w-full pb-[48px] md:pb-[80px] first:pt-[32px]", 
+        outerClassName
+      )}
+    >
       <div className={cn("mx-auto max-w-[1200px]", className)}>
         {children}
       </div>

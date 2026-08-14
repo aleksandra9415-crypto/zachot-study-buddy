@@ -3,8 +3,8 @@ import { Section } from "@/components/layout/Section";
 export const AboutService = () => {
   return (
     <Section className="bg-bg">
-      <div className="bg-white rounded-[24px] p-10 max-w-full">
-        <h2 className="text-[32px] font-bold text-navy-900 text-left mb-8">
+      <div className="bg-white rounded-[24px] p-[40px] max-w-full">
+        <h2 className="text-[32px] font-bold text-navy-900 text-left mb-[24px] md:mb-[32px]">
           Что такое Зачёт и чем он помогает
         </h2>
         
