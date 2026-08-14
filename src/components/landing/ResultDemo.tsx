@@ -13,8 +13,8 @@ export function ResultDemo() {
           {copy.demo.subtitle}
         </p>
 
-        <div className="relative mt-[32px] pb-[24px]">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[380px]">
+        <div className="relative mt-[32px] pb-[40px]">
+          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[460px]">
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
@@ -80,22 +80,31 @@ export function ResultDemo() {
                         К концу X века Древнерусское государство объединяло земли с разной племенной традицией и слабыми внутренними связями. Языческий культ не давал общей идеологической основы, а внешнеполитические контакты требовали понятного для соседей религиозного языка.
                       </p>
                     </div>
+
+                    <div>
+                      <h5 className="text-[15px] font-bold text-navy-900 mb-2">2. Роль княжеской власти</h5>
+                      <p className="text-[13px] leading-[1.7] text-navy-900">
+                        Владимир Святославич рассматривал новую веру как инструмент централизации. Единый культ снимал противоречия между племенными традициями и давал князю религиозное обоснование власти, которого прежний пантеон не обеспечивал.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-white p-6 text-navy-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
+          <div 
+            className="absolute bottom-[-24px] right-[-40px] w-[380px] rounded-[24px] bg-white p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E8E2D8] z-20 max-md:right-0 max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]"
+          >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">
                 К
               </div>
-              <span className="text-[14px] text-muted">{card.author}</span>
+              <span className="text-[14px] text-brand-muted">{card.author}</span>
             </div>
             <h3 className="mt-4 text-[16px] font-display">{card.title}</h3>
             <div className="mt-2">
-              <p className="line-clamp-3 text-[13px] leading-relaxed text-muted">
+              <p className="line-clamp-3 text-[13px] leading-relaxed text-brand-muted">
                 {card.lines?.[0]}
               </p>
 
