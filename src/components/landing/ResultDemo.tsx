@@ -65,7 +65,7 @@ export function ResultDemo() {
                       />
                     </svg>
                   </div>
-                  <h4 className="mb-4 text-[18px] font-display text-navy-900">
+                  <h4 className="mb-4 text-[18px] font-bold text-navy-900">
                     Введение
                   </h4>
                   <div className="space-y-6">
@@ -74,7 +74,7 @@ export function ResultDemo() {
                     </p>
                     
                     <div>
-                      <h5 className="text-[15px] font-display text-navy-900 mb-2">1. Историческая обстановка</h5>
+                      <h5 className="text-[15px] font-bold text-navy-900 mb-2">1. Историческая обстановка</h5>
                       <p className="text-[13px] leading-[1.7] text-navy-900">
                         К концу X века Древнерусское государство объединяло земли с разной племенной традицией и слабыми внутренними связями. Языческий культ не давал общей идеологической основы, а внешнеполитические контакты требовали понятного для соседей религиозного языка.
                       </p>
