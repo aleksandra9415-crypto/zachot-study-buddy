@@ -6,9 +6,10 @@ export function ResultDemo() {
 
   return (
     <Section className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-[48px] text-white">
-        <h2 className="text-center text-[28px] md:text-[40px]">{copy.demo.h2}</h2>
+      <div className="gradient-dark rounded-[32px] p-[48px] text-surface">
+        <h2 className="text-center text-[28px] md:text-[40px] font-heading font-extrabold">{copy.demo.h2}</h2>
         <p className="mx-auto mt-[24px] md:mt-[32px] max-w-[640px] text-center text-[16px] text-teal-100">
+
           {copy.demo.subtitle}
         </p>
 
@@ -17,7 +18,7 @@ export function ResultDemo() {
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
-              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E3E8EC] bg-bg px-4">
+              <div className="flex h-[44px] shrink-0 items-center border-b border-line bg-paper px-4">
                 <div className="flex gap-1.5">
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
@@ -30,15 +31,16 @@ export function ResultDemo() {
                   <div className="flex h-[28px] items-center rounded-full border border-ink-900 px-3 text-[12px] font-medium text-ink-900">
                     Презентация
                   </div>
-                  <div className="flex h-[28px] items-center rounded-full bg-ink-900 px-3 text-[12px] font-medium text-white">
+                  <div className="flex h-[28px] items-center rounded-full bg-ink-900 px-3 text-[12px] font-medium text-surface">
                     Скачать
                   </div>
+
                 </div>
               </div>
 
               <div className="flex flex-1 overflow-hidden">
                 {/* Left Sidebar */}
-                <div className="flex w-[48px] flex-col items-center bg-bg py-5">
+                <div className="flex w-[48px] flex-col items-center bg-paper py-5">
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
                   <div className="mb-5 h-5 w-5 rounded-sm bg-muted/20" />
@@ -47,7 +49,7 @@ export function ResultDemo() {
 
                 {/* Main Content */}
                 <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
-                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E3E8EC] px-4 text-[13px] text-muted">
+                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-line px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
                       width="10"
@@ -103,11 +105,12 @@ export function ResultDemo() {
               {card.meta.map((m) => (
                 <span
                   key={m}
-                  className="rounded-full bg-bg px-3 py-1 text-[12px] text-ink-900"
+                  className="rounded-full bg-paper px-3 py-1 text-[12px] text-ink-900"
                 >
                   {m}
                 </span>
               ))}
+
             </div>
           </div>
         </div>

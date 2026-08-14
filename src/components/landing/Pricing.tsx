@@ -11,9 +11,10 @@ export const Pricing = () => {
 
   return (
     <Section id="pricing" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-ink-950">
+      <h2 className="text-center text-3xl md:text-4xl font-heading font-extrabold mb-[24px] md:mb-[32px] text-ink-900">
         Выбери, сколько тебе нужно
       </h2>
+
 
       {/* Period Switcher */}
       <div className="flex justify-center mb-16">
@@ -49,12 +50,13 @@ export const Pricing = () => {
               key={plan.id}
               className={`rounded-[24px] p-6 md:p-8 flex flex-col gap-8 transition-all duration-300 border ${
                 plan.featured 
-                ? 'bg-ink-900 text-white border-ink-900 shadow-xl z-10 md:-my-4' 
-                : 'bg-white text-ink-900 border-orange-50'
+                ? 'bg-ink-900 text-surface border-ink-900 shadow-xl z-10 md:-my-4' 
+                : 'bg-surface text-ink-900 border-line'
               }`}
+
             >
               <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold">{plan.name}</h3>
+                <h3 className="text-xl font-heading font-extrabold">{plan.name}</h3>
                 <p className={`text-[13px] ${plan.featured ? 'text-teal-100' : 'text-muted'}`}>
                   {plan.caption}
                 </p>
@@ -62,7 +64,7 @@ export const Pricing = () => {
 
               <div className="flex flex-col gap-2">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{price}</span>
+                  <span className="text-4xl font-heading font-extrabold">{price}</span>
                   <span className="text-sm font-medium opacity-70">₽/мес.</span>
                 </div>
                 <p className={`text-[13px] ${plan.featured ? 'text-teal-100/70' : 'text-muted'}`}>
@@ -85,8 +87,9 @@ export const Pricing = () => {
 
               <button className={`w-full h-[52px] rounded-full font-bold mt-auto transition-all ${
                 plan.featured 
-                ? 'bg-amber-500 text-white hover:bg-orange-600 shadow-lg shadow-orange-500/20' 
-                : 'border border-ink-900 text-ink-900 hover:bg-navy-50'
+                ? 'bg-amber-500 text-ink-900 hover:bg-amber-600 shadow-lg shadow-amber-500/20' 
+                : 'border border-ink-900 text-ink-900 hover:bg-paper'
+
               }`}>
                 Выбрать
               </button>

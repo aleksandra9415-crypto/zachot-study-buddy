@@ -12,9 +12,10 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-6">
             <div className="flex flex-col gap-3">
-              <div className="w-10 h-10 bg-amber-500 rounded-[12px] flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 bg-amber-500 rounded-[12px] flex items-center justify-center text-ink-900 font-bold text-xl">
                 З
               </div>
+
               <span className="text-[18px] font-bold">{BRAND.name}</span>
             </div>
             <div className="space-y-1">
@@ -49,6 +50,7 @@ export const Footer = () => {
 
         {/* Bottom Area */}
         <div className="mt-8 pt-8 border-t border-ink-950 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+
           <p className="text-[13px] text-[#6B7C8C]">
             © 2026 · Реквизиты появятся после регистрации юрлица
           </p>

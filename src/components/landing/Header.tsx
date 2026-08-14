@@ -20,9 +20,10 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
         <a href="#" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-amber-500 text-[18px] font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-amber-500 text-[18px] font-bold text-ink-900">
             З
           </span>
+
           <span className="text-[18px] font-bold tracking-[-0.02em] text-ink-900">
             {BRAND.name}
           </span>
@@ -42,8 +43,9 @@ export function Header() {
 
         <a
           href="#"
-          className="inline-flex h-[52px] items-center rounded-full bg-ink-900 px-7 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+          className="inline-flex h-[52px] items-center rounded-full bg-ink-900 px-7 text-[16px] font-bold text-surface transition-opacity hover:opacity-90"
         >
+
           {copy.ctaPrimary}
         </a>
       </div>

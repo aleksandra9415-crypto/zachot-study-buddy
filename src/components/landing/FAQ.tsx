@@ -13,9 +13,10 @@ export const FAQ = () => {
   return (
     <Section id="faq" className="bg-bg">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="text-[32px] font-bold text-ink-900 text-center mb-[24px] md:mb-[32px]">
+        <h2 className="text-[32px] font-heading font-extrabold text-ink-900 text-center mb-[24px] md:mb-[32px]">
           Частые вопросы
         </h2>
+
         
         <div className="flex flex-col gap-3">
           {faq.map((item, index) => {

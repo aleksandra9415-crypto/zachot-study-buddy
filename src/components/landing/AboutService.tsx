@@ -37,9 +37,10 @@ export const AboutService = () => {
 
           {/* Right Column: Comparison Card */}
           <div className="bg-teal-100 rounded-[24px] p-[24px]">
-            <h3 className="text-[15px] font-bold text-ink-900 mb-5">
+            <h3 className="text-[15px] font-heading font-extrabold text-ink-900 mb-5">
               Чем отличается от чат-бота
             </h3>
+
             
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-3">

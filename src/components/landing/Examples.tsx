@@ -20,7 +20,7 @@ export function Examples() {
 
   return (
     <Section id="examples" className="px-6 md:px-0">
-      <h2 className="text-center text-[28px] md:text-[40px] mb-[24px] md:mb-[32px]">{copy.examples.h2}</h2>
+      <h2 className="text-center text-[28px] md:text-[40px] font-heading font-extrabold text-ink-900 mb-[24px] md:mb-[32px]">{copy.examples.h2}</h2>
 
       <div className="mt-8 flex gap-3">
         <button

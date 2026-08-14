@@ -9,6 +9,7 @@ export const Comparison = () => {
       <h2 className="text-center text-3xl md:text-4xl font-heading font-extrabold mb-[24px] md:mb-[32px] text-ink-900">
         Чем отличается от обычного чат-бота
       </h2>
+
       
       <div className="grid grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
         {/* Left column: labels */}
@@ -27,6 +28,7 @@ export const Comparison = () => {
             <div className="w-6 h-6 bg-amber-500 rounded-[6px] flex items-center justify-center text-ink-900 font-bold text-sm">
               З
             </div>
+
             <span className="font-heading font-extrabold text-ink-900 text-[16px]">{BRAND.name}</span>
           </div>
           {comparison.map((row, idx) => (
