@@ -1,4 +1,4 @@
-export default function Marker({ children, className = "text-orange-500" }) {
+export default function Marker({ children, className = "text-orange-500" }: { children: React.ReactNode, className?: string }) {
   return (
     <span style={{ position: "relative", display: "inline-block", whiteSpace: "nowrap" }}>
       <svg
