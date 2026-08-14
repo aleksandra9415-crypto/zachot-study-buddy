@@ -1,19 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
-import deskImg from "@/assets/illustrations/desk-scene.png";
 
 export function Personalization() {
   return (
     <section className="container-page">
       <div className="rounded-[32px] bg-white p-6 md:p-12">
         <div className="flex justify-center">
-          <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px]">
-            <img
-              src={deskImg}
-              alt="Иллюстрация: рабочий стол студента"
-              className="h-full w-full object-cover"
-            />
+          <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px] bg-teal-200">
+            <div className="absolute inset-0 flex items-center justify-center bg-navy-100 text-[14px] text-muted italic">
+              [Изображение рабочего стола]
+            </div>
           </div>
+
         </div>
 
         <h2 className="mt-10 text-center text-[28px] md:text-[40px]">
