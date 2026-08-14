@@ -18,7 +18,7 @@ export const Pricing = () => {
 
       {/* Period Switcher */}
       <div className="flex justify-center mb-16">
-        <div className="inline-flex p-1 bg-surface border border-[#E3E8EC] rounded-full">
+        <div className="inline-flex p-1 bg-surface border border-line rounded-full">
           {periods.map((period: any) => (
             <button
               key={period.id}
@@ -76,7 +76,7 @@ export const Pricing = () => {
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                      plan.featured ? 'bg-teal-600/20 text-teal-400' : 'bg-teal-50 text-teal-600'
+                      plan.featured ? 'bg-teal-600/20 text-teal-100' : 'bg-teal-100 text-teal-600'
                     }`}>
                       <Check className="w-3.5 h-3.5" />
                     </div>

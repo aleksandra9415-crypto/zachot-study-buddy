@@ -1,15 +1,13 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight, FileText, Calculator, Presentation } from "lucide-react";
 import { copy, examples } from "@/data/content";
+import { Section } from "@/components/layout/Section";
 
 const typeIcons: Record<string, any> = {
   "Текстовая работа": FileText,
   "Решение задачи": Calculator,
   "Презентация": Presentation,
 };
-
-
-import { Section } from "@/components/layout/Section";
 
 export function Examples() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -27,7 +25,7 @@ export function Examples() {
           type="button"
           aria-label="Назад"
           onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors hover:bg-amber-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors border border-line hover:bg-amber-100"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -35,7 +33,7 @@ export function Examples() {
           type="button"
           aria-label="Вперёд"
           onClick={() => scrollBy(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors hover:bg-amber-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors border border-line hover:bg-amber-100"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -48,7 +46,7 @@ export function Examples() {
         {examples.map((ex) => (
           <article
             key={ex.title}
-            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-surface p-6"
+            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-surface p-6 border border-line shadow-sm"
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-100 text-teal-600">
               {(() => {
@@ -57,7 +55,7 @@ export function Examples() {
               })()}
             </div>
 
-            <h3 className="mt-4 line-clamp-2 text-[16px] font-bold text-ink-900">
+            <h3 className="mt-4 line-clamp-2 text-[16px] font-heading font-extrabold text-ink-900">
               {ex.title}
             </h3>
             <div className="mt-auto pt-6 flex flex-wrap gap-x-1.5 gap-y-0.5 text-[12px] text-muted">
