@@ -30,7 +30,7 @@ export const Pricing = () => {
             >
               {period.label}
               {period.discount && (
-                <span className="bg-pink-500 text-ink-900 text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
+                <span className="bg-teal-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
                   {period.discount}
                 </span>
               )}

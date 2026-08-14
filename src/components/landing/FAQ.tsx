@@ -11,9 +11,9 @@ export const FAQ = () => {
   };
 
   return (
-    <Section id="faq" className="px-6 md:px-0">
+    <Section id="faq" className="bg-bg">
       <div className="max-w-[800px] mx-auto">
-        <h2 className="text-[28px] md:text-[40px] font-nunito font-extrabold tracking-[-0.01em] text-ink-900 text-center mb-[24px] md:mb-[32px]">
+        <h2 className="text-[32px] font-bold text-navy-900 text-center mb-[24px] md:mb-[32px]">
           Частые вопросы
         </h2>
         
@@ -23,13 +23,13 @@ export const FAQ = () => {
             return (
               <div 
                 key={index}
-                className="bg-surface rounded-[24px] border border-line shadow-sm overflow-hidden"
+                className="bg-white rounded-[16px] shadow-sm overflow-hidden"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-cream"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/50"
                 >
-                  <span className="text-[16px] font-bold text-ink-900 leading-tight">
+                  <span className="text-base font-medium text-navy-900 leading-tight">
                     {item.q}
                   </span>
                   <ChevronDown 
@@ -43,7 +43,7 @@ export const FAQ = () => {
                     isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-6 pb-5 text-[15px] leading-[1.6] text-muted border-t border-line pt-5">
+                  <div className="px-6 pb-5 text-[15px] leading-[1.6] text-muted">
                     {item.a}
                   </div>
                 </div>
