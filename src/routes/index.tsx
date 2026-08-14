@@ -10,6 +10,10 @@ import { Privacy } from "@/components/landing/Privacy";
 import { Comparison } from "@/components/landing/Comparison";
 import { Reviews } from "@/components/landing/Reviews";
 import { Pricing } from "@/components/landing/Pricing";
+import { FAQ } from "@/components/landing/FAQ";
+import { FinalCTA } from "@/components/landing/FinalCTA";
+import { AboutService } from "@/components/landing/AboutService";
+import { Footer } from "@/components/landing/Footer";
 import { BRAND } from "@/config/brand";
 
 const title = `${BRAND.name} — ${BRAND.tagline}`;
@@ -45,6 +49,10 @@ function Index() {
         <Comparison />
         <Reviews />
         <Pricing />
+        <FAQ />
+        <FinalCTA />
+        <AboutService />
+        <Footer />
       </main>
     </div>
   );
