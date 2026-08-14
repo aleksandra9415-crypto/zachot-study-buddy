@@ -1,11 +1,12 @@
 import { stats } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import { Shape } from "@/components/decor/Shape";
 
 const toneClass: Record<string, string> = {
-  accent: "bg-orange-500 text-white",
-  light: "bg-orange-100 text-navy-900",
-  white: "bg-white text-navy-900",
-  dark: "bg-navy-900 text-white",
+  accent: "bg-amber-500 text-ink-900",
+  light: "bg-amber-100 text-ink-900",
+  white: "bg-surface text-ink-900",
+  dark: "bg-ink-900 text-white",
 };
 
 const widths = [1.4, 1, 1, 1.3];
@@ -13,8 +14,9 @@ const widths = [1.4, 1, 1, 1.3];
 
 export function Stats() {
   return (
-    <Section className="px-6 md:px-0">
-      <div className="grid grid-cols-2 gap-4 md:flex">
+    <Section outerClassName="relative" className="px-6 md:px-0">
+      <Shape kind="circle" size={200} color="teal-600" position={{ top: -50, right: -60 }} />
+      <div className="relative z-10 grid grid-cols-2 gap-4 md:flex">
         {stats.map((s, i) => (
           <div
             key={s.label}
@@ -29,3 +31,4 @@ export function Stats() {
     </Section>
   );
 }
+
