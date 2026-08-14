@@ -5,6 +5,7 @@ import { footerLinks } from "@/data/content";
 export const Footer = () => {
   return (
     <Section className="bg-paper">
+
       <div className="bg-ink-900 rounded-[32px] p-[48px] w-full text-surface">
 
         {/* Top Area */}

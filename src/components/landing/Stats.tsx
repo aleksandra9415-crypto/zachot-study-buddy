@@ -25,7 +25,8 @@ export function Stats() {
             className={`relative z-10 flex h-[120px] flex-col justify-center rounded-[20px] p-6 ${toneClass[s.tone]}`}
           >
 
-            <span className="text-[36px] font-bold leading-none">{s.value}</span>
+            <span className="text-[36px] font-heading font-extrabold leading-none">{s.value}</span>
+
             <span className="mt-2 text-[14px]">{s.label}</span>
           </div>
         ))}
