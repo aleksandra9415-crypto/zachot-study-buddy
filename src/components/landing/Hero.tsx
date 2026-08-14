@@ -1,12 +1,16 @@
 import { copy, scenarios } from "@/data/content";
-
 import { Section } from "@/components/layout/Section";
+import Shape from "@/components/decor/Shape";
 
 export function Hero() {
   return (
     <Section outerClassName="py-0 md:py-0" className="px-6 md:px-0">
-      <div className="gradient-dark rounded-[32px] p-[48px] text-white md:p-[48px]">
-        <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
+      <div className="gradient-dark relative overflow-hidden rounded-[32px] p-[48px] text-white md:p-[48px]">
+        <Shape kind="circle" size={320} className="bg-teal-500" style={{ top: -120, right: -80 }} />
+        <Shape kind="diamond" size={120} className="bg-orange-500" style={{ bottom: -40, left: -30 }} />
+        
+        <div className="relative z-10">
+          <h1 className="max-w-[820px] text-[36px] leading-[1.05] md:text-[56px]">
           {copy.hero.h1}
         </h1>
         <p className="mt-6 max-w-[640px] text-[18px] text-teal-200">
@@ -36,6 +40,7 @@ export function Hero() {
           ))}
         </div>
       </div>
-    </Section>
+    </div>
+  </Section>
   );
 }
