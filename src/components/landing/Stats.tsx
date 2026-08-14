@@ -1,4 +1,5 @@
 import { stats } from "@/data/content";
+import { Section } from "@/components/layout/Section";
 
 const toneClass: Record<string, string> = {
   accent: "bg-orange-500 text-white",
@@ -9,9 +10,10 @@ const toneClass: Record<string, string> = {
 
 const widths = [1.4, 1, 1, 1.3];
 
+
 export function Stats() {
   return (
-    <section className="container-page">
+    <Section className="px-6 md:px-0">
       <div className="grid grid-cols-2 gap-4 md:flex">
         {stats.map((s, i) => (
           <div
@@ -24,6 +26,6 @@ export function Stats() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

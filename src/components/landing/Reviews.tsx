@@ -1,11 +1,12 @@
 import { Star } from "lucide-react";
 import { DEMO_DATA, demoReviews } from "@/data/demo";
+import { Section } from "@/components/layout/Section";
 
 export const Reviews = () => {
   if (!DEMO_DATA) return null;
 
   return (
-    <section className="container-1200 px-4 md:px-0 py-12 md:py-24">
+    <Section className="px-6 md:px-0">
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-navy-950">
         Что говорят студенты
       </h2>
@@ -40,6 +41,6 @@ export const Reviews = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

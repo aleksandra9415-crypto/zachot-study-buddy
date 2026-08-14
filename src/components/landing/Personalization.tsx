@@ -1,9 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
+import { Section } from "@/components/layout/Section";
+
 
 export function Personalization() {
   return (
-    <section className="container-page">
+    <Section className="px-6 md:px-0">
       <div className="rounded-[32px] bg-white p-6 md:p-12">
         <div className="flex justify-center">
           <div className="relative h-[400px] w-[280px] overflow-hidden rounded-[24px] bg-teal-200">
@@ -29,6 +31,6 @@ export function Personalization() {
           <ArrowRight className="h-4 w-4" />
         </button>
       </div>
-    </section>
+    </Section>
   );
 }

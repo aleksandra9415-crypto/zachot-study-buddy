@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
+import { Section } from "@/components/layout/Section";
 
 type PeriodId = "m1" | "m3" | "m12";
 
@@ -9,7 +10,7 @@ export const Pricing = () => {
   const [activePeriod, setActivePeriod] = useState<PeriodId>("m3");
 
   return (
-    <section id="pricing" className="container-1200 px-4 md:px-0 py-12 md:py-24">
+    <Section id="pricing" className="px-6 md:px-0">
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-navy-950">
         Выбери, сколько тебе нужно
       </h2>
@@ -93,6 +94,6 @@ export const Pricing = () => {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 };

@@ -18,7 +18,7 @@ export function Header() {
         scrolled ? "shadow-[0_2px_12px_rgba(6,33,50,0.08)]" : ""
       }`}
     >
-      <div className="container-page flex h-[72px] items-center justify-between gap-4">
+      <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
         <a href="#" className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-white">
             З
