@@ -11,12 +11,12 @@ export const Pricing = () => {
 
   return (
     <Section id="pricing" className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
         Выбери, сколько тебе нужно
       </h2>
 
       {/* Period Switcher */}
-      <div className="flex justify-center mb-16">
+      <div className="flex justify-center mt-[24px] mb-16">
         <div className="inline-flex p-1 bg-white border border-[#E8E2D8] rounded-full">
           {periods.map((period: any) => (
             <button

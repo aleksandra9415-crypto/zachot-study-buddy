@@ -7,11 +7,11 @@ export const Reviews = () => {
 
   return (
     <Section className="px-6 md:px-0">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-[24px] md:mb-[32px] text-navy-950">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-navy-950">
         Что говорят студенты
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-[24px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {demoReviews.map((review, idx) => (
           <div key={idx} className="bg-white rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50">
             <div className="flex gap-1">

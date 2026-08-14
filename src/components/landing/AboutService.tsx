@@ -8,11 +8,11 @@ export const AboutService = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[40px] items-start min-[901px]:grid-cols-[1.4fr_1fr]">
           {/* Left Column: Text */}
           <div className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px]">
-            <h2 className="text-[32px] font-bold text-navy-900 text-left mb-[24px] md:mb-[32px]">
+            <h2 className="text-[32px] font-bold text-navy-900 text-left">
               Что такое Зачёт и чем он помогает
             </h2>
             
-            <p>
+            <div className="mt-[24px]">
               Зачёт — образовательный сервис, который помогает студентам вузов и ссузов справляться с учебной нагрузкой: писать текстовые работы, решать задачи, готовить презентации и разбираться в темах перед экзаменом.
             </p>
             
@@ -22,7 +22,7 @@ export const AboutService = () => {
             
             <p>
               Сервис подходит студентам очной и заочной формы, а также старшеклассникам, которым нужно разобраться в теме самостоятельно.
-            </p>
+            </div>
           </div>
 
           {/* Right Column: Comparison Card */}

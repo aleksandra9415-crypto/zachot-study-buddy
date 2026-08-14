@@ -14,17 +14,23 @@ const widths = [1.4, 1, 1, 1.3];
 export function Stats() {
   return (
     <Section className="px-6 md:px-0">
-      <div className="grid grid-cols-2 gap-4 md:flex">
-        {stats.map((s, i) => (
-          <div
-            key={s.label}
-            style={{ flexGrow: widths[i], flexBasis: 0 }}
-            className={`flex h-[120px] flex-col justify-center rounded-[20px] p-6 ${toneClass[s.tone]}`}
-          >
-            <span className="text-[36px] font-bold leading-none">{s.value}</span>
-            <span className="mt-2 text-[14px]">{s.label}</span>
-          </div>
-        ))}
+      <div className="gradient-dark h-auto md:h-[132px] rounded-[24px] overflow-hidden">
+        <div className="grid grid-cols-2 md:grid-cols-4 h-full items-center p-6 md:p-0">
+          {stats.map((s, i) => (
+            <div
+              key={s.label}
+              className="relative flex flex-col items-center justify-center h-full text-center py-4 md:py-0"
+            >
+              {/* Vertical divider */}
+              {i < stats.length - 1 && (
+                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[56px] bg-navy-700" />
+              )}
+              
+              <span className="text-[40px] font-bold leading-none text-orange-500">{s.value}</span>
+              <span className="mt-[6px] text-[13px] text-[#8FA6AA]">{s.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );
