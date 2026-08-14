@@ -1,4 +1,5 @@
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import { FileCheck, ListOrdered, SlidersHorizontal, Wallet } from "lucide-react";
 
 export const AboutService = () => {
@@ -22,9 +23,9 @@ export const AboutService = () => {
               } : {})
             }}
           >
-            <h2 className="font-bold text-navy-900 text-left">
+            <SectionTitle className="text-left">
               Что такое Зачёт и чем он помогает
-            </h2>
+            </SectionTitle>
             
             <div className="mt-[24px] space-y-6">
               <p>

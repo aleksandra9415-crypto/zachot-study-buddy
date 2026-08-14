@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import Shape from "@/components/decor/Shape";
 
 
@@ -31,9 +32,9 @@ export function Personalization() {
 
           {/* Right Column: Content */}
           <div className="flex flex-col items-start text-left">
-            <h2 className="text-[28px] md:text-[40px] leading-tight font-display">
+            <SectionTitle className="text-left">
               {copy.personalization.h2}
-            </h2>
+            </SectionTitle>
             <p className="mt-[24px] md:mt-[32px] max-w-[480px] text-[16px] text-muted">
               {copy.personalization.text}
             </p>

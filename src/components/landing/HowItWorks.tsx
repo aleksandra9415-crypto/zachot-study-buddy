@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { copy, steps } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import { SectionTitle } from "@/components/ui/SectionTitle";
+import Marker from "@/components/decor/Marker";
 
 export function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
@@ -51,7 +53,7 @@ export function HowItWorks() {
 
   return (
     <Section id="how" className="px-6 md:px-0">
-      <h2 className="text-center font-display">{copy.how.h2}</h2>
+      <SectionTitle>Ты <Marker className="text-orange-500">ведёшь</Marker> процесс</SectionTitle>
 
       <div 
         className="mt-[24px] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
