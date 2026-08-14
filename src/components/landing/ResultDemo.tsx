@@ -17,11 +17,11 @@ export function ResultDemo() {
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
-              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E3E8EC] bg-bg px-4">
+              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E8E2D8] bg-bg px-4">
                 <div className="flex gap-1.5">
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E3E8EC]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
                 </div>
                 <div className="flex-1 text-center text-[13px] text-muted">
                   Влияние крещения Руси на становление государственности
@@ -47,7 +47,7 @@ export function ResultDemo() {
 
                 {/* Main Content */}
                 <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
-                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E3E8EC] px-4 text-[13px] text-muted">
+                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E8E2D8] px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
                       width="10"
@@ -87,7 +87,7 @@ export function ResultDemo() {
 
           <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-white p-6 text-navy-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-orange-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">
                 К
               </div>
               <span className="text-[14px] text-muted">{card.author}</span>

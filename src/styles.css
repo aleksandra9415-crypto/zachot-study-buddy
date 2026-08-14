@@ -72,23 +72,25 @@
   --color-white: var(--brand-white);
   --color-bg: var(--brand-bg);
   --color-muted: var(--brand-muted);
+  --color-pink-500: var(--pink-500);
 }
 
 :root {
   --radius: 0.625rem;
 
   /* Brand tokens */
-  --navy-950: oklch(0.237 0.046 240.2);
-  --navy-900: oklch(0.2774 0.0487 247.98);
-  --navy-700: oklch(0.3491 0.0587 245.87);
-  --orange-500: oklch(0.6855 0.2034 40.95);
-  --orange-100: oklch(0.9439 0.0316 50.4);
-  --teal-500: oklch(0.7003 0.0853 197.34);
-  --teal-200: oklch(0.8788 0.0368 198.63);
+  --navy-950: #0B2831;
+  --navy-900: #12333C;
+  --navy-700: #1E4650;
+  --orange-500: #FFC01E;
+  --orange-100: #FFF0C4;
+  --teal-500: #0B7C8C;
+  --teal-200: #D9EEF2;
   --brand-white: oklch(1 0 0);
-  --brand-bg: oklch(0.9654 0.0042 236.5);
-  --brand-muted: oklch(0.5782 0.0318 246.76);
-  --gradient-dark: linear-gradient(135deg, #062132 0%, #132A3F 100%);
+  --brand-bg: #FBF8F3;
+  --brand-muted: #6A8189;
+  --pink-500: #FF5C8A;
+  --gradient-dark: linear-gradient(135deg, #0B2831 0%, #12333C 100%);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);

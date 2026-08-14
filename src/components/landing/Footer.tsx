@@ -11,16 +11,16 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-6">
             <div className="flex flex-col gap-3">
-              <div className="w-10 h-10 bg-orange-500 rounded-[12px] flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 bg-orange-500 rounded-[12px] flex items-center justify-center text-navy-900 font-bold text-xl">
                 З
               </div>
               <span className="text-[18px] font-bold">{BRAND.name}</span>
             </div>
             <div className="space-y-1">
-              <p className="text-[13px] text-[#8FA3B4] leading-relaxed">
+              <p className="text-[13px] text-[#8FA6AA] leading-relaxed">
                 Поддержка отвечает по будням с 10:00 до 19:00 по МСК
               </p>
-              <p className="text-[13px] text-[#8FA3B4]">
+              <p className="text-[13px] text-[#8FA6AA]">
                 support@——
               </p>
             </div>
@@ -35,7 +35,7 @@ export const Footer = () => {
                   <li key={i}>
                     <a 
                       href="#" 
-                      className="text-[14px] text-[#8FA3B4] hover:text-white transition-colors"
+                      className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                     >
                       {item}
                     </a>
@@ -48,14 +48,14 @@ export const Footer = () => {
 
         {/* Bottom Area */}
         <div className="mt-8 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-[13px] text-[#6B7C8C]">
+          <p className="text-[13px] text-[#6A8189]">
             © 2026 · Реквизиты появятся после регистрации юрлица
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-white transition-colors">
+            <a href="#" className="text-[13px] text-[#6A8189] hover:text-white transition-colors">
               Политика обработки персональных данных
             </a>
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-white transition-colors">
+            <a href="#" className="text-[13px] text-[#6A8189] hover:text-white transition-colors">
               Пользовательское соглашение
             </a>
           </div>

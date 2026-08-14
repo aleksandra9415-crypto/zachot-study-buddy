@@ -20,7 +20,7 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
         <a href="#" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-navy-900">
             З
           </span>
           <span className="text-[18px] font-bold tracking-[-0.02em] text-navy-900">

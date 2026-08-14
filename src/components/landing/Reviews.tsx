@@ -18,7 +18,7 @@ export const Reviews = () => {
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-4 h-4 ${i < review.stars ? 'text-orange-500 fill-orange-500' : 'text-[#E3E8EC]'}`} 
+                  className={`w-4 h-4 ${i < review.stars ? 'text-pink-500 fill-pink-500' : 'text-[#E8E2D8]'}`} 
                 />
               ))}
             </div>
@@ -28,7 +28,7 @@ export const Reviews = () => {
             </p>
             
             <div className="flex items-center gap-3 mt-auto">
-              <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 font-bold text-sm shrink-0">
+              <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-navy-900 font-bold text-sm shrink-0">
                 {review.name[0]}
               </div>
               <div className="flex flex-col">

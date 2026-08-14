@@ -26,7 +26,7 @@ export const AboutService = () => {
           </div>
 
           {/* Right Column: Comparison Card */}
-          <div className="bg-[#E9EEF2] rounded-[24px] p-[24px]">
+          <div className="bg-[#EFEAE1] rounded-[24px] p-[24px]">
             <h3 className="text-[15px] font-bold text-navy-900 mb-5">
               Чем отличается от чат-бота
             </h3>
@@ -34,7 +34,7 @@ export const AboutService = () => {
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <FileCheck className="w-5 h-5 text-orange-500" />
+                  <FileCheck className="w-5 h-5 text-navy-900" />
                 </div>
                 <span className="text-[14px] text-navy-900 leading-snug">
                   Понимает формат учебных работ: структура, объём, оформление
@@ -43,7 +43,7 @@ export const AboutService = () => {
               
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <ListOrdered className="w-5 h-5 text-orange-500" />
+                  <ListOrdered className="w-5 h-5 text-navy-900" />
                 </div>
                 <span className="text-[14px] text-navy-900 leading-snug">
                   Показывает ход решения, а не только ответ
@@ -52,7 +52,7 @@ export const AboutService = () => {
               
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <SlidersHorizontal className="w-5 h-5 text-orange-500" />
+                  <SlidersHorizontal className="w-5 h-5 text-navy-900" />
                 </div>
                 <span className="text-[14px] text-navy-900 leading-snug">
                   Собирает работу по шагам, каждый можно поправить
@@ -61,7 +61,7 @@ export const AboutService = () => {
               
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-[12px] flex items-center justify-center shrink-0">
-                  <Wallet className="w-5 h-5 text-orange-500" />
+                  <Wallet className="w-5 h-5 text-navy-900" />
                 </div>
                 <span className="text-[14px] text-navy-900 leading-snug">
                   Работает из России и принимает оплату рублями
