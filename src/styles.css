@@ -202,3 +202,9 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
