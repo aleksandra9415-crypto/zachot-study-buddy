@@ -38,7 +38,7 @@ export const Footer = () => {
                   <li key={i}>
                     <a 
                       href="#" 
-                      className="text-[14px] text-[#8FA3B4] hover:text-white transition-colors"
+                      className="text-[14px] text-[#8FA3B4] hover:text-surface transition-colors"
                     >
                       {item}
                     </a>
@@ -56,10 +56,10 @@ export const Footer = () => {
             © 2026 · Реквизиты появятся после регистрации юрлица
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-white transition-colors">
+            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-surface transition-colors">
               Политика обработки персональных данных
             </a>
-            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-white transition-colors">
+            <a href="#" className="text-[13px] text-[#6B7C8C] hover:text-surface transition-colors">
               Пользовательское соглашение
             </a>
           </div>

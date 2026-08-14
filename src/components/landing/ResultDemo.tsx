@@ -14,7 +14,7 @@ export function ResultDemo() {
         </p>
 
         <div className="relative mt-[32px] pb-[24px]">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[380px]">
+          <div className="overflow-hidden rounded-[16px] bg-surface shadow-2xl h-[380px]">
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
@@ -48,7 +48,7 @@ export function ResultDemo() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 bg-white p-8 text-left overflow-y-auto">
+                <div className="flex-1 bg-surface p-8 text-left overflow-y-auto">
                   <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-line px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
@@ -87,7 +87,7 @@ export function ResultDemo() {
             </div>
           </div>
 
-          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-white p-6 text-ink-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
+          <div className="absolute bottom-0 right-0 w-[380px] translate-y-[24px] rounded-[24px] bg-surface p-6 text-ink-900 shadow-xl max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[calc(100%-32px)]">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-[16px] font-bold text-amber-500">
                 К

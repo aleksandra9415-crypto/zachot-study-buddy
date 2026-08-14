@@ -18,7 +18,7 @@ export const Pricing = () => {
 
       {/* Period Switcher */}
       <div className="flex justify-center mb-16">
-        <div className="inline-flex p-1 bg-white border border-[#E3E8EC] rounded-full">
+        <div className="inline-flex p-1 bg-surface border border-[#E3E8EC] rounded-full">
           {periods.map((period: any) => (
             <button
               key={period.id}

@@ -24,11 +24,11 @@ export const FAQ = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-[16px] shadow-sm overflow-hidden"
+                className="bg-surface rounded-[16px] shadow-sm overflow-hidden"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/50"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-surface/50"
                 >
                   <span className="text-base font-medium text-ink-900 leading-tight">
                     {item.q}

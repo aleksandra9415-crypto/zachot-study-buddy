@@ -27,7 +27,7 @@ export function Examples() {
           type="button"
           aria-label="Назад"
           onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink-900 transition-colors hover:bg-amber-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors hover:bg-amber-100"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -35,7 +35,7 @@ export function Examples() {
           type="button"
           aria-label="Вперёд"
           onClick={() => scrollBy(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink-900 transition-colors hover:bg-amber-100"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-ink-900 transition-colors hover:bg-amber-100"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -48,7 +48,7 @@ export function Examples() {
         {examples.map((ex) => (
           <article
             key={ex.title}
-            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-white p-6"
+            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-surface p-6"
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-100 text-teal-600">
               {(() => {
