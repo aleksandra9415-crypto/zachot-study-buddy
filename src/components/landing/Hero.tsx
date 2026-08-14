@@ -1,5 +1,5 @@
 import { copy, scenarios } from "@/data/content";
-
+import { Shape } from "@/components/decor/Shape";
 import { Section } from "@/components/layout/Section";
 
 export function Hero() {
