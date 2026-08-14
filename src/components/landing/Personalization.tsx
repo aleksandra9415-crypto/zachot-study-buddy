@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
+import Shape from "@/components/decor/Shape";
 
 
 export function Personalization() {
@@ -9,11 +10,12 @@ export function Personalization() {
       <div className="rounded-[32px] bg-white p-[40px]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[40px] items-center min-[901px]:grid-cols-2">
           {/* Left Column: Image */}
-          <div className="relative aspect-[3/2] md:aspect-[4/5] overflow-hidden rounded-[24px]">
+          <div className="relative aspect-[3/2] md:aspect-[4/5]">
+            <Shape kind="square" className="bg-orange-500" style={{ width: "100%", height: "100%", bottom: -24, left: -24 }} />
             <img 
               src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600" 
               alt="Workspace"
-              className="h-full w-full object-cover"
+              className="relative z-10 h-full w-full object-cover rounded-[24px]"
             />
           </div>
 
