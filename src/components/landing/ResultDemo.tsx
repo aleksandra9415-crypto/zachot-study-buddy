@@ -100,11 +100,11 @@ export function ResultDemo() {
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">
                 К
               </div>
-              <span className="text-[14px] text-brand-muted">{card.author}</span>
+              <span className="text-[14px] text-muted">{card.author}</span>
             </div>
             <h3 className="mt-4 text-[16px] font-display">{card.title}</h3>
             <div className="mt-2">
-              <p className="line-clamp-3 text-[13px] leading-relaxed text-brand-muted">
+              <p className="line-clamp-3 text-[13px] leading-relaxed text-muted">
                 {card.lines?.[0]}
               </p>
 

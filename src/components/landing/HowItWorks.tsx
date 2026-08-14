@@ -83,7 +83,7 @@ export function HowItWorks() {
               <h3 className={`mt-4 text-[18px] font-display transition-all duration-250 ${isActive ? "text-white" : "text-navy-900"}`}>
                 {step.title}
               </h3>
-              <p className={`mt-2 text-[14px] transition-all duration-250 ${isActive ? "text-teal-200" : "text-brand-muted"}`}>
+              <p className={`mt-2 text-[14px] transition-all duration-250 ${isActive ? "text-teal-200" : "text-muted"}`}>
                 {step.text}
               </p>
             </div>
