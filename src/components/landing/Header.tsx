@@ -6,6 +6,9 @@ import { nav, copy } from "@/data/content";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const onPricing = pathname === "/pricing";
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
