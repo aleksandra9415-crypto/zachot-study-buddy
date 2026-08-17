@@ -6,7 +6,7 @@ export function TopicDrill() {
   const [shown, setShown] = useState(false);
   const [done, setDone] = useState(false);
 
-  const item = topicDrill[index];
+  const item = topicDrill[index]!;
 
   return (
     <div className="mt-8">
