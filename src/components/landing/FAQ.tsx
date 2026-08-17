@@ -13,12 +13,12 @@ export const FAQ = () => {
 
   return (
     <Section id="faq" className="bg-bg">
-      <div className="max-w-[800px] mx-auto">
-        <SectionTitle>
-          Частые вопросы
-        </SectionTitle>
-        
-        <div className="mt-[24px] flex flex-col gap-3">
+      <SectionTitle>
+        Частые вопросы
+      </SectionTitle>
+
+      <div className="mt-[24px] flex flex-col gap-3">
+
           {faq.map((item, index) => {
             const isOpen = openIndex === index;
             return (
