@@ -14,7 +14,7 @@ export const Footer = () => {
             <img
               src={logo}
               alt={BRAND.name}
-              className="h-7 w-auto brightness-0 invert"
+              className="h-9 w-auto brightness-0 invert"
             />
             <div className="space-y-1">
               <p className="text-[13px] text-[#8FA6AA] leading-relaxed">
