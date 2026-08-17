@@ -31,7 +31,7 @@ export const Pricing = () => {
             >
               {period.label}
               {period.discount && (
-                <span className="bg-pink-500 text-navy-900 text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
+                <span className="bg-pink-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm font-bold">
                   {period.discount}
                 </span>
               )}
@@ -74,10 +74,10 @@ export const Pricing = () => {
               <div className="flex flex-col gap-4">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                      plan.featured ? 'bg-teal-500/20 text-teal-400' : 'bg-teal-50 text-teal-500'
+                    <div className={`shrink-0 mt-0.5 ${
+                      plan.featured ? 'text-white' : 'text-navy-900'
                     }`}>
-                      <Check className="w-3.5 h-3.5" />
+                      <Check className="w-5 h-5" />
                     </div>
                     <span className="text-sm leading-snug">{feature}</span>
                   </div>
@@ -86,7 +86,7 @@ export const Pricing = () => {
 
               <button className={`w-full h-[52px] rounded-full font-bold mt-auto transition-all ${
                 plan.featured 
-                ? 'bg-orange-500 text-navy-900 hover:opacity-90 shadow-lg shadow-orange-500/20' 
+                ? 'bg-orange-500 text-navy-900 hover:opacity-90' 
                 : 'border border-navy-900 text-navy-900 hover:bg-navy-50'
               }`}>
                 Выбрать
