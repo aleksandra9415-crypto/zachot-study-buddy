@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HistoryList } from "@/components/app/history/HistoryList";
 
 export const Route = createFileRoute("/app/history")({
   head: () => ({
