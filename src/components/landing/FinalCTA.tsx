@@ -5,8 +5,8 @@ import Shape from "@/components/decor/Shape";
 export const FinalCTA = () => {
   return (
     <Section className="relative bg-bg">
-      <Shape kind="triangle" size={120} className="text-pink-500 shape-float-3" style={{ top: -40, left: 30, transform: "rotate(12deg)", zIndex: 0 }} />
-      <Shape kind="circle" size={180} className="bg-orange-500 shape-float-4" style={{ bottom: -60, right: -30, zIndex: 0 }} />
+      <Shape kind="triangle" size={180} className="text-pink-500 shape-float-3" style={{ top: -60, left: 20, transform: "rotate(12deg)", zIndex: 0 }} />
+      <Shape kind="circle" size={260} className="bg-orange-500 shape-float-4" style={{ bottom: -90, right: -60, zIndex: 0 }} />
 
       <div className="gradient-dark-soft rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-center flex flex-col items-center relative z-[1] overflow-hidden">
         <div className="relative z-[2] flex flex-col items-center">
