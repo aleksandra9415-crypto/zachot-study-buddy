@@ -32,6 +32,13 @@ const actionIcons: Record<string, LucideIcon> = {
   topic: Lightbulb,
 };
 
+const actionArt: Record<string, string> = {
+  text: cardText,
+  task: cardTask,
+  deck: cardDeck,
+  topic: cardTopic,
+};
+
 const typeIcons: Record<string, LucideIcon> = {
   "Текстовая работа": FileText,
   "Решение задачи": Calculator,
