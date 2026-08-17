@@ -52,7 +52,7 @@ function AppHome() {
                 <Icon className="h-[22px] w-[22px] text-navy-900" />
               </div>
               <h2 className="mt-4 text-[18px] font-bold text-navy-900">{a.title}</h2>
-              <p className="mt-1.5 text-[14px] text-muted">{a.text}</p>
+              <p className="mt-1.5 whitespace-pre-line text-[14px] text-muted">{a.text}</p>
               <span className="mt-5 inline-flex h-10 w-fit items-center rounded-full bg-orange-500 px-5 text-[14px] font-medium text-navy-900">
                 {a.cta}
               </span>
