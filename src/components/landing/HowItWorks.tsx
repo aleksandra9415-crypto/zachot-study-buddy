@@ -53,7 +53,7 @@ export function HowItWorks() {
 
   return (
     <Section id="how" className="px-6 md:px-0">
-      <SectionTitle>Ты <Marker className="text-orange-500">ведёшь</Marker> процесс</SectionTitle>
+      <SectionTitle>Ты <Marker className="text-pink-500">ведёшь</Marker> процесс</SectionTitle>
 
       <div 
         className="mt-[24px] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
