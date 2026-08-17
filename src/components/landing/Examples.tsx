@@ -24,7 +24,7 @@ export function Examples() {
     <Section id="examples" className="px-6 md:px-0">
       <SectionTitle>Что <Marker className="text-orange-500">уже собрали</Marker> в Зачёте</SectionTitle>
 
-
+      <div className="mt-4 flex items-center gap-3">
         <div
           ref={trackRef}
           className="no-scrollbar flex flex-1 snap-x gap-4 overflow-x-auto pb-2"
