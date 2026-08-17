@@ -11,6 +11,7 @@ const typeIcons: Record<string, any> = {
 
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import Marker from "@/components/decor/Marker";
 
 export function Examples() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -21,7 +22,7 @@ export function Examples() {
 
   return (
     <Section id="examples" className="px-6 md:px-0">
-      <SectionTitle>{copy.examples.h2}</SectionTitle>
+      <SectionTitle>Что <Marker className="text-orange-500">уже собрали</Marker> в Зачёте</SectionTitle>
 
       <div className="mt-4 flex items-center gap-3">
         <button
