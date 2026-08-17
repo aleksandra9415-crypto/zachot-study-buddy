@@ -4,6 +4,20 @@ import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
 import { footerLinks } from "@/data/content";
 
+const footerRoutes: Record<string, string> = {
+  "Текстовые работы": "/app/text",
+  "Презентации": "/app/presentation",
+  "Решение задач": "/app/task",
+  "Разбор темы": "/app/topic",
+  "Тарифы": "/pricing",
+};
+
+const footerAnchors: Record<string, string> = {
+  "Примеры работ": "/#examples",
+  "Вопросы и ответы": "/#faq",
+  "Как это работает": "/#how",
+};
+
 export const Footer = () => {
   return (
     <Section className="bg-bg">
