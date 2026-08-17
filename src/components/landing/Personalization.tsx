@@ -14,13 +14,13 @@ export function Personalization() {
           <div className="relative aspect-[3/2] md:aspect-[4/5] flex items-center justify-center">
             <Shape 
               kind="square" 
-              className="bg-orange-500 shape-float-4" 
+              className="bg-orange-500 shape-float-smooth" 
               style={{ 
-                width: "110%", 
-                height: "110%", 
-                bottom: -16, 
-                left: -16,
-                ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? { bottom: -32, left: -32 } : {})
+                width: "96%", 
+                height: "96%", 
+                bottom: -8, 
+                left: -8,
+                ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? { bottom: -16, left: -16 } : {})
               }} 
             />
             <img 
