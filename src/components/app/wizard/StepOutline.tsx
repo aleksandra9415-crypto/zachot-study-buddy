@@ -13,10 +13,13 @@ export function StepOutline({ value, onChange }: Props) {
   const [regenerating, setRegenerating] = useState(false);
 
   const move = (index: number, dir: -1 | 1) => {
-    const next = [...value];
     const target = index + dir;
-    if (target < 0 || target >= next.length) return;
-    [next[index], next[target]] = [next[target], next[index]];
+    if (target < 0 || target >= value.length) return;
+    const next = [...value];
+    const a = next[index]!;
+    const b = next[target]!;
+    next[index] = b;
+    next[target] = a;
     onChange(next);
   };
 
