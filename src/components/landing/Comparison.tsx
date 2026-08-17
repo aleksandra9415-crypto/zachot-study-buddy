@@ -8,7 +8,7 @@ export const Comparison = () => {
   return (
     <Section id="comparison" className="px-6 md:px-0">
       <SectionTitle>
-        Чем отличается от обычного чат-бота
+        Чем отличаемся от других
       </SectionTitle>
       
       <div className="mt-[24px] grid grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
