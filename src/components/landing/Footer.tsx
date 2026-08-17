@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.svg.asset.json";
+import logo from "@/assets/logo.svg";
 import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
 import { footerLinks } from "@/data/content";
@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-6">
             <img
-              src={logo.url}
+              src={logo}
               alt={BRAND.name}
               className="h-9 w-auto brightness-0 invert"
             />

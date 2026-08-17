@@ -212,107 +212,15 @@
   letter-spacing: -0.01em;
 }
 
-/* Decorative floating shapes — pronounced, varied motion */
-@keyframes shape-float-1 {
-  0% {
+/* Decorative floating shapes */
+@keyframes shape-float {
+  from {
     translate: 0 0;
     rotate: 0deg;
   }
-  30% {
-    translate: 36px -42px;
-    rotate: 10deg;
-  }
-  60% {
-    translate: -18px 24px;
-    rotate: -6deg;
-  }
-  100% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-}
-
-@keyframes shape-float-2 {
-  0% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-  25% {
-    translate: -28px 18px;
-    rotate: -8deg;
-  }
-  55% {
-    translate: 22px -30px;
-    rotate: 5deg;
-  }
-  100% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-}
-
-@keyframes shape-float-smooth {
-  0% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-  50% {
-    translate: 8px -12px;
-    rotate: 2deg;
-  }
-  100% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-}
-
-.shape-float-smooth {
-  animation-name: shape-float-smooth;
-  animation-duration: 16s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  will-change: transform;
-}
-
-@keyframes shape-float-3 {
-  0% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-  35% {
-    translate: 20px 32px;
-    rotate: 12deg;
-  }
-  70% {
-    translate: -32px -16px;
-    rotate: -7deg;
-  }
-  100% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-}
-
-@keyframes shape-float-4 {
-  0% {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-  20% {
-    translate: -22px -36px;
-    rotate: -10deg;
-  }
-  50% {
-    translate: 30px 12px;
-    rotate: 6deg;
-  }
-  80% {
-    translate: 8px -20px;
-    rotate: -3deg;
-  }
-  100% {
-    translate: 0 0;
-    rotate: 0deg;
+  to {
+    translate: 12px -14px;
+    rotate: 3deg;
   }
 }
 
@@ -320,26 +228,27 @@
 .shape-float-2,
 .shape-float-3,
 .shape-float-4 {
-  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  animation-name: shape-float;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  will-change: transform;
+  animation-direction: alternate;
 }
 
 .shape-float-1 {
-  animation-name: shape-float-1;
-  animation-duration: 9s;
+  animation-duration: 14s;
+  animation-delay: 0s;
 }
 .shape-float-2 {
-  animation-name: shape-float-2;
-  animation-duration: 11s;
+  animation-duration: 18s;
+  animation-delay: 2s;
 }
 .shape-float-3 {
-  animation-name: shape-float-3;
-  animation-duration: 10s;
+  animation-duration: 16s;
+  animation-delay: 4s;
 }
 .shape-float-4 {
-  animation-name: shape-float-4;
-  animation-duration: 13s;
+  animation-duration: 20s;
+  animation-delay: 1s;
 }
 
 @media (prefers-reduced-motion: reduce) {
