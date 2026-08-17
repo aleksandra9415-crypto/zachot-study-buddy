@@ -26,7 +26,7 @@ export const Comparison = () => {
         {/* Middle column: Us */}
         <div className="bg-white rounded-[24px] px-5 flex flex-col border border-[#E6E9EC] shadow-sm">
           <div className="min-h-[64px] flex items-center gap-3">
-            <img src={logo} alt={BRAND.name} className="h-6 w-auto" />
+            <img src={logo.url} alt={BRAND.name} className="h-6 w-auto" />
           </div>
 
           {comparison.map((row, idx) => (

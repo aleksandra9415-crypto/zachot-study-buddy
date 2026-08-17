@@ -21,7 +21,7 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
         <a href="#" className="flex items-center" aria-label={BRAND.name}>
-          <img src={logo} alt={BRAND.name} className="h-8 w-auto md:h-10" />
+          <img src={logo.url} alt={BRAND.name} className="h-8 w-auto md:h-10" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

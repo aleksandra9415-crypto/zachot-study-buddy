@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-6">
             <img
-              src={logo}
+              src={logo.url}
               alt={BRAND.name}
               className="h-9 w-auto brightness-0 invert"
             />
