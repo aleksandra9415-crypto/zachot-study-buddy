@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Sparkles, Receipt } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Sparkles, Receipt, ArrowRight } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
 
