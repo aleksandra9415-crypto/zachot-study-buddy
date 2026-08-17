@@ -27,8 +27,8 @@ export const Comparison = () => {
         <div className="bg-white rounded-[24px] px-5 flex flex-col border border-[#E6E9EC] shadow-sm">
           <div className="min-h-[64px] flex items-center gap-3">
             <img src={logo} alt={BRAND.name} className="h-6 w-auto" />
-            <span className="font-bold text-navy-950 text-[16px]">{BRAND.name}</span>
           </div>
+
           {comparison.map((row, idx) => (
             <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#E6E9EC]' : ''}`}>
               <Check className="w-5 h-5 text-teal-500 shrink-0" />
