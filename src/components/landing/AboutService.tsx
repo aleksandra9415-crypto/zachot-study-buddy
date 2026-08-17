@@ -24,7 +24,7 @@ export const AboutService = () => {
             }}
           >
             <SectionTitle className="text-left">
-              Что такое Зачёт и чем он помогает
+              Что такое Зачёт?
             </SectionTitle>
             
             <div className="mt-[24px] space-y-6">
