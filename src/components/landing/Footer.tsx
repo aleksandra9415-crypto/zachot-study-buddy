@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
 import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
