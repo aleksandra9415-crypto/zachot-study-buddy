@@ -6,14 +6,12 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <Section outerClassName="py-0 md:py-0" className="px-6 md:px-0">
-      <div className="gradient-dark relative overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-white">
-        <Shape kind="circle" size={160} className="bg-teal-500 md:hidden" style={{ top: -60, right: -40 }} />
-        <Shape kind="circle" size={320} className="bg-teal-500 hidden md:block" style={{ top: -120, right: -80 }} />
-        <Shape kind="diamond" size={70} className="bg-orange-500 md:hidden" style={{ bottom: -35, left: -25 }} />
-        <Shape kind="diamond" size={140} className="bg-orange-500 hidden md:block" style={{ bottom: -70, left: -55 }} />
-        
-        <div className="relative z-10">
+    <Section outerClassName="py-0 md:py-0" className="relative px-6 md:px-0">
+      <Shape kind="circle" size={340} className="bg-teal-500 shape-float-1" style={{ top: -60, right: -60, zIndex: 0 }} />
+      <Shape kind="triangle" size={180} className="text-orange-500 shape-float-2" style={{ bottom: -50, left: -40, transform: "rotate(-15deg)", zIndex: 0 }} />
+
+      <div className="gradient-dark-soft relative z-[1] overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-white">
+        <div className="relative z-[2]">
           <h1 className="max-w-[820px] text-[32px] leading-[1.05] md:text-[56px]">
             Учёба без ночных <Marker className="text-pink-500"><span className="whitespace-nowrap text-white">дедлайнов</span></Marker>
           </h1>
