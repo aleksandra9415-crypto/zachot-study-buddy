@@ -141,7 +141,7 @@ function Toc({ active, mobile }: { active: string; mobile?: boolean }) {
 
 function LibraryWorkPage() {
   const work = demoWork;
-  const [active, setActive] = useState(work.sections[0].id);
+  const [active, setActive] = useState(work.sections[0]?.id ?? "");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
