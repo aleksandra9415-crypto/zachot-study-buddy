@@ -3,6 +3,7 @@ import { comparison } from "@/data/content";
 import { Check, X } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import logo from "@/assets/logo.svg";
 
 export const Comparison = () => {
   return (
@@ -25,9 +26,7 @@ export const Comparison = () => {
         {/* Middle column: Us */}
         <div className="bg-white rounded-[24px] px-5 flex flex-col border border-[#E6E9EC] shadow-sm">
           <div className="min-h-[64px] flex items-center gap-3">
-            <div className="w-6 h-6 bg-orange-500 rounded-[6px] flex items-center justify-center text-navy-900 font-bold text-sm">
-              З
-            </div>
+            <img src={logo} alt={BRAND.name} className="h-6 w-auto" />
             <span className="font-bold text-navy-950 text-[16px]">{BRAND.name}</span>
           </div>
           {comparison.map((row, idx) => (
@@ -39,7 +38,7 @@ export const Comparison = () => {
         </div>
 
         {/* Right column: Them */}
-        <div className="bg-[#F4F6F7] rounded-[24px] px-5 flex flex-col">
+        <div className="bg-[#F4F6F7] rounded-[24px] px-5 flex flex-col border border-[#E6E9EC]">
           <div className="min-h-[64px] flex items-center">
             <span className="text-muted font-medium text-[16px]">Обычные нейросети</span>
           </div>
