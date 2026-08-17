@@ -2,6 +2,7 @@ import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import Marker from "@/components/decor/Marker";
+import avatarKaterina from "@/assets/avatar-katerina.jpg";
 
 export function ResultDemo() {
   const card = copy.demo.card;
@@ -15,7 +16,7 @@ export function ResultDemo() {
         </p>
 
         <div className="relative mt-[32px] pb-[40px] flex flex-col md:block">
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[280px] md:h-[460px]">
+          <div className="overflow-hidden rounded-[16px] bg-white shadow-2xl h-[380px] md:h-[560px]">
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
@@ -98,9 +99,14 @@ export function ResultDemo() {
             className="mt-4 md:mt-0 md:absolute md:bottom-[-24px] md:right-[-40px] w-full md:w-[380px] rounded-[20px] md:rounded-[24px] bg-white p-5 md:p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E6E9EC] z-20"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">
-                К
-              </div>
+              <img
+                src={avatarKaterina}
+                alt="Фото Катерины"
+                loading="lazy"
+                width={512}
+                height={512}
+                className="h-10 w-10 rounded-full object-cover"
+              />
               <span className="text-[14px] text-muted">{card.author}</span>
             </div>
             <h3 className="mt-4 text-[18px] md:text-[16px] font-display">{card.title}</h3>
