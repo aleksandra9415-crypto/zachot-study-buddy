@@ -15,10 +15,10 @@ import { FinalCTA } from "@/components/landing/FinalCTA";
 import { AboutService } from "@/components/landing/AboutService";
 import { Footer } from "@/components/landing/Footer";
 import { BRAND } from "@/config/brand";
-import { copy } from "@/data/content";
 
 const title = `${BRAND.name} — ${BRAND.tagline}`;
-const description = copy.hero.subtitle;
+const description =
+  "Пиши работы, решай задачи, собирай презентации и разбирайся в сложных темах — по шагам и с объяснениями.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
