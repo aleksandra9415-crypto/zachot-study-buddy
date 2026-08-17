@@ -29,7 +29,7 @@ function AppLayout() {
 
       {/* Mobile top bar */}
       <header className="fixed left-0 right-0 top-0 z-40 flex h-14 items-center justify-between bg-navy-900 px-4 min-[900px]:hidden">
-        <Link to="/">
+        <Link to="/" className="cursor-pointer">
           <img src={logo} alt={BRAND.name} className="h-7 w-auto brightness-0 invert" />
         </Link>
         <button type="button" aria-label="Меню" onClick={() => setOpen(true)} className="text-white">

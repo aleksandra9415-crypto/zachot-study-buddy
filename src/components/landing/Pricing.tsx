@@ -85,13 +85,13 @@ export const Pricing = () => {
                 ))}
               </div>
 
-              <button className={`w-full h-[52px] rounded-full font-bold mt-auto transition-all ${
+              <Link to="/app/subscription" className={`w-full h-[52px] rounded-full font-bold mt-auto transition-all inline-flex items-center justify-center ${
                 plan.featured 
                 ? 'bg-orange-500 text-navy-900 hover:opacity-90' 
                 : 'border border-navy-900 text-navy-900 hover:bg-navy-50'
               }`}>
                 Выбрать
-              </button>
+              </Link>
             </div>
           );
         })}

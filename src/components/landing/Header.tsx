@@ -24,9 +24,9 @@ export function Header() {
       }`}
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
-        <a href="#" className="flex items-center" aria-label={BRAND.name}>
+        <Link to="/" className="flex items-center" aria-label={BRAND.name}>
           <img src={logo} alt={BRAND.name} className="h-10 w-auto" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((item) => {
@@ -57,12 +57,12 @@ export function Header() {
         </nav>
 
 
-        <a
-          href="/app"
+        <Link
+          to="/app"
           className="inline-flex h-[44px] md:h-[52px] items-center rounded-full bg-orange-500 px-[18px] md:px-7 text-[14px] md:text-[16px] font-medium text-navy-900 transition-opacity hover:opacity-90"
         >
           {copy.ctaPrimary}
-        </a>
+        </Link>
       </div>
     </header>
   );

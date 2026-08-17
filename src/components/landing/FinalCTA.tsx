@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import Shape from "@/components/decor/Shape";
@@ -16,9 +17,9 @@ export const FinalCTA = () => {
           <p className="text-[15px] md:text-base text-teal-200 max-w-[560px] leading-[1.6] mb-10">
             Первая работа бесплатно — посмотришь, как Зачёт справляется с твоей темой, и решишь, нужна ли подписка.
           </p>
-          <button className="h-[52px] px-10 rounded-full bg-orange-500 text-navy-900 font-bold hover:opacity-90 transition-colors">
-            Начать бесплатно
-          </button>
+          <Link to="/app" className="h-[52px] px-10 rounded-full bg-orange-500 text-navy-900 font-bold hover:opacity-90 transition-colors inline-flex items-center justify-center">
+            Взять первую работу
+          </Link>
         </div>
       </div>
     </Section>

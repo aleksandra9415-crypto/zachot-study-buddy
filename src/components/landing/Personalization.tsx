@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -39,13 +40,13 @@ export function Personalization() {
               {copy.personalization.text}
             </p>
 
-            <button
-              type="button"
+            <Link
+              to="/app"
               className="mt-8 flex h-[52px] w-fit items-center justify-center gap-2 rounded-full border border-navy-900 bg-transparent px-[28px] text-[16px] font-medium text-navy-900 transition-colors hover:bg-bg"
             >
               Попробовать
               <ArrowRight className="h-4 w-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,6 +4,20 @@ import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
 import { footerLinks } from "@/data/content";
 
+const footerRoutes: Record<string, string> = {
+  "Текстовые работы": "/app/text",
+  "Презентации": "/app/presentation",
+  "Решение задач": "/app/task",
+  "Разбор темы": "/app/topic",
+  "Тарифы": "/pricing",
+};
+
+const footerAnchors: Record<string, string> = {
+  "Примеры работ": "/#examples",
+  "Вопросы и ответы": "/#faq",
+  "Как это работает": "/#how",
+};
+
 export const Footer = () => {
   return (
     <Section className="bg-bg">
@@ -34,16 +48,16 @@ export const Footer = () => {
               <ul className="flex flex-col gap-[10px]">
                 {column.items.map((item, i) => (
                   <li key={i}>
-                    {item === "Тарифы" ? (
+                    {footerRoutes[item] ? (
                       <Link
-                        to="/pricing"
+                        to={footerRoutes[item]!}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
                         {item}
                       </Link>
                     ) : (
                       <a
-                        href="#"
+                        href={footerAnchors[item] ?? "#"}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
                         {item}
