@@ -16,13 +16,13 @@ export const Reviews = () => {
         {demoReviews.map((review, idx) => (
           <div 
             key={idx} 
-            className={`bg-white rounded-[16px] md:rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-orange-50/50 ${idx === 1 ? 'md:rotate-[1.5deg] md:z-10' : ''}`}
+            className={`bg-white rounded-[16px] md:rounded-[24px] p-6 flex flex-col gap-6 shadow-sm border border-[#E6E9EC] ${idx === 1 ? 'md:rotate-[1.5deg] md:z-10' : ''}`}
           >
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-4 h-4 ${i < review.stars ? 'text-pink-500 fill-pink-500' : 'text-[#E8E2D8]'}`} 
+                  className={`w-4 h-4 ${i < review.stars ? 'text-pink-500 fill-pink-500' : 'text-[#E6E9EC]'}`} 
                 />
               ))}
             </div>

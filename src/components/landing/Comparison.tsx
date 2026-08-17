@@ -23,7 +23,7 @@ export const Comparison = () => {
         </div>
 
         {/* Middle column: Us */}
-        <div className="bg-white rounded-[24px] px-5 flex flex-col border border-orange-50/50 shadow-sm">
+        <div className="bg-white rounded-[24px] px-5 flex flex-col border border-[#E6E9EC] shadow-sm">
           <div className="min-h-[64px] flex items-center gap-3">
             <div className="w-6 h-6 bg-orange-500 rounded-[6px] flex items-center justify-center text-navy-900 font-bold text-sm">
               З
@@ -31,7 +31,7 @@ export const Comparison = () => {
             <span className="font-bold text-navy-950 text-[16px]">{BRAND.name}</span>
           </div>
           {comparison.map((row, idx) => (
-            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#EFEAE1]' : ''}`}>
+            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#E6E9EC]' : ''}`}>
               <Check className="w-5 h-5 text-teal-500 shrink-0" />
               <span className="text-[14px] text-navy-900 font-normal leading-snug">{row.us}</span>
             </div>
@@ -39,12 +39,12 @@ export const Comparison = () => {
         </div>
 
         {/* Right column: Them */}
-        <div className="bg-[#EFEAE1] rounded-[24px] px-5 flex flex-col">
+        <div className="bg-[#F4F6F7] rounded-[24px] px-5 flex flex-col">
           <div className="min-h-[64px] flex items-center">
             <span className="text-muted font-medium text-[16px]">Обычные нейросети</span>
           </div>
           {comparison.map((row, idx) => (
-            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#E8E2D8]' : ''}`}>
+            <div key={idx} className={`min-h-[64px] flex items-center gap-3 ${idx < comparison.length - 1 ? 'border-b border-[#E6E9EC]' : ''}`}>
               <X className="w-5 h-5 text-muted shrink-0" />
               <span className="text-[14px] text-muted font-normal leading-snug">{row.them}</span>
             </div>

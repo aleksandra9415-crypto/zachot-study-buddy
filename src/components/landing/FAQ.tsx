@@ -24,7 +24,7 @@ export const FAQ = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-[16px] shadow-sm overflow-hidden"
+                className="bg-white rounded-[16px] border border-[#E6E9EC] overflow-hidden"
               >
                 <button
                   onClick={() => toggle(index)}
