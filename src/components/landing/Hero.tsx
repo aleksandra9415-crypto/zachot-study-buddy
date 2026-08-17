@@ -39,16 +39,17 @@ export function Hero() {
             >
               <ArrowUpRight className="absolute top-4 right-4 h-4 w-4 text-muted transition-colors group-hover:text-orange-500" />
               
-              <div className="flex h-16 w-16 min-[600px]:h-[72px] min-[600px]:w-[72px] min-[900px]:h-24 min-[900px]:w-24 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 shrink-0">
+              <div className="flex h-20 w-20 min-[600px]:h-[96px] min-[600px]:w-[96px] min-[900px]:h-[128px] min-[900px]:w-[128px] items-center justify-center shrink-0">
                 <img 
                   src={scenarioImages[s.id]} 
                   alt={s.title}
                   width={816}
                   height={816}
                   loading="lazy"
-                  className="h-full w-full object-contain p-2 transition-transform duration-200 group-hover:scale-105"
+                  className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
+
               <div className="mt-4 min-[600px]:mt-0">
                 <h3 className="text-[18px] font-display text-navy-900 leading-tight">{s.title}</h3>
                 <p className="mt-[6px] text-[14px] text-muted leading-snug">{s.caption}</p>
