@@ -95,6 +95,17 @@ export const Pricing = () => {
           );
         })}
       </div>
+
+      <div className="mt-5 flex justify-center">
+        <Link
+          to="/pricing"
+          className="inline-flex items-center gap-2 text-[15px] text-teal-500 hover:underline"
+        >
+          Сравнить тарифы подробно
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
     </Section>
   );
 };
+
