@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HistoryList } from "@/components/app/history/HistoryList";
 
 export const Route = createFileRoute("/app/history")({
   head: () => ({
@@ -13,5 +14,5 @@ export const Route = createFileRoute("/app/history")({
 });
 
 function Page() {
-  return <h1 className="font-display text-[32px] font-extrabold text-navy-900">Мои задания</h1>;
+  return <HistoryList />;
 }

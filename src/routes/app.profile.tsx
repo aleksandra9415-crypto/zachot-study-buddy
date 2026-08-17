@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ProfileForm } from "@/components/app/profile/ProfileForm";
 
 export const Route = createFileRoute("/app/profile")({
   head: () => ({
@@ -13,5 +14,5 @@ export const Route = createFileRoute("/app/profile")({
 });
 
 function Page() {
-  return <h1 className="font-display text-[32px] font-extrabold text-navy-900">Профиль</h1>;
+  return <ProfileForm />;
 }
