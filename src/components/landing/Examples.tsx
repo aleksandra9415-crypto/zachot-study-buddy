@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight, FileText, Calculator, Presentation } from "lucide-react";
-import { copy, examples } from "@/data/content";
+import { examples } from "@/data/content";
 
 const typeIcons: Record<string, any> = {
   "Текстовая работа": FileText,
