@@ -21,7 +21,7 @@ export function PlanMatrix() {
       <div className="hidden rounded-[20px] border border-[#E6E9EC] bg-white p-2 min-[900px]:block">
         <div className="relative">
           {/* highlighted middle column */}
-          <div className="pointer-events-none absolute inset-y-0 left-[calc(1.6/4.6*100%)] w-[calc(1/4.6*100%)] bg-[#EAEEF2]" />
+          <div className="pointer-events-none absolute inset-y-0 left-[56.52%] w-[21.74%] bg-[#EAEEF2]" />
 
           <div className="relative grid grid-cols-[1.6fr_1fr_1fr_1fr] items-center border-b border-[#E6E9EC]">
             <div className="h-[56px]" />
