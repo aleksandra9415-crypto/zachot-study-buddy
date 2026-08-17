@@ -30,7 +30,7 @@ function NavItem({
   onNavigate,
 }: {
   item: { id: string; label: string; to: string; icon: string };
-  onNavigate?: () => void;
+  onNavigate?: (() => void) | undefined;
 }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const active = pathname === item.to;
@@ -38,7 +38,7 @@ function NavItem({
 
   return (
     <Link
-      to={item.to}
+      to={item.to as "/app"}
       onClick={onNavigate}
       className={`group flex h-11 items-center gap-3 rounded-[10px] px-3 text-[15px] transition-colors ${
         active ? "bg-navy-700 text-white" : "text-[#8FA6AA] hover:bg-navy-700 hover:text-white"

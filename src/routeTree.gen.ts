@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppBonusRouteImport } from './routes/app.bonus'
 import { Route as AppHistoryRouteImport } from './routes/app.history'
 import { Route as AppPresentationRouteImport } from './routes/app.presentation'
@@ -29,6 +30,11 @@ const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
 } as any)
 const AppBonusRoute = AppBonusRouteImport.update({
   id: '/bonus',
@@ -82,10 +88,10 @@ export interface FileRoutesByFullPath {
   '/app/task': typeof AppTaskRoute
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/app': typeof AppRouteWithChildren
   '/app/bonus': typeof AppBonusRoute
   '/app/history': typeof AppHistoryRoute
   '/app/presentation': typeof AppPresentationRoute
@@ -94,6 +100,7 @@ export interface FileRoutesByTo {
   '/app/task': typeof AppTaskRoute
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
+  '/app': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -107,6 +114,7 @@ export interface FileRoutesById {
   '/app/task': typeof AppTaskRoute
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,10 +129,10 @@ export interface FileRouteTypes {
     | '/app/task'
     | '/app/text'
     | '/app/topic'
+    | '/app/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/app'
     | '/app/bonus'
     | '/app/history'
     | '/app/presentation'
@@ -133,6 +141,7 @@ export interface FileRouteTypes {
     | '/app/task'
     | '/app/text'
     | '/app/topic'
+    | '/app'
   id:
     | '__root__'
     | '/'
@@ -145,6 +154,7 @@ export interface FileRouteTypes {
     | '/app/task'
     | '/app/text'
     | '/app/topic'
+    | '/app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -167,6 +177,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/app'
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
     }
     '/app/bonus': {
       id: '/app/bonus'
@@ -236,6 +253,7 @@ interface AppRouteChildren {
   AppTaskRoute: typeof AppTaskRoute
   AppTextRoute: typeof AppTextRoute
   AppTopicRoute: typeof AppTopicRoute
+  AppIndexRoute: typeof AppIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
@@ -247,6 +265,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppTaskRoute: AppTaskRoute,
   AppTextRoute: AppTextRoute,
   AppTopicRoute: AppTopicRoute,
+  AppIndexRoute: AppIndexRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
