@@ -32,8 +32,8 @@ export const Footer = () => {
               className="h-9 w-auto brightness-0 invert"
             />
             <div className="space-y-1">
-              <p className="text-[13px] text-[#8FA6AA] leading-relaxed">
-                Поддержка отвечает по будням с 10:00 до 19:00 по МСК
+              <p className="text-[13px] text-[#8FA6AA] leading-relaxed whitespace-pre-line">
+                {"Поддержка отвечает\nпо будням с 10:00 до 19:00 по МСК"}
               </p>
               <p className="text-[13px] text-[#8FA6AA]">
                 support@——
