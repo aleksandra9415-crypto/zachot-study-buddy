@@ -203,3 +203,24 @@ export const footerLinks = [
   },
 ];
 
+
+export const appNav = [
+  { id: "text", label: "Создать текст", to: "/app/text", icon: "FileText" },
+  { id: "task", label: "Решить задачу", to: "/app/task", icon: "Calculator" },
+  { id: "deck", label: "Создать презентацию", to: "/app/presentation", icon: "Presentation" },
+  { id: "topic", label: "Разобрать тему", to: "/app/topic", icon: "Lightbulb" },
+];
+
+export const appNavSecondary = [
+  { id: "history", label: "Мои задания", to: "/app/history", icon: "ListChecks" },
+  { id: "bonus", label: "Бонусы", to: "/app/bonus", icon: "Gift" },
+  { id: "profile", label: "Профиль", to: "/app/profile", icon: "User" },
+  { id: "subscription", label: "Подписка", to: "/app/subscription", icon: "CreditCard" },
+];
+
+export const appActions = [
+  { id: "text", title: "Текстовая работа", text: "Реферат, эссе, курсовая — с планом, источниками и оформлением", cta: "Начать работу", to: "/app/text" },
+  { id: "task", title: "Решение задачи", text: "Ответ сразу или разбор по шагам — выбираешь ты", cta: "Решить", to: "/app/task" },
+  { id: "deck", title: "Презентация", text: "Слайды по твоей теме, от восьми штук", cta: "Собрать", to: "/app/presentation" },
+  { id: "topic", title: "Разбор темы", text: "Понять материал и подготовиться к экзамену", cta: "Разобраться", to: "/app/topic" },
+];
