@@ -48,16 +48,16 @@ export const Footer = () => {
               <ul className="flex flex-col gap-[10px]">
                 {column.items.map((item, i) => (
                   <li key={i}>
-                    {item === "Тарифы" ? (
+                    {footerRoutes[item] ? (
                       <Link
-                        to="/pricing"
+                        to={footerRoutes[item]!}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
                         {item}
                       </Link>
                     ) : (
                       <a
-                        href="#"
+                        href={footerAnchors[item] ?? "#"}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
                         {item}
