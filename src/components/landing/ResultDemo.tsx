@@ -2,6 +2,7 @@ import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import Marker from "@/components/decor/Marker";
+import avatarKaterina from "@/assets/avatar-katerina.jpg";
 
 export function ResultDemo() {
   const card = copy.demo.card;
