@@ -1,3 +1,4 @@
+import logo from "@/assets/logo.svg";
 import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
 import { footerLinks } from "@/data/content";
