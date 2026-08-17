@@ -68,7 +68,7 @@ export function HowItWorks() {
               onClick={() => handleStepClick(i)}
               className={`relative flex flex-col overflow-hidden rounded-[20px] md:rounded-[24px] p-5 md:p-6 transition-all duration-250 ${
                 isActive ? "bg-navy-900 text-white" : "bg-white border border-[#E6E9EC] text-navy-900"
-              } ${isMobile ? "cursor-default border border-[#E6E9EC]" : "cursor-pointer"}`}
+              } ${isMobile ? "cursor-default" : "cursor-pointer"}`}
             >
               {isActive && (
                 <div 

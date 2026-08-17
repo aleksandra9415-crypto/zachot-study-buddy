@@ -19,7 +19,7 @@ export function ResultDemo() {
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
-              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E6E9EC] bg-bg px-4">
+              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E6E9EC] bg-[#F4F6F7] px-4">
                 <div className="flex gap-1.5">
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E6E9EC]" />
                   <div className="h-[10px] w-[10px] rounded-full bg-[#E6E9EC]" />
