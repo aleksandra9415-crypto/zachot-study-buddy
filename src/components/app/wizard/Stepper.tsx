@@ -20,7 +20,7 @@ export function Stepper({ current, onGo }: Props) {
                 disabled={i > current}
                 onClick={() => onGo(i)}
                 className={[
-                  "flex h-8 w-8 items-center justify-center rounded-full text-[14px] font-semibold transition md:h-7 md:w-7",
+                  "flex h-8 w-8 items-center justify-center rounded-full text-[14px] font-semibold transition max-[899px]:h-7 max-[899px]:w-7",
                   done ? "bg-teal-500 text-white" : "",
                   active ? "bg-orange-500 text-navy-900" : "",
                   !done && !active ? "bg-[#EAEEF2] text-muted" : "",
@@ -32,7 +32,7 @@ export function Stepper({ current, onGo }: Props) {
               </button>
               <span
                 className={[
-                  "hidden text-[13px] md:block",
+                  "text-[13px] max-[899px]:hidden",
                   active ? "font-bold text-navy-900" : "text-muted",
                 ].join(" ")}
               >
@@ -42,7 +42,7 @@ export function Stepper({ current, onGo }: Props) {
             {i < wizardSteps.length - 1 && (
               <div
                 className={[
-                  "mt-4 h-[2px] flex-1 md:mt-[14px]",
+                  "mt-4 h-[2px] flex-1 max-[899px]:mt-[14px] max-[899px]:max-w-[48px]",
                   i < current ? "bg-teal-500" : "bg-[#EAEEF2]",
                 ].join(" ")}
               />
