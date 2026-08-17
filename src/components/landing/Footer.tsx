@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
 import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
@@ -33,14 +34,24 @@ export const Footer = () => {
               <ul className="flex flex-col gap-[10px]">
                 {column.items.map((item, i) => (
                   <li key={i}>
-                    <a 
-                      href="#" 
-                      className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
-                    >
-                      {item}
-                    </a>
+                    {item === "Тарифы" ? (
+                      <Link
+                        to="/pricing"
+                        className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
+                      >
+                        {item}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
+                      >
+                        {item}
+                      </a>
+                    )}
                   </li>
                 ))}
+
               </ul>
             </div>
           ))}

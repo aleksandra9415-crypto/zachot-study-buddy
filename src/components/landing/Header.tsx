@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
 import { BRAND } from "@/config/brand";
 import { nav, copy } from "@/data/content";
@@ -31,20 +31,31 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((item) => {
             const isPricing = item.href === "#pricing";
-            const active = onPricing && isPricing;
+            if (isPricing) {
+              return (
+                <Link
+                  key={item.href}
+                  to="/pricing"
+                  className={`text-[16px] transition-colors hover:text-navy-900 ${
+                    onPricing ? "font-medium text-navy-900" : "text-muted"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
             return (
               <a
                 key={item.href}
-                href={onPricing ? (isPricing ? "/pricing" : `/${item.href}`) : item.href}
-                className={`text-[16px] transition-colors hover:text-navy-900 ${
-                  active ? "font-medium text-navy-900" : "text-muted"
-                }`}
+                href={`/${item.href}`}
+                className="text-[16px] text-muted transition-colors hover:text-navy-900"
               >
                 {item.label}
               </a>
             );
           })}
         </nav>
+
 
         <a
           href="/app"

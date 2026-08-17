@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Check, ArrowRight } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
 import { Section } from "@/components/layout/Section";
@@ -95,6 +96,17 @@ export const Pricing = () => {
           );
         })}
       </div>
+
+      <div className="mt-5 flex justify-center">
+        <Link
+          to="/pricing"
+          className="inline-flex items-center gap-2 text-[15px] text-teal-500 hover:underline"
+        >
+          Сравнить тарифы подробно
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
     </Section>
   );
 };
+

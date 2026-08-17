@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Sparkles, Receipt } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Sparkles, Receipt, ArrowRight } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
 
@@ -130,6 +131,17 @@ export function SubscriptionBoard() {
           );
         })}
       </div>
+
+      <div className="mt-5 flex justify-center">
+        <Link
+          to="/pricing"
+          className="inline-flex items-center gap-2 text-[15px] text-teal-500 hover:underline"
+        >
+          Сравнить тарифы подробно
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+
 
       {/* Payments history */}
       <h2 className="mt-8 font-display text-[20px] font-extrabold text-navy-900">История платежей</h2>
