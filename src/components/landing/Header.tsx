@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
 import { BRAND } from "@/config/brand";
 import { nav, copy } from "@/data/content";
