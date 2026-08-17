@@ -3,6 +3,17 @@ import { Section } from "@/components/layout/Section";
 import Shape from "@/components/decor/Shape";
 import Marker from "@/components/decor/Marker";
 import { ArrowUpRight } from "lucide-react";
+import scenarioText from "@/assets/scenario-text.png";
+import scenarioDeck from "@/assets/scenario-deck.png";
+import scenarioTask from "@/assets/scenario-task.png";
+import scenarioTopic from "@/assets/scenario-topic.png";
+
+const scenarioImages: Record<string, string> = {
+  text: scenarioText,
+  deck: scenarioDeck,
+  task: scenarioTask,
+  topic: scenarioTopic,
+};
 
 export function Hero() {
   return (
@@ -30,9 +41,12 @@ export function Hero() {
               
               <div className="flex h-16 w-16 min-[600px]:h-[72px] min-[600px]:w-[72px] min-[900px]:h-24 min-[900px]:w-24 items-center justify-center overflow-hidden rounded-[12px] bg-orange-100 shrink-0">
                 <img 
-                  src={`https://api.dicebear.com/9.x/shapes/svg?seed=${s.id}&backgroundColor=ffe7da`} 
+                  src={scenarioImages[s.id]} 
                   alt={s.title}
-                  className="w-full h-full object-cover"
+                  width={816}
+                  height={816}
+                  loading="lazy"
+                  className="h-full w-full object-contain p-2 transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
               <div className="mt-4 min-[600px]:mt-0">
