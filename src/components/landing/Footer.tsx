@@ -1,3 +1,4 @@
+import logo from "@/assets/logo.svg";
 import { Section } from "@/components/layout/Section";
 import { BRAND } from "@/config/brand";
 import { footerLinks } from "@/data/content";
@@ -10,12 +11,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10">
           {/* Brand Info */}
           <div className="space-y-6">
-            <div className="flex flex-col gap-3">
-              <div className="w-10 h-10 bg-orange-500 rounded-[12px] flex items-center justify-center text-navy-900 font-bold text-xl">
-                З
-              </div>
-              <span className="text-[18px] font-display">{BRAND.name}</span>
-            </div>
+            <img
+              src={logo}
+              alt={BRAND.name}
+              className="h-7 w-auto brightness-0 invert"
+            />
             <div className="space-y-1">
               <p className="text-[13px] text-[#8FA6AA] leading-relaxed">
                 Поддержка отвечает по будням с 10:00 до 19:00 по МСК
