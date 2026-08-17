@@ -17,6 +17,7 @@ const SOURCES_ID = "o6";
 export function StepText({ outline, sources, texts, onChangeText, activeId, onSelect }: Props) {
   const [regenerating, setRegenerating] = useState(false);
   const active = outline.find((o) => o.id === activeId) ?? outline[0];
+  if (!active) return null;
   const isSources = active.id === SOURCES_ID;
   const selectedSources = sources.filter((s) => s.on);
   const text = texts[active.id] ?? "";
