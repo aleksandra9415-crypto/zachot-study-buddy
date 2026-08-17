@@ -122,6 +122,14 @@ export function ResultDemo() {
             </div>
           </div>
         </div>
+        <div className="mt-8 flex justify-center md:mt-10">
+          <a
+            href="#pricing"
+            className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-8 text-[15px] font-bold text-navy-900 transition-all hover:opacity-90"
+          >
+            Выбрать тариф
+          </a>
+        </div>
       </div>
     </Section>
   );
