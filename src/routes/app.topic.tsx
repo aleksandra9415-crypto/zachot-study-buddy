@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { TopicStart } from "@/components/app/topic/TopicStart";
+import { TopicProgram } from "@/components/app/topic/TopicProgram";
 
 export const Route = createFileRoute("/app/topic")({
   head: () => ({
@@ -13,5 +16,36 @@ export const Route = createFileRoute("/app/topic")({
 });
 
 function Page() {
-  return <h1 className="font-display text-[32px] font-extrabold text-navy-900">Разбор темы</h1>;
+  const [topic, setTopic] = useState("");
+  const [level, setLevel] = useState("recap");
+  const [started, setStarted] = useState(false);
+  const [programKey, setProgramKey] = useState(0);
+  const [activeTopic, setActiveTopic] = useState("");
+
+  if (started) {
+    return (
+      <TopicProgram
+        key={programKey}
+        topic={activeTopic}
+        onReset={() => {
+          setStarted(false);
+          setTopic("");
+        }}
+      />
+    );
+  }
+
+  return (
+    <TopicStart
+      topic={topic}
+      onTopic={setTopic}
+      level={level}
+      onLevel={setLevel}
+      onStart={() => {
+        setActiveTopic(topic.trim());
+        setProgramKey((k) => k + 1);
+        setStarted(true);
+      }}
+    />
+  );
 }
