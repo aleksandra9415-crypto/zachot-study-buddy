@@ -1,36 +1,20 @@
-export const referral = {
-  title: "Получи 1500 бонусов за друга",
-  subtitle: "Приглашай сколько хочешь — лимита нет",
-  link: "https://zachot.ai/ref/qS4Yv31J",
-  stats: [
-    { value: "0", label: "прошли регистрацию", icon: "Users" },
-    { value: "0", label: "друга оплатили подписку", icon: "CreditCard" },
-    { value: "0", label: "бонусов начислено", icon: "Coins" },
-  ],
-};
+// PLACEHOLDER: условия реферальной программы не утверждены. Размер бонуса и правила уточнить до запуска
+export const bonusRules = [
+  { id: "b1", title: "Делишься ссылкой", text: "Отправь её однокурсникам — в чат группы или лично" },
+  { id: "b2", title: "Друг подключает подписку", text: "Любой тариф, любой период" },
+  { id: "b3", title: "Оба получаете неделю", text: "Неделя подписки тебе и неделя ему" },
+];
 
-export const soon = {
-  title: "Скоро тут будет ещё один бонус",
-  text: "Заглядывай сюда, чтобы не пропустить",
-};
+export const bonusStats = [
+  { id: "s1", value: "7", label: "перешли по ссылке" },
+  { id: "s2", value: "2", label: "подключили подписку" },
+  { id: "s3", value: "14", label: "дней накоплено" },
+];
 
-export const channel = {
-  title: "Залетай в наш телеграм-канал",
-  text: "Промокоды, лайфхаки и кейсы по учёбе",
-  cta: "Подписаться",
-};
+export const bonusInvited = [
+  { id: "i1", name: "Тимур К.", date: "12 августа", status: "paid" },
+  { id: "i2", name: "Даша С.", date: "9 августа", status: "paid" },
+  { id: "i3", name: "Марк Л.", date: "5 августа", status: "pending" },
+];
 
-export const bot = {
-  title: "Подключай телеграм-бота",
-  text: "Забирай все возможности Зачёта с собой",
-  items: [
-    { icon: "Gift", text: "Эксклюзивные бонусы только для своих" },
-    { icon: "Smartphone", text: "Удобно с телефона — дома или на паре" },
-    { icon: "Flame", text: "Лайфхаки и секретные фишки по учёбе" },
-  ],
-  cta: "Попробовать",
-  phone: {
-    title: "Наведи и заходи",
-    text: "Используй как приложение,\nпрямо в мессенджере",
-  },
-};
+export const referralLink = "zachet.ru/r/k-timonova";
