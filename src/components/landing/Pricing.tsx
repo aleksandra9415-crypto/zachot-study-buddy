@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Check, ArrowRight } from "lucide-react";
 import { DEMO_DATA, demoPlans } from "@/data/demo";
 import { periods } from "@/data/content";
 import { Section } from "@/components/layout/Section";
