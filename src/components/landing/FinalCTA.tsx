@@ -4,14 +4,12 @@ import Shape from "@/components/decor/Shape";
 
 export const FinalCTA = () => {
   return (
-    <Section className="bg-bg">
-      <div className="bg-[linear-gradient(135deg,#0B2831_0%,#12333C_100%)] rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-center flex flex-col items-center relative overflow-hidden">
-        <Shape kind="diamond" size={56} className="bg-pink-500 md:hidden" style={{ top: -10, left: 20 }} />
-        <Shape kind="diamond" size={96} className="bg-pink-500 hidden md:block" style={{ top: -20, left: 40 }} />
-        <Shape kind="circle" size={90} className="bg-orange-500 md:hidden" style={{ bottom: -35, right: -20 }} />
-        <Shape kind="circle" size={160} className="bg-orange-500 hidden md:block" style={{ bottom: -70, right: -40 }} />
-        
-        <div className="relative z-10 flex flex-col items-center">
+    <Section className="relative bg-bg">
+      <Shape kind="triangle" size={120} className="text-pink-500 shape-float-3" style={{ top: -40, left: 30, transform: "rotate(12deg)", zIndex: 0 }} />
+      <Shape kind="circle" size={180} className="bg-orange-500 shape-float-4" style={{ bottom: -60, right: -30, zIndex: 0 }} />
+
+      <div className="gradient-dark-soft rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-center flex flex-col items-center relative z-[1] overflow-hidden">
+        <div className="relative z-[2] flex flex-col items-center">
           <SectionTitle className="text-white mb-6">
             Начни с одной работы
           </SectionTitle>
