@@ -8,6 +8,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { appActions, examples } from "@/data/content";
+import cardText from "@/assets/app-card-text.png";
+import cardTask from "@/assets/app-card-task.png";
+import cardDeck from "@/assets/app-card-deck.png";
+import cardTopic from "@/assets/app-card-topic.png";
 
 export const Route = createFileRoute("/app/")({
   head: () => ({
