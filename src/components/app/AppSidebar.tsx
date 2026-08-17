@@ -54,7 +54,7 @@ function NavItem({
   );
 }
 
-export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
+export function AppSidebar({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <div className="flex h-full w-[260px] flex-col bg-navy-900 p-5">
       <Link to="/" onClick={onNavigate} className="block">
