@@ -4,7 +4,17 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { faq } from "@/data/content";
 import { ChevronDown } from "lucide-react";
 
-export const FAQ = () => {
+export const FAQ = ({
+  items = faq,
+  title = "Частые вопросы",
+  id = "faq",
+  className,
+}: {
+  items?: { q: string; a: string }[];
+  title?: string;
+  id?: string;
+  className?: string;
+}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -12,14 +22,14 @@ export const FAQ = () => {
   };
 
   return (
-    <Section id="faq" className="bg-bg">
+    <Section id={id} className={className ?? "bg-bg"}>
       <SectionTitle>
-        Частые вопросы
+        {title}
       </SectionTitle>
 
       <div className="mt-[24px] flex flex-col gap-3">
 
-          {faq.map((item, index) => {
+          {items.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
