@@ -14,5 +14,5 @@ export const Route = createFileRoute("/app/profile")({
 });
 
 function Page() {
-  return <h1 className="font-display text-[32px] font-extrabold text-navy-900">Профиль</h1>;
+  return <ProfileForm />;
 }
