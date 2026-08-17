@@ -21,6 +21,7 @@ import { Route as AppSubscriptionRouteImport } from './routes/app.subscription'
 import { Route as AppTaskRouteImport } from './routes/app.task'
 import { Route as AppTextRouteImport } from './routes/app.text'
 import { Route as AppTopicRouteImport } from './routes/app.topic'
+import { Route as LibrarySubjectSlugRouteImport } from './routes/library.$subject.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +83,11 @@ const AppTopicRoute = AppTopicRouteImport.update({
   path: '/topic',
   getParentRoute: () => AppRoute,
 } as any)
+const LibrarySubjectSlugRoute = LibrarySubjectSlugRouteImport.update({
+  id: '/library/$subject/$slug',
+  path: '/library/$subject/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
   '/app/': typeof AppIndexRoute
+  '/library/$subject/$slug': typeof LibrarySubjectSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
   '/app': typeof AppIndexRoute
+  '/library/$subject/$slug': typeof LibrarySubjectSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/app/text': typeof AppTextRoute
   '/app/topic': typeof AppTopicRoute
   '/app/': typeof AppIndexRoute
+  '/library/$subject/$slug': typeof LibrarySubjectSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/app/text'
     | '/app/topic'
     | '/app/'
+    | '/library/$subject/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -153,6 +163,7 @@ export interface FileRouteTypes {
     | '/app/text'
     | '/app/topic'
     | '/app'
+    | '/library/$subject/$slug'
   id:
     | '__root__'
     | '/'
@@ -167,12 +178,14 @@ export interface FileRouteTypes {
     | '/app/text'
     | '/app/topic'
     | '/app/'
+    | '/library/$subject/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
   PricingRoute: typeof PricingRoute
+  LibrarySubjectSlugRoute: typeof LibrarySubjectSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppTopicRouteImport
       parentRoute: typeof AppRoute
     }
+    '/library/$subject/$slug': {
+      id: '/library/$subject/$slug'
+      path: '/library/$subject/$slug'
+      fullPath: '/library/$subject/$slug'
+      preLoaderRoute: typeof LibrarySubjectSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -294,6 +314,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
   PricingRoute: PricingRoute,
+  LibrarySubjectSlugRoute: LibrarySubjectSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
