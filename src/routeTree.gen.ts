@@ -11,6 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AppBonusRouteImport } from './routes/app.bonus'
+import { Route as AppHistoryRouteImport } from './routes/app.history'
+import { Route as AppPresentationRouteImport } from './routes/app.presentation'
+import { Route as AppProfileRouteImport } from './routes/app.profile'
+import { Route as AppSubscriptionRouteImport } from './routes/app.subscription'
+import { Route as AppTaskRouteImport } from './routes/app.task'
+import { Route as AppTextRouteImport } from './routes/app.text'
+import { Route as AppTopicRouteImport } from './routes/app.topic'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +30,126 @@ const AppRoute = AppRouteImport.update({
   path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppBonusRoute = AppBonusRouteImport.update({
+  id: '/bonus',
+  path: '/bonus',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppHistoryRoute = AppHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPresentationRoute = AppPresentationRouteImport.update({
+  id: '/presentation',
+  path: '/presentation',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProfileRoute = AppProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSubscriptionRoute = AppSubscriptionRouteImport.update({
+  id: '/subscription',
+  path: '/subscription',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTaskRoute = AppTaskRouteImport.update({
+  id: '/task',
+  path: '/task',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTextRoute = AppTextRouteImport.update({
+  id: '/text',
+  path: '/text',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTopicRoute = AppTopicRouteImport.update({
+  id: '/topic',
+  path: '/topic',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/bonus': typeof AppBonusRoute
+  '/app/history': typeof AppHistoryRoute
+  '/app/presentation': typeof AppPresentationRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/subscription': typeof AppSubscriptionRoute
+  '/app/task': typeof AppTaskRoute
+  '/app/text': typeof AppTextRoute
+  '/app/topic': typeof AppTopicRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/bonus': typeof AppBonusRoute
+  '/app/history': typeof AppHistoryRoute
+  '/app/presentation': typeof AppPresentationRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/subscription': typeof AppSubscriptionRoute
+  '/app/task': typeof AppTaskRoute
+  '/app/text': typeof AppTextRoute
+  '/app/topic': typeof AppTopicRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/bonus': typeof AppBonusRoute
+  '/app/history': typeof AppHistoryRoute
+  '/app/presentation': typeof AppPresentationRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/subscription': typeof AppSubscriptionRoute
+  '/app/task': typeof AppTaskRoute
+  '/app/text': typeof AppTextRoute
+  '/app/topic': typeof AppTopicRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/app'
+  fullPaths:
+    | '/'
+    | '/app'
+    | '/app/bonus'
+    | '/app/history'
+    | '/app/presentation'
+    | '/app/profile'
+    | '/app/subscription'
+    | '/app/task'
+    | '/app/text'
+    | '/app/topic'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app'
-  id: '__root__' | '/' | '/app'
+  to:
+    | '/'
+    | '/app'
+    | '/app/bonus'
+    | '/app/history'
+    | '/app/presentation'
+    | '/app/profile'
+    | '/app/subscription'
+    | '/app/task'
+    | '/app/text'
+    | '/app/topic'
+  id:
+    | '__root__'
+    | '/'
+    | '/app'
+    | '/app/bonus'
+    | '/app/history'
+    | '/app/presentation'
+    | '/app/profile'
+    | '/app/subscription'
+    | '/app/task'
+    | '/app/text'
+    | '/app/topic'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AppRoute: typeof AppRoute
+  AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +168,92 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app/bonus': {
+      id: '/app/bonus'
+      path: '/bonus'
+      fullPath: '/app/bonus'
+      preLoaderRoute: typeof AppBonusRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/history': {
+      id: '/app/history'
+      path: '/history'
+      fullPath: '/app/history'
+      preLoaderRoute: typeof AppHistoryRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/presentation': {
+      id: '/app/presentation'
+      path: '/presentation'
+      fullPath: '/app/presentation'
+      preLoaderRoute: typeof AppPresentationRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/profile': {
+      id: '/app/profile'
+      path: '/profile'
+      fullPath: '/app/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/subscription': {
+      id: '/app/subscription'
+      path: '/subscription'
+      fullPath: '/app/subscription'
+      preLoaderRoute: typeof AppSubscriptionRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/task': {
+      id: '/app/task'
+      path: '/task'
+      fullPath: '/app/task'
+      preLoaderRoute: typeof AppTaskRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/text': {
+      id: '/app/text'
+      path: '/text'
+      fullPath: '/app/text'
+      preLoaderRoute: typeof AppTextRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/topic': {
+      id: '/app/topic'
+      path: '/topic'
+      fullPath: '/app/topic'
+      preLoaderRoute: typeof AppTopicRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppBonusRoute: typeof AppBonusRoute
+  AppHistoryRoute: typeof AppHistoryRoute
+  AppPresentationRoute: typeof AppPresentationRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppSubscriptionRoute: typeof AppSubscriptionRoute
+  AppTaskRoute: typeof AppTaskRoute
+  AppTextRoute: typeof AppTextRoute
+  AppTopicRoute: typeof AppTopicRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppBonusRoute: AppBonusRoute,
+  AppHistoryRoute: AppHistoryRoute,
+  AppPresentationRoute: AppPresentationRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppSubscriptionRoute: AppSubscriptionRoute,
+  AppTaskRoute: AppTaskRoute,
+  AppTextRoute: AppTextRoute,
+  AppTopicRoute: AppTopicRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AppRoute: AppRoute,
+  AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

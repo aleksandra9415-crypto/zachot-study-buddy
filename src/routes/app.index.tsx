@@ -1,0 +1,97 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  FileText,
+  Calculator,
+  Presentation,
+  Lightbulb,
+  ChevronRight,
+  type LucideIcon,
+} from "lucide-react";
+import { appActions, examples } from "@/data/content";
+
+export const Route = createFileRoute("/app/")({
+  head: () => ({
+    meta: [
+      { title: "С чем помочь? — Зачёт" },
+      { name: "description", content: "Главный экран кабинета: тексты, задачи, презентации и разбор тем." },
+      { property: "og:title", content: "С чем помочь? — Зачёт" },
+      { property: "og:description", content: "Главный экран кабинета: тексты, задачи, презентации и разбор тем." },
+    ],
+  }),
+  component: AppHome,
+});
+
+const actionIcons: Record<string, LucideIcon> = {
+  text: FileText,
+  task: Calculator,
+  deck: Presentation,
+  topic: Lightbulb,
+};
+
+const typeIcons: Record<string, LucideIcon> = {
+  "Текстовая работа": FileText,
+  "Решение задачи": Calculator,
+  "Презентация": Presentation,
+};
+
+function AppHome() {
+  return (
+    <div>
+      <h1 className="font-display text-[32px] font-extrabold text-navy-900">С чем помочь?</h1>
+
+      <div className="mt-6 grid grid-cols-1 gap-4 min-[900px]:grid-cols-2">
+        {appActions.map((a) => {
+          const Icon = actionIcons[a.id] ?? FileText;
+          return (
+            <Link
+              key={a.id}
+              to={a.to as "/app"}
+              className="group flex flex-col rounded-[20px] border border-[#E6E9EC] bg-white p-6 transition-all duration-200 hover:border-orange-500 hover:shadow-[0_8px_24px_rgba(11,40,49,0.10)]"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-orange-100">
+                <Icon className="h-[22px] w-[22px] text-navy-900" />
+              </div>
+              <h2 className="mt-4 text-[18px] font-bold text-navy-900">{a.title}</h2>
+              <p className="mt-1.5 text-[14px] text-muted">{a.text}</p>
+              <span className="mt-5 inline-flex h-10 w-fit items-center rounded-full bg-orange-500 px-5 text-[14px] font-medium text-navy-900">
+                {a.cta}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className="mt-10">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="font-display text-[22px] font-extrabold text-navy-900">Последние работы</h2>
+          <Link to="/app/history" className="text-[14px] text-teal-500">
+            Все задания
+          </Link>
+        </div>
+
+        <div className="mt-4 flex flex-col gap-3">
+          {examples.slice(0, 3).map((ex) => {
+            const Icon = typeIcons[ex.type] ?? FileText;
+            return (
+              <div
+                key={ex.title}
+                className="flex items-center gap-4 rounded-[14px] border border-[#E6E9EC] bg-white px-5 py-4 transition-colors hover:border-teal-500"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-teal-200">
+                  <Icon className="h-[18px] w-[18px] text-navy-900" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-[15px] text-navy-900">{ex.title}</p>
+                  <p className="mt-0.5 text-[13px] text-muted">
+                    {ex.type} · {ex.subject}
+                  </p>
+                </div>
+                <ChevronRight className="h-[18px] w-[18px] shrink-0 text-muted" />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
