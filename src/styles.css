@@ -251,6 +251,29 @@
   }
 }
 
+@keyframes shape-float-smooth {
+  0% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  50% {
+    translate: 8px -12px;
+    rotate: 2deg;
+  }
+  100% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+
+.shape-float-smooth {
+  animation-name: shape-float-smooth;
+  animation-duration: 16s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
 @keyframes shape-float-3 {
   0% {
     translate: 0 0;
