@@ -29,15 +29,21 @@ export function Header() {
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-[16px] text-muted transition-colors hover:text-navy-900"
-            >
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) => {
+            const isPricing = item.href === "#pricing";
+            const active = onPricing && isPricing;
+            return (
+              <a
+                key={item.href}
+                href={onPricing ? (isPricing ? "/pricing" : `/${item.href}`) : item.href}
+                className={`text-[16px] transition-colors hover:text-navy-900 ${
+                  active ? "font-medium text-navy-900" : "text-muted"
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <a
