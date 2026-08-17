@@ -19,13 +19,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto max-w-[1200px] px-6 flex h-[72px] items-center justify-between gap-4">
-        <a href="#" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange-500 text-[18px] font-bold text-navy-900">
-            З
-          </span>
-          <span className="text-[18px] font-display text-navy-900">
-            {BRAND.name}
-          </span>
+        <a href="#" className="flex items-center" aria-label={BRAND.name}>
+          <img src={logo} alt={BRAND.name} className="h-7 w-auto md:h-8" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
