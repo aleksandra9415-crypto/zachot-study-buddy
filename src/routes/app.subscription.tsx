@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SubscriptionBoard } from "@/components/app/subscription/SubscriptionBoard";
 
 export const Route = createFileRoute("/app/subscription")({
   head: () => ({
@@ -13,5 +14,10 @@ export const Route = createFileRoute("/app/subscription")({
 });
 
 function Page() {
-  return <h1 className="font-display text-[32px] font-extrabold text-navy-900">Подписка</h1>;
+  return (
+    <div>
+      <h1 className="font-display text-[28px] font-extrabold text-navy-900">Подписка</h1>
+      <SubscriptionBoard />
+    </div>
+  );
 }
