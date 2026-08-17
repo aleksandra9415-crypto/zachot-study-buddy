@@ -5,7 +5,7 @@ import { FileCheck, ListOrdered, SlidersHorizontal, Wallet } from "lucide-react"
 export const AboutService = () => {
   return (
     <Section className="bg-bg">
-      <div className="bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-[40px] max-w-full relative overflow-hidden">
+      <div className="bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-[40px] max-w-full relative overflow-hidden border border-[#E6E9EC]">
         {/* Notebook line */}
         <div className="absolute top-0 bottom-0 left-[20px] md:left-[32px] w-[1px] bg-pink-500 z-10" />
         
@@ -14,11 +14,11 @@ export const AboutService = () => {
           <div 
             className="text-[15px] text-navy-900 leading-[1.7] space-y-6 max-w-[640px] pl-[40px] md:pl-[64px] relative"
             style={{
-              backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 27px, #F0EBE1 27px, #F0EBE1 28px)',
+              backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 27px, #E6E9EC 27px, #E6E9EC 28px)',
               backgroundSize: '100% 28px',
               backgroundAttachment: 'local',
               ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? {
-                backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 31px, #F0EBE1 31px, #F0EBE1 32px)',
+                backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 31px, #E6E9EC 31px, #E6E9EC 32px)',
                 backgroundSize: '100% 32px'
               } : {})
             }}
@@ -43,7 +43,7 @@ export const AboutService = () => {
           </div>
 
           {/* Right Column: Comparison Card */}
-          <div className="bg-[#EFEAE1] rounded-[24px] p-[24px]">
+          <div className="bg-[#F4F6F7] rounded-[24px] p-[24px]">
             <h3 className="text-[15px] font-bold text-navy-900 mb-5">
               Чем отличается от чат-бота
             </h3>

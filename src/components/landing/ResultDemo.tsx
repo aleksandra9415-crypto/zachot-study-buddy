@@ -19,11 +19,11 @@ export function ResultDemo() {
             {/* Mockup Editor */}
             <div className="flex w-full h-full flex-col">
               {/* Top Panel */}
-              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E8E2D8] bg-bg px-4">
+              <div className="flex h-[44px] shrink-0 items-center border-b border-[#E6E9EC] bg-bg px-4">
                 <div className="flex gap-1.5">
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
-                  <div className="h-[10px] w-[10px] rounded-full bg-[#E8E2D8]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E6E9EC]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E6E9EC]" />
+                  <div className="h-[10px] w-[10px] rounded-full bg-[#E6E9EC]" />
                 </div>
                 <div className="flex-1 text-center text-[13px] text-muted truncate px-2">
                   Влияние крещения Руси на становление государственности
@@ -49,7 +49,7 @@ export function ResultDemo() {
 
                 {/* Main Content */}
                 <div className="flex-1 bg-white p-6 md:p-8 text-left overflow-y-auto">
-                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E8E2D8] px-4 text-[13px] text-muted">
+                  <div className="mb-6 flex h-[40px] items-center justify-between rounded-lg border border-[#E6E9EC] px-4 text-[13px] text-muted">
                     Титульный лист
                     <svg
                       width="10"
@@ -95,7 +95,7 @@ export function ResultDemo() {
           </div>
 
           <div 
-            className="mt-4 md:mt-0 md:absolute md:bottom-[-24px] md:right-[-40px] w-full md:w-[380px] rounded-[20px] md:rounded-[24px] bg-white p-5 md:p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E8E2D8] z-20"
+            className="mt-4 md:mt-0 md:absolute md:bottom-[-24px] md:right-[-40px] w-full md:w-[380px] rounded-[20px] md:rounded-[24px] bg-white p-5 md:p-6 text-navy-900 shadow-[0_12px_32px_rgba(11,40,49,0.28)] border border-[#E6E9EC] z-20"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-[16px] font-bold text-navy-900">

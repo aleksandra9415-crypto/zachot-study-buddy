@@ -67,8 +67,8 @@ export function HowItWorks() {
               key={step.n}
               onClick={() => handleStepClick(i)}
               className={`relative flex flex-col overflow-hidden rounded-[20px] md:rounded-[24px] p-5 md:p-6 transition-all duration-250 ${
-                isActive ? "bg-navy-900 text-white" : "bg-[#FBF8F3] md:bg-[#EFEAE1] text-navy-900"
-              } ${isMobile ? "cursor-default border border-[#E8E2D8]" : "cursor-pointer"}`}
+                isActive ? "bg-navy-900 text-white" : "bg-white border border-[#E6E9EC] text-navy-900"
+              } ${isMobile ? "cursor-default border border-[#E6E9EC]" : "cursor-pointer"}`}
             >
               {isActive && (
                 <div 
@@ -78,7 +78,7 @@ export function HowItWorks() {
               )}
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-[8px] text-[14px] font-bold transition-all duration-250 ${
-                  isActive ? "bg-orange-500 text-navy-900" : "bg-[#EFEAE1] md:bg-white text-navy-900"
+                  isActive ? "bg-orange-500 text-navy-900" : "bg-[#F4F6F7] md:bg-[#F4F6F7] text-navy-900"
                 }`}
               >
                 {step.n}

@@ -18,7 +18,7 @@ export const Pricing = () => {
 
       {/* Period Switcher */}
       <div className="flex justify-center mt-[24px] mb-8 md:mb-16">
-        <div className="inline-flex p-1 bg-white border border-[#E8E2D8] rounded-full overflow-x-auto no-scrollbar max-w-full">
+        <div className="inline-flex p-1 bg-white border border-[#E6E9EC] rounded-full overflow-x-auto no-scrollbar max-w-full">
           {periods.map((period: any) => (
             <button
               key={period.id}
@@ -51,7 +51,7 @@ export const Pricing = () => {
               className={`rounded-[20px] md:rounded-[24px] p-5 md:p-8 flex flex-col gap-8 transition-all duration-300 border ${
                 plan.featured 
                 ? 'bg-navy-900 text-white border-navy-900 shadow-xl z-10 md:-my-4' 
-                : 'bg-white text-navy-900 border-orange-50'
+                : 'bg-white text-navy-900 border-[#E6E9EC]'
               }`}
             >
               <div className="flex flex-col gap-1">

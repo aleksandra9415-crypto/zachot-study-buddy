@@ -50,7 +50,7 @@ export function Examples() {
         {examples.map((ex) => (
           <article
             key={ex.title}
-            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-white p-6"
+            className="flex w-[300px] shrink-0 snap-start flex-col rounded-[24px] bg-white p-6 border border-[#E6E9EC]"
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-teal-200 text-teal-500">
               {(() => {

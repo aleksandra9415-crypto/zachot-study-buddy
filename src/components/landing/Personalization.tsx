@@ -8,7 +8,7 @@ import Shape from "@/components/decor/Shape";
 export function Personalization() {
   return (
     <Section className="px-6 md:px-0">
-      <div className="rounded-[32px] bg-white p-[40px]">
+      <div className="rounded-[32px] bg-white p-[40px] border border-[#E6E9EC]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[40px] items-center min-[901px]:grid-cols-2">
           {/* Left Column: Image */}
           <div className="relative aspect-[3/2] md:aspect-[4/5] flex items-center justify-center">
