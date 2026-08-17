@@ -57,7 +57,7 @@ function NavItem({
 export function AppSidebar({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <div className="flex h-full w-[260px] flex-col bg-navy-900 p-5">
-      <Link to="/" onClick={onNavigate} className="block">
+      <Link to="/" onClick={onNavigate} className="block cursor-pointer">
         <img src={logo} alt={BRAND.name} className="h-9 w-auto brightness-0 invert" />
       </Link>
 
