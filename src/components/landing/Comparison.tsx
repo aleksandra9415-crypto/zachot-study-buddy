@@ -3,7 +3,7 @@ import { comparison } from "@/data/content";
 import { Check, X } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logo.svg.asset.json";
 
 export const Comparison = () => {
   return (

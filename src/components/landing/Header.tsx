@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logo.svg.asset.json";
 import { BRAND } from "@/config/brand";
 import { nav, copy } from "@/data/content";
 
