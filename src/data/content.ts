@@ -84,6 +84,7 @@ export const nav = [
   { label: "Примеры", href: "#examples" },
   { label: "Как работает", href: "#how" },
   { label: "Тарифы", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export const copy = {

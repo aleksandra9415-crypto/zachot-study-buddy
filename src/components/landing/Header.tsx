@@ -38,7 +38,7 @@ export function Header() {
 
         <a
           href="#"
-          className="inline-flex h-[44px] md:h-[52px] items-center rounded-full bg-orange-500 px-[18px] md:px-7 text-[14px] md:text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+          className="inline-flex h-[44px] md:h-[52px] items-center rounded-full bg-orange-500 px-[18px] md:px-7 text-[14px] md:text-[16px] font-medium text-navy-900 transition-opacity hover:opacity-90"
         >
           {copy.ctaPrimary}
         </a>
