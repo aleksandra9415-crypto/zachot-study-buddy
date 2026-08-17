@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight, FileText, Calculator, Presentation } from "lucide-react";
+import { ChevronRight, FileText, Calculator, Presentation } from "lucide-react";
 import { examples } from "@/data/content";
 
 const typeIcons: Record<string, any> = {
@@ -25,15 +25,6 @@ export function Examples() {
       <SectionTitle>Что <Marker className="text-orange-500">уже собрали</Marker> в Зачёте</SectionTitle>
 
       <div className="mt-4 flex items-center gap-3">
-        <button
-          type="button"
-          aria-label="Назад"
-          onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white border border-[#E6E9EC] text-navy-900 transition-colors hover:bg-orange-100"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-
         <div
           ref={trackRef}
           className="no-scrollbar flex flex-1 snap-x gap-4 overflow-x-auto pb-2"
