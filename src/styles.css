@@ -211,3 +211,61 @@
   font-weight: 800;
   letter-spacing: -0.01em;
 }
+
+/* Decorative floating shapes */
+@keyframes shape-float {
+  from {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  to {
+    translate: 12px -14px;
+    rotate: 3deg;
+  }
+}
+
+.shape-float-1,
+.shape-float-2,
+.shape-float-3,
+.shape-float-4 {
+  animation-name: shape-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.shape-float-1 {
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+.shape-float-2 {
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+.shape-float-3 {
+  animation-duration: 16s;
+  animation-delay: 4s;
+}
+.shape-float-4 {
+  animation-duration: 20s;
+  animation-delay: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-float-1,
+  .shape-float-2,
+  .shape-float-3,
+  .shape-float-4 {
+    animation: none !important;
+    translate: none;
+    rotate: none;
+  }
+}
+
+@utility gradient-dark-soft {
+  background-image: linear-gradient(
+    135deg,
+    rgba(11, 40, 49, 0.94) 0%,
+    rgba(18, 51, 60, 0.94) 100%
+  );
+}
