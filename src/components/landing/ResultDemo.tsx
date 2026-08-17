@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -129,12 +130,12 @@ export function ResultDemo() {
           </div>
         </div>
         <div className="mt-8 flex justify-center md:mt-10">
-          <a
-            href="#pricing"
+          <Link
+            to="/pricing"
             className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-8 text-[15px] font-bold text-navy-900 transition-all hover:opacity-90"
           >
             Выбрать тариф
-          </a>
+          </Link>
         </div>
       </div>
     </Section>

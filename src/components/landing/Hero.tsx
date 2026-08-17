@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { copy, scenarios } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import Shape from "@/components/decor/Shape";
@@ -13,6 +14,13 @@ const scenarioImages: Record<string, string> = {
   deck: scenarioDeck,
   task: scenarioTask,
   topic: scenarioTopic,
+};
+
+const scenarioRoutes: Record<string, string> = {
+  text: "/app/text",
+  deck: "/app/presentation",
+  task: "/app/task",
+  topic: "/app/topic",
 };
 
 export function Hero() {
@@ -32,9 +40,9 @@ export function Hero() {
 
         <div className="mt-[40px] grid grid-cols-1 gap-4 min-[600px]:grid-cols-2 min-[900px]:grid-cols-4">
           {scenarios.map((s) => (
-            <a 
+            <Link 
               key={s.id} 
-              href="#" 
+              to={scenarioRoutes[s.id]} 
               className="group relative flex flex-col rounded-[24px] bg-white p-6 transition-all duration-200 hover:-translate-y-[2px] hover:border-orange-500 hover:shadow-[0_8px_24px_rgba(11,40,49,0.18)] border border-[#E6E9EC] cursor-pointer min-[600px]:min-h-[200px] min-[900px]:min-h-[260px] min-[600px]:justify-between"
             >
               <ArrowUpRight className="absolute top-4 right-4 h-4 w-4 text-muted transition-colors group-hover:text-orange-500" />
@@ -54,7 +62,7 @@ export function Hero() {
                 <h3 className="text-[18px] font-display text-navy-900 leading-tight">{s.title}</h3>
                 <p className="mt-[6px] text-[14px] text-muted leading-snug">{s.caption}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

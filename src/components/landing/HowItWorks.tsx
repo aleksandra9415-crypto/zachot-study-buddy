@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { copy, steps } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -95,12 +96,12 @@ export function HowItWorks() {
       </div>
 
       <div className="mt-[32px] flex justify-center">
-        <button
-          type="button"
+        <Link
+          to="/app"
           className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-10 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90"
         >
-          Начать бесплатно
-        </button>
+          Попробовать на своей теме
+        </Link>
       </div>
     </Section>
   );
