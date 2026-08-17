@@ -8,6 +8,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { appActions, examples } from "@/data/content";
+import cardText from "@/assets/app-card-text.png";
+import cardTask from "@/assets/app-card-task.png";
+import cardDeck from "@/assets/app-card-deck.png";
+import cardTopic from "@/assets/app-card-topic.png";
 
 export const Route = createFileRoute("/app/")({
   head: () => ({
@@ -28,6 +32,13 @@ const actionIcons: Record<string, LucideIcon> = {
   topic: Lightbulb,
 };
 
+const actionArt: Record<string, string> = {
+  text: cardText,
+  task: cardTask,
+  deck: cardDeck,
+  topic: cardTopic,
+};
+
 const typeIcons: Record<string, LucideIcon> = {
   "Текстовая работа": FileText,
   "Решение задачи": Calculator,
@@ -46,13 +57,22 @@ function AppHome() {
             <Link
               key={a.id}
               to={a.to as "/app"}
-              className="group flex flex-col rounded-[20px] border border-[#E6E9EC] bg-white p-6 transition-all duration-200 hover:border-orange-500 hover:shadow-[0_8px_24px_rgba(11,40,49,0.10)]"
+              className="group relative isolate flex flex-col overflow-hidden rounded-[20px] border border-[#E6E9EC] bg-white p-6 transition-all duration-200 hover:border-orange-500 hover:shadow-[0_8px_24px_rgba(11,40,49,0.10)]"
             >
+              <img
+                src={actionArt[a.id]}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                width={512}
+                height={512}
+                className="pointer-events-none absolute -top-2 right-0 -z-10 h-[120px] w-[120px] object-contain opacity-90 transition-transform duration-300 group-hover:scale-105 min-[900px]:h-[140px] min-[900px]:w-[140px]"
+              />
               <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-orange-100">
                 <Icon className="h-[22px] w-[22px] text-navy-900" />
               </div>
               <h2 className="mt-4 text-[18px] font-bold text-navy-900">{a.title}</h2>
-              <p className="mt-1.5 whitespace-pre-line text-[14px] text-muted">{a.text}</p>
+              <p className="mt-1.5 max-w-[75%] whitespace-pre-line text-[14px] text-muted">{a.text}</p>
               <span className="mt-5 inline-flex h-10 w-fit items-center rounded-full bg-orange-500 px-5 text-[14px] font-medium text-navy-900">
                 {a.cta}
               </span>
