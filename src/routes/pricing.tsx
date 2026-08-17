@@ -53,14 +53,11 @@ function PricingPage() {
               <PlanMatrix />
             </div>
           </div>
-
-          <div className="mt-[64px]">
-            <SectionTitle>Вопросы об оплате</SectionTitle>
-            <div className="mt-[32px]">
-              <FAQ items={payFaq} title="" id="pay-faq" className="" />
-            </div>
-          </div>
         </Section>
+
+        <div className="mx-auto max-w-[1200px] px-4 md:px-0">
+          <FAQ items={payFaq} title="Вопросы об оплате" id="pay-faq" className="" />
+        </div>
 
         <Section className="bg-bg pb-[80px]">
           <div className="rounded-[32px] bg-[linear-gradient(135deg,#0B2831_0%,#12333C_100%)] p-6 text-center md:p-[48px]">
