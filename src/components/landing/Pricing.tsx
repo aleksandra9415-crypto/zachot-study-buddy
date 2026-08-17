@@ -97,10 +97,10 @@ export const Pricing = () => {
         })}
       </div>
 
-      <div className="mt-5 flex justify-center">
+      <div className="mt-10 flex justify-center">
         <Link
           to="/pricing"
-          className="inline-flex items-center gap-2 text-[15px] text-teal-500 hover:underline"
+          className="inline-flex h-[48px] items-center justify-center gap-2 rounded-full bg-navy-900 px-7 text-[15px] font-medium text-white transition-opacity hover:opacity-90"
         >
           Сравнить тарифы подробно
           <ArrowRight className="h-4 w-4" />
