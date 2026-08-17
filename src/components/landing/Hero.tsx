@@ -3,16 +3,16 @@ import { Section } from "@/components/layout/Section";
 import Shape from "@/components/decor/Shape";
 import Marker from "@/components/decor/Marker";
 import { ArrowUpRight } from "lucide-react";
-import scenarioText from "@/assets/scenario-text-flat.png.asset.json";
-import scenarioDeck from "@/assets/scenario-deck-flat.png.asset.json";
-import scenarioTask from "@/assets/scenario-task-flat.png.asset.json";
-import scenarioTopic from "@/assets/scenario-topic-flat.png.asset.json";
+import scenarioText from "@/assets/scenario-text.png";
+import scenarioDeck from "@/assets/scenario-deck.png";
+import scenarioTask from "@/assets/scenario-task.png";
+import scenarioTopic from "@/assets/scenario-topic.png";
 
 const scenarioImages: Record<string, string> = {
-  text: scenarioText.url,
-  deck: scenarioDeck.url,
-  task: scenarioTask.url,
-  topic: scenarioTopic.url,
+  text: scenarioText,
+  deck: scenarioDeck,
+  task: scenarioTask,
+  topic: scenarioTopic,
 };
 
 export function Hero() {
