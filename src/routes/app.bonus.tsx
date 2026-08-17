@@ -16,10 +16,9 @@ export const Route = createFileRoute("/app/bonus")({
 function Page() {
   return (
     <div>
-      <h1 className="font-display text-[32px] font-extrabold text-navy-900">Все бонусы Зачёта</h1>
-      <div className="mt-6">
-        <BonusBoard />
-      </div>
+      <h1 className="font-display text-[28px] font-extrabold text-navy-900">Бонусы</h1>
+      <p className="mt-1.5 text-[14px] text-muted">Приводи однокурсников — получайте подписку оба</p>
+      <BonusBoard />
     </div>
   );
 }
