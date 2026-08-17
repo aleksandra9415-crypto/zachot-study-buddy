@@ -23,11 +23,9 @@ export const FAQ = ({
 
   return (
     <Section id={id} className={className ?? "bg-bg"}>
-      <SectionTitle>
-        {title}
-      </SectionTitle>
+      {title ? <SectionTitle>{title}</SectionTitle> : null}
 
-      <div className="mt-[24px] flex flex-col gap-3">
+      <div className={`flex flex-col gap-3 ${title ? "mt-[24px]" : ""}`}>
 
           {items.map((item, index) => {
             const isOpen = openIndex === index;
