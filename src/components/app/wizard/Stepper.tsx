@@ -4,12 +4,14 @@ import { wizardSteps } from "@/data/wizard";
 type Props = {
   current: number;
   onGo: (step: number) => void;
+  steps?: string[];
 };
 
-export function Stepper({ current, onGo }: Props) {
+export function Stepper({ current, onGo, steps }: Props) {
+  const labels = steps ?? wizardSteps;
   return (
     <div className="mt-6 flex items-start">
-      {wizardSteps.map((label, i) => {
+      {labels.map((label, i) => {
         const done = i < current;
         const active = i === current;
         return (
@@ -39,7 +41,7 @@ export function Stepper({ current, onGo }: Props) {
                 {label}
               </span>
             </div>
-            {i < wizardSteps.length - 1 && (
+            {i < labels.length - 1 && (
               <div
                 className={[
                   "mt-4 h-[2px] flex-1 max-[899px]:mt-[14px] max-[899px]:max-w-[48px]",
