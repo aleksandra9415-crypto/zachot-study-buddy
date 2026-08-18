@@ -13,6 +13,12 @@ export const deckOutlineMock = [
   { id: "d12", title: "Выводы", kind: "text", bullets: ["Среда определяет управляемость", "Роли важнее инструментов", "Риски закладываются заранее"] },
 ];
 
+export const deckSizes = [
+  { id: "4:3",  label: "Стандарт (4:3)" },
+  { id: "16:9", label: "Широкий (16:9)", active: true },
+  { id: "a4",   label: "Для печати (A4)" },
+];
+
 export const deckLengths = [
   { id: "auto", label: "Авто" },
   { id: "8",    label: "8 слайдов" },
