@@ -4,7 +4,7 @@ import { PresentationInput } from "@/components/app/presentation/PresentationInp
 import { PresentationResult } from "@/components/app/presentation/PresentationResult";
 import { DeckGenerating } from "@/components/app/presentation/DeckGenerating";
 import { deckOutlineMock } from "@/data/presentation";
-import type { DeckSlide } from "@/components/app/presentation/DeckStepOutline";
+import type { DeckSlide } from "@/components/app/presentation/PresentationResult";
 
 export const Route = createFileRoute("/app/presentation")({
   head: () => ({
@@ -36,6 +36,19 @@ function PresentationPage() {
     }
   });
 
+  const handleSettingsChange = (v: Settings) => {
+    setSettings(prev => ({
+      ...prev,
+      density: v.density,
+      extras: {
+        title: v.extras.title ?? prev.extras.title,
+        numbers: v.extras.numbers ?? prev.extras.numbers,
+        images: v.extras.images ?? prev.extras.images,
+        sources: v.extras.sources ?? prev.extras.sources,
+      }
+    }));
+  };
+
   const [slides, setSlides] = useState<DeckSlide[]>([]);
 
   const handleCreate = () => {
@@ -63,7 +76,7 @@ function PresentationPage() {
           designId={designId}
           setDesignId={setDesignId}
           settings={settings}
-          setSettings={setSettings}
+          setSettings={handleSettingsChange}
           onCreate={handleCreate}
         />
       )}
