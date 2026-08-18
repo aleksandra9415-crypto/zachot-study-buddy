@@ -12,7 +12,12 @@ import {
   ChevronRight
 } from "lucide-react";
 import { deckDesigns, deckOutlineMock } from "@/data/presentation";
-import type { DeckSlide } from "./DeckStepOutline";
+export type DeckSlide = {
+  id: string;
+  title: string;
+  kind: "title" | "text" | "image";
+  bullets: string[];
+};
 
 type Props = {
   topic: string;
@@ -105,7 +110,7 @@ export function PresentationResult({ topic, slides, setSlides, designId, onBack 
                     <span className="text-[11px] font-bold" style={{ color: design.accent }}>{slide.title}</span>
                     <div className="mt-2 flex flex-1 gap-2 overflow-hidden">
                       <ul className="flex-1 space-y-1">
-                        {slide.bullets.slice(0, 3).map((b, bi) => (
+                        {slide.bullets.slice(0, 3).map((b: string, bi: number) => (
                           <li key={bi} className="flex items-start gap-1.5 text-[9px]" style={{ color: `${design.ink}B3` }}>
                             <div className="mt-1 h-1 w-1 shrink-0 rounded-full" style={{ backgroundColor: design.ink, opacity: 0.7 }} />
                             <span className="truncate">{b}</span>
@@ -241,7 +246,7 @@ export function PresentationResult({ topic, slides, setSlides, designId, onBack 
                   </h2>
                   <div className="mt-8 flex flex-1 gap-10 max-[899px]:mt-4 max-[899px]:gap-4">
                     <ul className="flex-1 space-y-4 max-[899px]:space-y-2">
-                      {slides[openIndex].bullets.map((b, bi) => (
+                      {slides[openIndex].bullets.map((b: string, bi: number) => (
                         <li key={bi} className="flex items-start gap-3 text-[18px] leading-relaxed max-[899px]:text-[14px]" style={{ color: design.ink }}>
                           <div className="mt-2.5 h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: design.accent }} />
                           {b}
