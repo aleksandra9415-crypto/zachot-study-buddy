@@ -10,9 +10,9 @@ import { GeneratingScreen } from "@/components/app/wizard/GeneratingScreen";
 import { outlineMock, sourcesMock, sectionTextMock } from "@/data/wizard";
 
 export const Route = createFileRoute("/app/text")({
-  validateSearch: (search: Record<string, unknown>): { topic?: string } => {
+  validateSearch: (search: Record<string, unknown>) => {
     return {
-      topic: typeof search.topic === 'string' ? search.topic : undefined,
+      topic: (search['topic'] as string) || undefined,
     }
   },
   head: () => ({
@@ -49,7 +49,7 @@ const initialTexts = (outline: OutlineItem[]) =>
   >;
 
 function Page() {
-  const { topic: topicParam } = createFileRoute("/app/text").useSearch() as { topic?: string };
+  const { topic: topicParam } = Route.useSearch();
   const [step, setStep] = useState(0);
   const [generating, setGenerating] = useState(false);
   const [topic, setTopic] = useState<TopicState>(() => initialTopic(topicParam || ""));
