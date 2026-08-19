@@ -312,18 +312,13 @@ function SeoToolPage() {
               <p className="text-[15px] md:text-base text-teal-200 max-w-[560px] leading-[1.6] mb-10">
                 Первые работы бесплатно — без подписки и без карты
               </p>
-              <button
-                onClick={() => {
-                   window.scrollTo({ top: 0, behavior: 'smooth' });
-                   setTimeout(() => {
-                     const textarea = document.querySelector('textarea');
-                     if (textarea) textarea.focus();
-                   }, 500);
-                }}
-                className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-10 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 cursor-pointer"
+              <Link
+                to={referatPage.targetApp}
+                search={{ topic: "" }}
+                className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-10 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90"
               >
                 {referatPage.inputCta}
-              </button>
+              </Link>
             </div>
           </div>
         </Section>
