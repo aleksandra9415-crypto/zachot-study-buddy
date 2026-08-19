@@ -48,24 +48,23 @@ export const Footer = () => {
               <ul className="flex flex-col gap-[10px]">
                 {column.items.map((item, i) => (
                   <li key={i}>
-                    {footerRoutes[item] ? (
+                    {item.href.startsWith("/") && !item.href.includes("#") ? (
                       <Link
-                        to={footerRoutes[item]!}
+                        to={item.href}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     ) : (
                       <a
-                        href={footerAnchors[item] ?? "#"}
+                        href={item.href}
                         className="text-[14px] text-[#8FA6AA] hover:text-white transition-colors"
                       >
-                        {item}
+                        {item.label}
                       </a>
                     )}
                   </li>
                 ))}
-
               </ul>
             </div>
           ))}
