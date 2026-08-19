@@ -9,6 +9,7 @@ export type SeoToolPage = {
   targetApp: string;       // куда ведёт форма: /app/text, /app/task...
   bullets: { label: string; anchor: string }[]; // якорные преимущества
   presets?: string[];      // примеры тем под формой
+  showResultDemo?: boolean; // показывать ли блок с результатом
   seo: {
     id: string;
     heading: string;       // H2

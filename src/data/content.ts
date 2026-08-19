@@ -191,15 +191,35 @@ export const faq = [
 export const footerLinks = [
   {
     title: "Сервисы",
-    items: ["Текстовые работы", "Презентации", "Решение задач", "Разбор темы"],
+    items: [
+      { label: "Текстовые работы", href: "/app/text" },
+      { label: "Презентации", href: "/app/presentation" },
+      { label: "Решение задач", href: "/app/task" },
+      { label: "Разбор темы", href: "/app/topic" },
+      { label: "Примеры работ", href: "/#examples" },
+    ],
   },
   {
-    title: "Разделы",
-    items: ["Примеры работ", "Тарифы", "Библиотека", "Вопросы и ответы"],
+    title: "ИИ-помощники",
+    items: [
+      { label: "Нейросеть для реферата", href: "/example" },
+      { label: "Нейросеть для эссе", href: "/ai/esse" },
+      { label: "Нейросеть для доклада", href: "/ai/doklad" },
+      { label: "Нейросеть для сочинения", href: "/ai/sochinenie" },
+      { label: "Нейросеть для решения задач", href: "/ai/zadachi" },
+      { label: "Нейросеть для ответов на вопросы", href: "/ai/otvety" },
+      { label: "Нейросеть для презентаций", href: "/ai/prezentacii" },
+    ],
   },
   {
     title: "О сервисе",
-    items: ["Как это работает", "Поддержка", "Партнёрам"],
+    items: [
+      { label: "Как это работает", href: "/#how" },
+      { label: "Тарифы", href: "/pricing" },
+      { label: "Вопросы и ответы", href: "/#faq" },
+      { label: "Поддержка", href: "#" },
+      { label: "Партнёрам", href: "#" },
+    ],
   },
 ];
 
