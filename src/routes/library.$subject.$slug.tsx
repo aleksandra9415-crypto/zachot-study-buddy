@@ -213,6 +213,7 @@ function LibraryWorkPage() {
             <p className="text-[15px] text-navy-900">Нужна такая же работа, но по твоей теме?</p>
             <Link
               to="/app/text"
+              search={{ topic: "" }}
               className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-navy-900 px-6 text-[15px] font-medium text-white transition-opacity hover:opacity-90 max-[899px]:w-full"
             >
               Сделать свою
@@ -271,6 +272,7 @@ function LibraryWorkPage() {
             </p>
             <Link
               to="/app/text"
+              search={{ topic: "" }}
               className="mt-6 inline-flex h-12 items-center rounded-full bg-orange-500 px-7 text-[16px] font-medium text-navy-900 transition-opacity hover:opacity-90"
             >
               Начать бесплатно

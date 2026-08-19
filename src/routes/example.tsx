@@ -277,6 +277,7 @@ function SeoToolPage() {
             </p>
             <Link
               to="/app/text"
+              search={{ topic: "" }}
               className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90"
             >
               Написать реферат
