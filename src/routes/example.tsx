@@ -101,13 +101,13 @@ function SeoToolPage() {
             <Shape 
               kind="circle" 
               size={280} 
-              className="bg-teal-500 max-[900px]:scale-50" 
+              className="bg-teal-500 shape-float-1 max-[900px]:scale-50" 
               style={{ top: -60, right: -60, zIndex: 0 }} 
             />
             <Shape 
               kind="triangle" 
               size={140} 
-              className="text-orange-500 max-[900px]:scale-50" 
+              className="text-orange-500 shape-float-2 max-[900px]:scale-50" 
               style={{ bottom: -50, left: -40, transform: "rotate(-15deg)", zIndex: 0 }} 
             />
 
@@ -116,7 +116,6 @@ function SeoToolPage() {
               className="relative z-[1] rounded-[32px] p-6 md:p-[48px] overflow-hidden"
               style={{ 
                 background: "linear-gradient(135deg, rgba(11,40,49,0.94) 0%, rgba(18,51,60,0.94) 100%)",
-                backdropFilter: "blur(8px)"
               }}
             >
               <div className="grid grid-cols-1 min-[901px]:grid-cols-[1.1fr_1fr] gap-10 items-center">
