@@ -308,7 +308,7 @@ function SeoToolPage() {
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center mb-8">
             Частые вопросы
           </h2>
-          <div className="mx-auto max-w-[800px]">
+          <div className="w-full">
             <Accordion type="single" collapsible className="space-y-3">
               {referatPage.faq.map((item, idx) => (
                 <AccordionItem
