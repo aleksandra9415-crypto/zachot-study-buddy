@@ -11,7 +11,7 @@ import { referatPage } from "@/data/seoToolReferat";
 import { comparison, examples } from "@/data/content";
 import { Sparkles, Check, ArrowRight, X } from "lucide-react";
 import logo from "@/assets/logo.svg";
-import { Shape } from "@/components/decor/Shape";
+import Shape from "@/components/decor/Shape";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/example")({
@@ -39,6 +39,10 @@ function SeoToolPage() {
     e.preventDefault();
     if (!topic.trim()) return;
     navigate({ to: referatPage.targetApp, search: { topic } });
+  };
+
+  const handlePreset = (preset: string) => {
+    setTopic(preset);
   };
 
   const jsonLd = {
@@ -101,22 +105,39 @@ function SeoToolPage() {
 
             {/* Form Card */}
             <div className="mt-8 rounded-[20px] border border-line bg-white p-5 shadow-sm max-w-[800px]">
-              <form onSubmit={handleCta} className="space-y-4">
-                <textarea
-                  value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
-                  placeholder={referatPage.inputPlaceholder}
-                  className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[80px]"
-                />
-                <button
-                  type="submit"
-                  disabled={!topic.trim()}
-                  className="w-full md:w-fit flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
-                >
-                  <Sparkles className="h-4.5 w-4.5" />
-                  {referatPage.inputCta}
-                </button>
-              </form>
+                <form onSubmit={handleCta} className="space-y-4">
+                  <textarea
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    placeholder={referatPage.inputPlaceholder}
+                    className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[80px]"
+                  />
+                  
+                  {referatPage.presets && (
+                    <div className="flex flex-wrap gap-2">
+                      {referatPage.presets.map((preset, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => handlePreset(preset)}
+                          className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg truncate max-w-[200px] md:max-w-none"
+                          title={preset}
+                        >
+                          {preset}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={!topic.trim()}
+                    className="w-full md:w-fit flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
+                  >
+                    <Sparkles className="h-4.5 w-4.5" />
+                    {referatPage.inputCta}
+                  </button>
+                </form>
             </div>
 
             {/* Bullets */}
@@ -190,6 +211,9 @@ function SeoToolPage() {
           </div>
         </Section>
 
+        {/* Result Demo */}
+        <ResultDemo />
+
         {/* Examples Section */}
         <Section className="mt-[56px] px-6 md:px-0">
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center">
@@ -212,6 +236,12 @@ function SeoToolPage() {
             ))}
           </div>
         </Section>
+
+        {/* Reviews */}
+        <Reviews />
+
+        {/* Pricing */}
+        <Pricing />
 
         {/* SEO Text Section */}
         <Section id="how" className="mt-[56px] px-6 md:px-0">
@@ -271,8 +301,10 @@ function SeoToolPage() {
         </Section>
 
         {/* Call to Action Section */}
-        <Section className="mt-[56px] px-6 md:px-0">
-          <div className="bg-[linear-gradient(135deg,#0B2831_0%,#12333C_100%)] rounded-[32px] p-12 max-[899px]:px-6 max-[899px]:py-10 text-center">
+        <Section className="mt-[56px] px-6 md:px-0 relative">
+          <Shape kind="triangle" size={120} className="text-pink-500" style={{ top: -40, left: 30, transform: "rotate(12deg)" }} />
+          <Shape kind="circle" size={180} className="bg-orange-500" style={{ bottom: -60, right: -30 }} />
+          <div className="bg-[linear-gradient(135deg,#0B2831_0%,#12333C_100%)] rounded-[32px] p-12 max-[899px]:px-6 max-[899px]:py-10 text-center relative z-10">
             <h2 className="text-[32px] font-display font-extrabold text-white mb-3">
               Попробуй на своей теме
             </h2>
