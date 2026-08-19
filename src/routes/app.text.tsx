@@ -29,38 +29,39 @@ const nextLabels = [
   "Создать новую работу",
 ];
 
-const initialTopic: TopicState = {
-  topic: "",
+const initialTopic = (defaultTopic = ""): TopicState => ({
+  topic: defaultTopic,
   workType: "Реферат",
   subject: "История",
   volume: "m",
   requirements: "",
-};
+});
 
-const initialTexts = () =>
-  Object.fromEntries(outlineMock.map((o) => [o.id, sectionTextMock[o.id] ?? ""])) as Record<
+const initialTexts = (outline: OutlineItem[]) =>
+  Object.fromEntries(outline.map((o) => [o.id, sectionTextMock[o.id] ?? ""])) as Record<
     string,
     string
   >;
 
 function Page() {
+  const { topic: topicParam } = createFileRoute("/app/text").useSearch<{ topic?: string }>();
   const [step, setStep] = useState(0);
   const [generating, setGenerating] = useState(false);
-  const [topic, setTopic] = useState<TopicState>(initialTopic);
+  const [topic, setTopic] = useState<TopicState>(() => initialTopic(topicParam || ""));
   const [outline, setOutline] = useState<OutlineItem[]>(
     outlineMock.map((o) => ({ ...o, items: [...o.items] })),
   );
   const [sources, setSources] = useState<SourceItem[]>(sourcesMock.map((s) => ({ ...s })));
-  const [texts, setTexts] = useState<Record<string, string>>(initialTexts);
+  const [texts, setTexts] = useState<Record<string, string>>(() => initialTexts(outlineMock));
   const [activeSection, setActiveSection] = useState(outlineMock[0]!.id);
 
   const canNext = step === 0 ? topic.topic.trim().length > 0 : true;
 
   const reset = () => {
-    setTopic(initialTopic);
+    setTopic(initialTopic(""));
     setOutline(outlineMock.map((o) => ({ ...o, items: [...o.items] })));
     setSources(sourcesMock.map((s) => ({ ...s })));
-    setTexts(initialTexts());
+    setTexts(initialTexts(outlineMock));
     setActiveSection(outlineMock[0]!.id);
     setStep(0);
   };

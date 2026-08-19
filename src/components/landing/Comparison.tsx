@@ -7,7 +7,7 @@ import logo from "@/assets/logo.svg";
 
 export const Comparison = () => {
   return (
-    <Section id="comparison" className="px-6 md:px-0">
+    <Section id="compare" className="px-6 md:px-0">
       <SectionTitle>
         Чем отличаемся от других
       </SectionTitle>
