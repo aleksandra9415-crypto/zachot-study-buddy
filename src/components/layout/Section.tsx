@@ -1,14 +1,20 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface SectionProps {
+interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   id?: string;
   className?: string;
   children: React.ReactNode;
   outerClassName?: string;
 }
 
-export const Section = ({ id, className, children, outerClassName }: SectionProps) => {
+export const Section = ({ 
+  id, 
+  className, 
+  children, 
+  outerClassName,
+  ...props 
+}: SectionProps) => {
   return (
     <section 
       id={id} 
@@ -16,6 +22,7 @@ export const Section = ({ id, className, children, outerClassName }: SectionProp
         "w-full first:pt-[32px] last:pb-[32px]", 
         outerClassName
       )}
+      {...props}
     >
       <div className={cn("mx-auto max-w-[1200px]", className)}>
         {children}
