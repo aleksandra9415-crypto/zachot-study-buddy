@@ -49,8 +49,13 @@ export function PresentationResult({ topic, slides, setSlides, designId, onBack 
     const target = index + dir;
     if (target < 0 || target >= slides.length) return;
     const next = [...slides];
-    [next[index], next[target]] = [next[target], next[index]];
-    setSlides(next);
+    const slideA = next[index];
+    const slideB = next[target];
+    if (slideA && slideB) {
+      next[index] = slideB;
+      next[target] = slideA;
+      setSlides(next);
+    }
   };
 
   const removeSlide = (id: string) => {
@@ -233,27 +238,27 @@ export function PresentationResult({ topic, slides, setSlides, designId, onBack 
               className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] p-10 shadow-2xl max-[899px]:p-6"
               style={{ backgroundColor: design.bg }}
             >
-              {slides[openIndex].kind === 'title' ? (
+              {slides[openIndex]?.kind === 'title' ? (
                 <div className="flex h-full items-center justify-center text-center">
                   <h2 className="text-[32px] font-extrabold max-[899px]:text-[22px]" style={{ color: design.accent }}>
-                    {slides[openIndex].title}
+                    {slides[openIndex]?.title}
                   </h2>
                 </div>
               ) : (
                 <div className="flex h-full flex-col">
                   <h2 className="text-[28px] font-extrabold max-[899px]:text-[18px]" style={{ color: design.accent }}>
-                    {slides[openIndex].title}
+                    {slides[openIndex]?.title}
                   </h2>
                   <div className="mt-8 flex flex-1 gap-10 max-[899px]:mt-4 max-[899px]:gap-4">
                     <ul className="flex-1 space-y-4 max-[899px]:space-y-2">
-                      {slides[openIndex].bullets.map((b: string, bi: number) => (
+                      {slides[openIndex]?.bullets.map((b: string, bi: number) => (
                         <li key={bi} className="flex items-start gap-3 text-[18px] leading-relaxed max-[899px]:text-[14px]" style={{ color: design.ink }}>
                           <div className="mt-2.5 h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: design.accent }} />
                           {b}
                         </li>
                       ))}
                     </ul>
-                    {slides[openIndex].kind === 'image' && (
+                    {slides[openIndex]?.kind === 'image' && (
                       <div className="flex w-[40%] items-center justify-center rounded-[12px]" style={{ backgroundColor: `${design.ink}0A` }}>
                         <ImageIcon className="h-12 w-12" style={{ color: `${design.ink}26` }} />
                       </div>
