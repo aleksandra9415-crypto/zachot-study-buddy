@@ -36,7 +36,7 @@ function PresentationPage() {
     }
   });
 
-  const handleSettingsChange = (v: Settings) => {
+  const handleSettingsChange = (v: any) => {
     setSettings(prev => ({
       ...prev,
       density: v.density,
@@ -54,7 +54,7 @@ function PresentationPage() {
   const handleCreate = () => {
     setView("generating");
     setTimeout(() => {
-      setSlides(deckOutlineMock.map(s => ({ ...s, bullets: [...s.bullets] })));
+      setSlides(deckOutlineMock.map(s => ({ ...s, kind: s.kind as "title" | "text" | "image", bullets: [...s.bullets] })));
       setView("result");
     }, 2500);
   };
