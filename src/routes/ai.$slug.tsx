@@ -308,7 +308,7 @@ export function SeoToolLayout({ page }: { page: SeoToolPageType }) {
                       {block.list.map((item, lIdx) => (
                         <li key={lIdx} className="flex items-start gap-2.5 text-[15px] text-navy-900 leading-normal">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-500" />
-                          {item}
+                          {item.toString()}
                         </li>
                       ))}
                     </ul>
