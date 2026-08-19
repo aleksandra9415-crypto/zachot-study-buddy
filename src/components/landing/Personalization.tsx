@@ -58,10 +58,10 @@ export function Personalization() {
                   transform = "scale(1) opacity-100 translate-y-0 rotate-[-1deg] md:rotate-[-2deg]";
                   zIndex = 30;
                 } else if (isNext) {
-                  transform = "scale(0.95) opacity-60 translate-y-2 rotate-[1deg]";
+                  transform = "scale(0.95) opacity-100 translate-y-2 rotate-[1deg]";
                   zIndex = 20;
                 } else if (isPrev) {
-                  transform = "scale(0.9) opacity-30 translate-y-4 rotate-[2deg]";
+                  transform = "scale(0.9) opacity-100 translate-y-4 rotate-[2deg]";
                   zIndex = 10;
                 }
 
