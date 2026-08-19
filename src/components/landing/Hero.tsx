@@ -24,10 +24,26 @@ const scenarioRoutes: Record<string, string> = {
 };
 
 export function Hero() {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", String((((e.clientX - r.left) / r.width) - 0.5) * 2));
+    e.currentTarget.style.setProperty("--my", String((((e.clientY - r.top) / r.height) - 0.5) * 2));
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.style.setProperty("--mx", "0");
+    e.currentTarget.style.setProperty("--my", "0");
+  };
+
   return (
-    <Section outerClassName="py-0 md:py-0" className="relative px-6 md:px-0">
-      <Shape kind="circle" size={340} className="bg-teal-500 shape-float-1" style={{ top: -60, right: -60, zIndex: 0 }} />
-      <Shape kind="triangle" size={180} className="text-orange-500 shape-float-2" style={{ bottom: -50, left: -40, transform: "rotate(-15deg)", zIndex: 0 }} />
+    <Section 
+      outerClassName="py-0 md:py-0" 
+      className="relative px-6 md:px-0 shape-scene"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Shape kind="circle" size={280} className="bg-teal-500" style={{ top: -60, right: -60 }} depth={26} float={18} />
+      <Shape kind="triangle" size={140} className="text-orange-500" style={{ bottom: -50, left: -40, transform: "rotate(-15deg)" }} depth={-16} float={14} floatDelay={2} />
 
       <div className="gradient-dark-soft relative z-[1] overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] text-white">
         <div className="relative z-[2]">

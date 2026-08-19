@@ -1,50 +1,59 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-export default function Shape({ 
-  kind = "circle", 
-  size = 200, 
-  className = "", 
-  style = {} 
-}: { 
-  kind?: "circle" | "square" | "diamond" | "triangle", 
-  size?: number, 
-  className?: string, 
-  style?: React.CSSProperties 
+export default function Shape({
+  kind = "circle",
+  size = 200,
+  className = "",
+  style = {},
+  depth = 0,        // максимальный сдвиг за курсором в px; 0 = без параллакса
+  float = 0,        // длительность плавания в секундах; 0 = без плавания
+  floatDelay = 0,
+}: {
+  kind?: "circle" | "square" | "diamond" | "triangle",
+  size?: number,
+  className?: string,
+  style?: React.CSSProperties,
+  depth?: number,
+  float?: number,
+  floatDelay?: number,
 }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const { top, right, bottom, left, transform: rotate, ...rest } = style as any;
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const currentSize = isMobile ? size / 2 : size;
-
-  const base: React.CSSProperties = {
+  const outer: React.CSSProperties = {
     position: "absolute",
-    width: currentSize,
-    height: currentSize,
+    top, right, bottom, left,
+    width: size,
+    height: size,
     pointerEvents: "none",
     zIndex: 0,
-    ...style,
+    transform: `translate(calc(var(--mx, 0) * ${depth}px), calc(var(--my, 0) * ${depth}px))`,
+    transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)",
+    ...rest,
   };
 
-  if (kind === "circle") base.borderRadius = "50%";
-  if (kind === "square") base.borderRadius = isMobile ? 8 : 16;
-  if (kind === "diamond") {
-    base.borderRadius = isMobile ? 4 : 8;
-    base.transform = (style.transform || "") + " rotate(45deg)";
-  }
+  const inner: React.CSSProperties = {
+    width: "100%",
+    height: "100%",
+    transform: rotate,
+    animation: float ? `shape-float ${float}s ease-in-out ${floatDelay}s infinite alternate` : undefined,
+  };
 
-  if (kind === "triangle") {
-    return (
+  let figure;
+  if (kind === "circle") figure = (
+    <div className={`w-full h-full rounded-full ${className}`} />
+  );
+  if (kind === "square") figure = (
+    <div className={`w-full h-full rounded-[16px] ${className}`} />
+  );
+  if (kind === "diamond") figure = (
+    <div className={`w-full h-full rounded-[8px] rotate-45 ${className}`} />
+  );
+  if (kind === "triangle")
+    figure = (
       <svg
-        aria-hidden="true"
         className={className}
         viewBox="0 0 100 88"
-        style={base}
+        style={{ width: '100%', height: '100%' }}
       >
         <path
           fill="currentColor"
@@ -52,7 +61,12 @@ export default function Shape({
         />
       </svg>
     );
-  }
 
-  return <div aria-hidden="true" className={className} style={base} />;
+  return (
+    <div aria-hidden="true" style={outer}>
+      <div style={inner}>
+        {figure}
+      </div>
+    </div>
+  );
 }

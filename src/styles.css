@@ -214,52 +214,14 @@
 
 /* Decorative floating shapes */
 @keyframes shape-float {
-  from {
-    translate: 0 0;
-    rotate: 0deg;
-  }
-  to {
-    translate: 12px -14px;
-    rotate: 3deg;
-  }
-}
-
-.shape-float-1,
-.shape-float-2,
-.shape-float-3,
-.shape-float-4 {
-  animation-name: shape-float;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.shape-float-1 {
-  animation-duration: 14s;
-  animation-delay: 0s;
-}
-.shape-float-2 {
-  animation-duration: 18s;
-  animation-delay: 2s;
-}
-.shape-float-3 {
-  animation-duration: 16s;
-  animation-delay: 4s;
-}
-.shape-float-4 {
-  animation-duration: 20s;
-  animation-delay: 1s;
+  from { translate: 0 0; }
+  to   { translate: 8px -10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .shape-float-1,
-  .shape-float-2,
-  .shape-float-3,
-  .shape-float-4 {
-    animation: none !important;
-    translate: none;
-    rotate: none;
-  }
+  [aria-hidden="true"] > * { animation: none !important; }
+  .shape-scene * { transition: none !important; }
+  .shape-scene { --mx: 0 !important; --my: 0 !important; }
 }
 
 @utility gradient-dark-soft {
