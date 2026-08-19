@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as ExampleRouteImport } from './routes/example'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppBonusRouteImport } from './routes/app.bonus'
@@ -31,6 +32,11 @@ const IndexRoute = IndexRouteImport.update({
 const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExampleRoute = ExampleRouteImport.update({
+  id: '/example',
+  path: '/example',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -92,6 +98,7 @@ const LibrarySubjectSlugRoute = LibrarySubjectSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/example': typeof ExampleRoute
   '/pricing': typeof PricingRoute
   '/app/bonus': typeof AppBonusRoute
   '/app/history': typeof AppHistoryRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/example': typeof ExampleRoute
   '/pricing': typeof PricingRoute
   '/app/bonus': typeof AppBonusRoute
   '/app/history': typeof AppHistoryRoute
@@ -122,6 +130,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/example': typeof ExampleRoute
   '/pricing': typeof PricingRoute
   '/app/bonus': typeof AppBonusRoute
   '/app/history': typeof AppHistoryRoute
@@ -139,6 +148,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/app'
+    | '/example'
     | '/pricing'
     | '/app/bonus'
     | '/app/history'
@@ -153,6 +163,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/example'
     | '/pricing'
     | '/app/bonus'
     | '/app/history'
@@ -168,6 +179,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/app'
+    | '/example'
     | '/pricing'
     | '/app/bonus'
     | '/app/history'
@@ -184,6 +196,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
+  ExampleRoute: typeof ExampleRoute
   PricingRoute: typeof PricingRoute
   LibrarySubjectSlugRoute: typeof LibrarySubjectSlugRoute
 }
@@ -202,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/app'
       fullPath: '/app'
       preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/example': {
+      id: '/example'
+      path: '/example'
+      fullPath: '/example'
+      preLoaderRoute: typeof ExampleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -313,6 +333,7 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
+  ExampleRoute: ExampleRoute,
   PricingRoute: PricingRoute,
   LibrarySubjectSlugRoute: LibrarySubjectSlugRoute,
 }
