@@ -120,10 +120,10 @@ function SeoToolPage() {
                         key={i}
                         type="button"
                         onClick={() => handlePreset(preset)}
-                        className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg transition-colors truncate max-w-[200px] md:max-w-[300px]"
+                        className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg transition-colors truncate max-w-[220px] md:max-w-none"
                         title={preset}
                       >
-                        {preset}
+                        {preset.length > 45 ? preset.slice(0, 42) + '...' : preset}
                       </button>
                     ))}
                   </div>
