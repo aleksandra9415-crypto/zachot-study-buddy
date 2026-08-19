@@ -10,7 +10,7 @@ export const Footer = () => {
     <Section className="bg-bg">
       <div className="bg-navy-900 rounded-[20px] md:rounded-[32px] p-6 md:p-[48px] w-full text-white">
         {/* Top Area */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_0.75fr_1.15fr_0.8fr] gap-6">
           {/* Brand Info */}
           <div className="space-y-6">
             <img

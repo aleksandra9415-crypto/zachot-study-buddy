@@ -212,7 +212,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: "О сервисе",
+    title: "Больше о нас",
     items: [
       { label: "Как это работает", href: "/#how" },
       { label: "Тарифы", href: "/pricing" },
