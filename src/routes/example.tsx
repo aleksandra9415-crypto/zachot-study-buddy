@@ -179,7 +179,7 @@ function SeoToolPage() {
             </div>
           </div>
           <div className="mt-8 text-center">
-            <Link to="/#compare" className="text-[14px] text-teal-500 font-medium hover:underline inline-flex items-center gap-1">
+            <Link to="/" hash="compare" className="text-[14px] text-teal-500 font-medium hover:underline inline-flex items-center gap-1">
               Полное сравнение на главной
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
@@ -200,7 +200,7 @@ function SeoToolPage() {
                 <div className="mt-3 flex items-center gap-2 text-[13px] text-muted">
                   <span>{item.type}</span>
                   <span>•</span>
-                  <span>{item.volume}</span>
+                  <span>{item.size}</span>
                   <span>•</span>
                   <span>{item.subject}</span>
                 </div>

@@ -44,7 +44,7 @@ const initialTexts = (outline: OutlineItem[]) =>
   >;
 
 function Page() {
-  const { topic: topicParam } = createFileRoute("/app/text").useSearch<{ topic?: string }>();
+  const { topic: topicParam } = createFileRoute("/app/text").useSearch() as { topic?: string };
   const [step, setStep] = useState(0);
   const [generating, setGenerating] = useState(false);
   const [topic, setTopic] = useState<TopicState>(() => initialTopic(topicParam || ""));
