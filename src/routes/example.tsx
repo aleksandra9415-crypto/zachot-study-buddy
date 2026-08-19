@@ -88,70 +88,101 @@ function SeoToolPage() {
       
       <main className="flex flex-col gap-[56px] md:gap-[96px] pb-[96px]">
         {/* Hero Section */}
-        <Section className="px-6 md:px-0 pt-6">
-          <div className="flex items-center gap-2 text-[13px] text-muted overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <Section outerClassName="pt-6 pb-0" className="px-6 md:px-0">
+          {/* Breadcrumbs */}
+          <div className="flex items-center gap-2 text-[13px] text-muted overflow-x-auto whitespace-nowrap no-scrollbar mb-6">
             <Link to="/" className="hover:text-navy-900 transition-colors">Главная</Link>
             <span className="text-line">/</span>
             <span className="text-muted">{referatPage.h1}</span>
           </div>
 
-          <div className="mt-4">
-            <h1 className="text-[32px] md:text-[40px] font-display font-extrabold text-navy-900 max-w-[800px] leading-tight">
-              {referatPage.h1}
-            </h1>
-            <p className="mt-3 text-[16px] text-muted max-w-[640px] leading-relaxed">
-              {referatPage.subtitle}
-            </p>
+          <div className="relative">
+            {/* Background Shapes */}
+            <Shape 
+              kind="circle" 
+              size={280} 
+              className="bg-teal-500 shape-float-1 max-[900px]:scale-50" 
+              style={{ top: -60, right: -60, zIndex: 0 }} 
+            />
+            <Shape 
+              kind="triangle" 
+              size={140} 
+              className="text-orange-500 shape-float-2 max-[900px]:scale-50" 
+              style={{ bottom: -50, left: -40, transform: "rotate(-15deg)", zIndex: 0 }} 
+            />
 
-            {/* Form Card */}
-            <div className="mt-8 rounded-[20px] border border-line bg-white p-5 shadow-sm max-w-[800px]">
-              <form onSubmit={handleCta} className="space-y-4">
-                <textarea
-                  value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
-                  placeholder={referatPage.inputPlaceholder}
-                  className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[80px]"
-                />
-                
-                {referatPage.presets && (
-                  <div className="flex flex-wrap gap-2">
-                    {referatPage.presets.map((preset, i) => (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => handlePreset(preset)}
-                        className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg transition-colors truncate max-w-[220px] md:max-w-none"
-                        title={preset}
+            {/* Dark Card */}
+            <div 
+              className="relative z-[1] rounded-[32px] p-6 md:p-[48px] overflow-hidden"
+              style={{ 
+                background: "linear-gradient(135deg, rgba(11,40,49,0.94) 0%, rgba(18,51,60,0.94) 100%)",
+              }}
+            >
+              <div className="grid grid-cols-1 min-[901px]:grid-cols-[1.1fr_1fr] gap-10 items-center">
+                {/* Left Column: Text content */}
+                <div>
+                  <h1 className="text-[28px] min-[901px]:text-[40px] font-display font-extrabold text-white leading-tight">
+                    {referatPage.h1}
+                  </h1>
+                  <p className="mt-4 text-[16px] text-teal-200 max-w-[460px] leading-relaxed">
+                    {referatPage.subtitle}
+                  </p>
+
+                  <div className="mt-6 flex flex-col gap-3">
+                    {referatPage.bullets.map((bullet, idx) => (
+                      <a
+                        key={idx}
+                        href={bullet.anchor}
+                        className="flex items-center gap-3 text-[15px] text-white hover:underline group"
                       >
-                        {preset.length > 45 ? preset.slice(0, 42) + '...' : preset}
-                      </button>
+                        <Check className="h-4.5 w-4.5 text-teal-500 shrink-0" />
+                        <span>{bullet.label}</span>
+                      </a>
                     ))}
                   </div>
-                )}
+                </div>
 
-                <button
-                  type="submit"
-                  disabled={!topic.trim()}
-                  className="w-full md:w-fit flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
-                >
-                  <Sparkles className="h-4.5 w-4.5" />
-                  {referatPage.inputCta}
-                </button>
-              </form>
-            </div>
+                {/* Right Column: Generator form */}
+                <div className="bg-white rounded-[20px] p-5 shadow-[0_16px_40px_rgba(6,26,36,0.35)]">
+                  <div className="text-[13px] font-bold text-muted mb-2 uppercase tracking-wider">
+                    Тема работы
+                  </div>
+                  <form onSubmit={handleCta} className="space-y-4">
+                    <textarea
+                      value={topic}
+                      onChange={(e) => setTopic(e.target.value)}
+                      placeholder={referatPage.inputPlaceholder}
+                      rows={4}
+                      className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[100px]"
+                    />
+                    
+                    {referatPage.presets && (
+                      <div className="flex flex-wrap gap-2">
+                        {referatPage.presets.map((preset, i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            onClick={() => handlePreset(preset)}
+                            className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg transition-colors truncate max-w-[220px] md:max-w-none"
+                            title={preset}
+                          >
+                            {preset.length > 45 ? preset.slice(0, 42) + '...' : preset}
+                          </button>
+                        ))}
+                      </div>
+                    )}
 
-            {/* Bullets */}
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3">
-              {referatPage.bullets.map((bullet, idx) => (
-                <a
-                  key={idx}
-                  href={bullet.anchor}
-                  className="flex items-center gap-1.5 text-[14px] text-teal-500 font-medium hover:underline"
-                >
-                  <Check className="h-4 w-4" />
-                  {bullet.label}
-                </a>
-              ))}
+                    <button
+                      type="submit"
+                      disabled={!topic.trim()}
+                      className="w-full flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
+                    >
+                      <Sparkles className="h-4.5 w-4.5" />
+                      {referatPage.inputCta}
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </Section>
