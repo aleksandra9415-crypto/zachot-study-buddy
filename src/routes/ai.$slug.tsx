@@ -324,7 +324,7 @@ export function SeoToolLayout({ page }: { page: SeoToolPageType }) {
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center mb-8">
             Частые вопросы
           </h2>
-          <div className="w-full">
+          <div className="w-full max-w-[1200px] mx-auto">
             <Accordion type="single" collapsible className="space-y-3">
               {page.faq.map((item, idx) => (
                 <AccordionItem
