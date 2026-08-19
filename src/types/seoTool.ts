@@ -8,6 +8,7 @@ export type SeoToolPage = {
   inputCta: string;        // подпись главной кнопки
   targetApp: string;       // куда ведёт форма: /app/text, /app/task...
   bullets: { label: string; anchor: string }[]; // якорные преимущества
+  presets?: string[];      // примеры тем под формой
   seo: {
     id: string;
     heading: string;       // H2

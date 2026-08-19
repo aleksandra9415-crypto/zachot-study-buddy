@@ -3,11 +3,15 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Section } from "@/components/layout/Section";
+import { ResultDemo } from "@/components/landing/ResultDemo";
+import { Reviews } from "@/components/landing/Reviews";
+import { Pricing } from "@/components/landing/Pricing";
 import { BRAND } from "@/config/brand";
 import { referatPage } from "@/data/seoToolReferat";
 import { comparison, examples } from "@/data/content";
 import { Sparkles, Check, ArrowRight, X } from "lucide-react";
 import logo from "@/assets/logo.svg";
+import { Shape } from "@/components/decor/Shape";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/example")({
