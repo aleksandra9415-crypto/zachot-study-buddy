@@ -5,12 +5,14 @@ import { copy } from "@/data/content";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import Shape from "@/components/decor/Shape";
-
+import student1 from "@/assets/student-1.jpg.asset.json";
+import student2 from "@/assets/student-2.jpg.asset.json";
+import student3 from "@/assets/student-3.jpg.asset.json";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600"
+  student1.url,
+  student2.url,
+  student3.url
 ];
 
 export function Personalization() {
