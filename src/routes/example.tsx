@@ -79,14 +79,14 @@ function SeoToolPage() {
   };
 
   return (
-    <div className="min-h-screen bg-bg font-sans">
+    <div className="min-h-screen bg-bg font-sans overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
       
-      <main className="pb-[96px]">
+      <main className="flex flex-col gap-[56px] md:gap-[96px] pb-[96px]">
         {/* Hero Section */}
         <Section className="px-6 md:px-0 pt-6">
           <div className="flex items-center gap-2 text-[13px] text-muted overflow-x-auto whitespace-nowrap scrollbar-hide">
@@ -105,39 +105,39 @@ function SeoToolPage() {
 
             {/* Form Card */}
             <div className="mt-8 rounded-[20px] border border-line bg-white p-5 shadow-sm max-w-[800px]">
-                <form onSubmit={handleCta} className="space-y-4">
-                  <textarea
-                    value={topic}
-                    onChange={(e) => setTopic(e.target.value)}
-                    placeholder={referatPage.inputPlaceholder}
-                    className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[80px]"
-                  />
-                  
-                  {referatPage.presets && (
-                    <div className="flex flex-wrap gap-2">
-                      {referatPage.presets.map((preset, i) => (
-                        <button
-                          key={i}
-                          type="button"
-                          onClick={() => handlePreset(preset)}
-                          className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg truncate max-w-[200px] md:max-w-none"
-                          title={preset}
-                        >
-                          {preset}
-                        </button>
-                      ))}
-                    </div>
-                  )}
+              <form onSubmit={handleCta} className="space-y-4">
+                <textarea
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  placeholder={referatPage.inputPlaceholder}
+                  className="w-full resize-none border-0 bg-transparent p-0 text-[16px] text-navy-900 placeholder:text-muted focus:ring-0 min-h-[80px]"
+                />
+                
+                {referatPage.presets && (
+                  <div className="flex flex-wrap gap-2">
+                    {referatPage.presets.map((preset, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => handlePreset(preset)}
+                        className="h-[34px] px-3 rounded-full border border-line text-[13px] text-navy-900 hover:bg-bg transition-colors truncate max-w-[200px] md:max-w-[300px]"
+                        title={preset}
+                      >
+                        {preset}
+                      </button>
+                    ))}
+                  </div>
+                )}
 
-                  <button
-                    type="submit"
-                    disabled={!topic.trim()}
-                    className="w-full md:w-fit flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
-                  >
-                    <Sparkles className="h-4.5 w-4.5" />
-                    {referatPage.inputCta}
-                  </button>
-                </form>
+                <button
+                  type="submit"
+                  disabled={!topic.trim()}
+                  className="w-full md:w-fit flex h-[52px] items-center justify-center gap-2 rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 disabled:opacity-45 disabled:cursor-not-allowed"
+                >
+                  <Sparkles className="h-4.5 w-4.5" />
+                  {referatPage.inputCta}
+                </button>
+              </form>
             </div>
 
             {/* Bullets */}
@@ -157,13 +157,12 @@ function SeoToolPage() {
         </Section>
 
         {/* Comparison Section */}
-        <Section id="compare" className="mt-[56px] px-6 md:px-0">
+        <Section id="compare" className="px-6 md:px-0">
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center">
             Чем отличается от обычного чат-бота
           </h2>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-[0.8fr_1.4fr_1.4fr] gap-4 items-stretch">
-            {/* Mobile simplified or desktop full table */}
             <div className="hidden md:flex flex-col">
               <div className="min-h-[64px]" />
               {comparison.slice(0, 4).map((row, idx) => (
@@ -215,7 +214,7 @@ function SeoToolPage() {
         <ResultDemo />
 
         {/* Examples Section */}
-        <Section className="mt-[56px] px-6 md:px-0">
+        <Section className="px-6 md:px-0">
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center">
             Примеры готовых работ
           </h2>
@@ -244,7 +243,7 @@ function SeoToolPage() {
         <Pricing />
 
         {/* SEO Text Section */}
-        <Section id="how" className="mt-[56px] px-6 md:px-0">
+        <Section id="how" className="px-6 md:px-0">
           <div className="bg-white border border-line rounded-[24px] p-10 max-[899px]:p-5">
             <div className="max-w-[720px]">
               {referatPage.seo.map((block, idx) => (
@@ -274,7 +273,7 @@ function SeoToolPage() {
         </Section>
 
         {/* FAQ Section */}
-        <Section id="faq" className="mt-[56px] px-6 md:px-0">
+        <Section id="faq" className="px-6 md:px-0">
           <h2 className="text-[28px] font-display font-extrabold text-navy-900 text-center mb-8">
             Частые вопросы
           </h2>
@@ -300,29 +299,37 @@ function SeoToolPage() {
           </div>
         </Section>
 
-        {/* Call to Action Section */}
-        <Section className="mt-[56px] px-6 md:px-0 relative">
-          <Shape kind="triangle" size={120} className="text-pink-500" style={{ top: -40, left: 30, transform: "rotate(12deg)" }} />
-          <Shape kind="circle" size={180} className="bg-orange-500" style={{ bottom: -60, right: -30 }} />
-          <div className="bg-[linear-gradient(135deg,#0B2831_0%,#12333C_100%)] rounded-[32px] p-12 max-[899px]:px-6 max-[899px]:py-10 text-center relative z-10">
-            <h2 className="text-[32px] font-display font-extrabold text-white mb-3">
-              Попробуй на своей теме
-            </h2>
-            <p className="text-[16px] text-teal-200 mb-8">
-              Первые работы бесплатно — без подписки и без карты
-            </p>
-            <Link
-              to="/app/text"
-              search={{ topic: "" }}
-              className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-8 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90"
-            >
-              Написать реферат
-            </Link>
+        {/* Final CTA Section */}
+        <Section className="relative px-6 md:px-0">
+          <Shape kind="triangle" size={120} className="text-pink-500 shape-float-3" style={{ top: -40, left: 30, transform: "rotate(12deg)", zIndex: 0 }} />
+          <Shape kind="circle" size={180} className="bg-orange-500 shape-float-4" style={{ bottom: -60, right: -30, zIndex: 0 }} />
+          
+          <div className="gradient-dark-soft rounded-[20px] md:rounded-[32px] p-8 md:p-[48px] text-center flex flex-col items-center relative z-[1] overflow-hidden">
+            <div className="relative z-[2] flex flex-col items-center">
+              <h2 className="text-[32px] font-display font-extrabold text-white mb-3">
+                Попробуй на своей теме
+              </h2>
+              <p className="text-[15px] md:text-base text-teal-200 max-w-[560px] leading-[1.6] mb-10">
+                Первые работы бесплатно — без подписки и без карты
+              </p>
+              <button
+                onClick={() => {
+                   window.scrollTo({ top: 0, behavior: 'smooth' });
+                   setTimeout(() => {
+                     const textarea = document.querySelector('textarea');
+                     if (textarea) textarea.focus();
+                   }, 500);
+                }}
+                className="inline-flex h-[52px] items-center justify-center rounded-full bg-orange-500 px-10 text-[16px] font-bold text-navy-900 transition-opacity hover:opacity-90 cursor-pointer"
+              >
+                {referatPage.inputCta}
+              </button>
+            </div>
           </div>
         </Section>
 
         {/* Neighbors Section */}
-        <Section className="mt-[56px] px-6 md:px-0">
+        <Section className="px-6 md:px-0">
           <h2 className="text-[22px] font-display font-extrabold text-navy-900 mb-6">
             Другие AI-инструменты Зачёта
           </h2>
