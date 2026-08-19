@@ -10,6 +10,11 @@ import { GeneratingScreen } from "@/components/app/wizard/GeneratingScreen";
 import { outlineMock, sourcesMock, sectionTextMock } from "@/data/wizard";
 
 export const Route = createFileRoute("/app/text")({
+  validateSearch: (search: Record<string, unknown>): { topic?: string } => {
+    return {
+      topic: typeof search.topic === 'string' ? search.topic : undefined,
+    }
+  },
   head: () => ({
     meta: [
       { title: "Текстовая работа — Зачёт" },
